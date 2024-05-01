@@ -91,7 +91,7 @@ const webExtensions = [
         icon: 'https://raw.githubusercontent.com/cssnr/text-formatter/master/src/images/logo128.png',
         description: 'Web Extension for Splitting and Formatting Text.',
         links: {
-            Google: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc',
+            Google: 'https://chromewebstore.google.com/detail/text-formatter/medimbembaeldnglneiipkenpagjfcdj',
             Mozilla: 'https://github.com/cssnr/text-formatter/releases/latest',
             GitHub: 'https://github.com/cssnr/text-formatter',
         },
