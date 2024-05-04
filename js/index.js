@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', domContentLoaded)
 
 const infoCard = document.querySelector('.clone > .info-card')
 const extContainer = document.getElementById('ext-container')
-// const toolsContainer = document.getElementById('tools-container')
+const appsContainer = document.getElementById('apps-container')
 const actionsContainer = document.getElementById('actions-container')
 
 const webExtensions = [
@@ -23,7 +23,7 @@ const webExtensions = [
     },
     {
         name: 'Open Links in New Tab',
-        url: 'https://github.com/cssnr/open-links-in-new-tab',
+        url: 'https://open-links-in-new-tab.cssnr.com/',
         icon: 'https://raw.githubusercontent.com/cssnr/open-links-in-new-tab/master/src/images/logo128.png',
         description:
             'Web Extension to Open Links in New Tabs for Specified Domains or Temporarily on Any Tab.',
@@ -31,6 +31,7 @@ const webExtensions = [
             Google: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc',
             Mozilla: 'https://addons.mozilla.org/addon/open-links-in-new-tab',
             GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
+            Website: 'https://open-links-in-new-tab.cssnr.com/',
         },
     },
     {
@@ -108,7 +109,67 @@ const webExtensions = [
     },
 ]
 
-// const githubActions = []
+const webApps = [
+    {
+        name: 'Django Files',
+        url: 'https://django-files.github.io/',
+        icon: 'https://raw.githubusercontent.com/django-files/web-extension/master/src/media/logo128.png',
+        description:
+            'A Feature Packed Self-Hosted Django/Docker File Manager for Sharing Files with ShareX, Flameshot and Much more.',
+        links: {
+            GitHub: 'https://github.com/django-files/django-files',
+            Website: 'https://smwc.world/',
+        },
+    },
+    {
+        name: 'SMWC ROM Archive',
+        url: 'https://smwc.world/',
+        icon: 'https://smwc.world/static/images/logo.png',
+        description:
+            'SMWCentral ROM Archive to archive, download, send notifications, plus patch and play SMW ROMs online.',
+        links: {
+            GitHub: 'https://github.com/cssnr/smwc-web',
+            Website: 'https://smwc.world/',
+        },
+    },
+]
+
+const githubActions = [
+    {
+        name: 'Stack Deploy',
+        url: 'https://github.com/cssnr/stack-deploy-action',
+        description:
+            'Deploy Docker Stack to Remote Host using SSH Authentication.',
+        links: {
+            GitHub: 'https://github.com/cssnr/stack-deploy-action',
+        },
+    },
+    {
+        name: 'Mozilla Addon Update File',
+        url: 'https://github.com/cssnr/mozilla-addon-update-action',
+        description:
+            'Update the Mozilla Firefox Update JSON File after a Release.',
+        links: {
+            GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
+        },
+    },
+    {
+        name: 'Push Artifacts',
+        url: 'https://github.com/cssnr/push-artifacts-action',
+        description: 'Pushes Build Artifacts to a Remote Host using rsync.',
+        links: {
+            GitHub: 'https://github.com/cssnr/push-artifacts-action',
+        },
+    },
+    {
+        name: 'Cloudflare Purge Cache',
+        url: 'https://github.com/cssnr/cf-purge-cache-action',
+        description: 'Pushes Build Artifacts to a Remote Host using rsync.',
+        links: {
+            GitHub: 'https://github.com/cssnr/cf-purge-cache-action',
+        },
+    },
+]
 
 /**
  * DOMContentLoaded Callback
@@ -120,10 +181,14 @@ async function domContentLoaded() {
     for (const data of webExtensions) {
         addCard(data, extContainer)
     }
-    // console.debug('Add githubActions')
-    // for (const data of githubActions) {
-    //     addCard(data, actionsContainer)
-    // }
+    console.debug('Add webApps')
+    for (const data of webApps) {
+        addCard(data, appsContainer)
+    }
+    console.debug('Add githubActions')
+    for (const data of githubActions) {
+        addCard(data, actionsContainer)
+    }
 }
 
 /**
@@ -141,7 +206,11 @@ function addCard(data, parent) {
         link.title = data.name
     }
     const img = card.querySelector('img')
-    img.src = data.icon
+    if (data.icon) {
+        img.src = data.icon
+    } else {
+        img.remove()
+    }
     const title = card.querySelector('h3 > a')
     title.textContent = data.name
     const p = card.querySelector('p')
