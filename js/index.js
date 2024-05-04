@@ -6,6 +6,13 @@ const infoCard = document.querySelector('.clone > .info-card')
 const extContainer = document.getElementById('ext-container')
 const appsContainer = document.getElementById('apps-container')
 const actionsContainer = document.getElementById('actions-container')
+const otherContainer = document.getElementById('other-container')
+
+const faIcons = {
+    faPython: document.querySelector('.clone .fa-python'),
+    faJs: document.querySelector('.clone .fa-js'),
+    faShell: document.querySelector('.clone .fa-terminal'),
+}
 
 const webExtensions = [
     {
@@ -20,6 +27,7 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/link-extractor',
             Website: 'https://link-extractor.cssnr.com/',
         },
+        fa: 'faJs',
     },
     {
         name: 'Open Links in New Tab',
@@ -33,6 +41,7 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
             Website: 'https://open-links-in-new-tab.cssnr.com/',
         },
+        fa: 'faJs',
     },
     {
         name: 'PlayDrift Extension',
@@ -46,6 +55,7 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/playdrift-extension',
             Website: 'https://playdrift-extension.cssnr.com/',
         },
+        fa: 'faJs',
     },
     {
         name: 'Django Files Extension',
@@ -59,6 +69,7 @@ const webExtensions = [
             GitHub: 'https://github.com/django-files/web-extension',
             Website: 'https://django-files.github.io/',
         },
+        fa: 'faJs',
     },
     {
         name: 'SMWC Web Extension',
@@ -72,6 +83,7 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/smwc-web-extension',
             Website: 'https://smwc.world/',
         },
+        fa: 'faJs',
     },
     {
         name: 'ASN Plus',
@@ -85,6 +97,7 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/asn-plus',
             Website: 'https://asn-plus.cssnr.com/',
         },
+        fa: 'faJs',
     },
     {
         name: 'Text Formatter',
@@ -96,16 +109,31 @@ const webExtensions = [
             Mozilla: 'https://github.com/cssnr/text-formatter/releases/latest',
             GitHub: 'https://github.com/cssnr/text-formatter',
         },
+        fa: 'faJs',
+    },
+    {
+        name: 'Aviation Tools',
+        url: 'https://github.com/cssnr/aviation-tools',
+        icon: 'https://raw.githubusercontent.com/cssnr/aviation-tools/master/src/images/logo128.png',
+        description:
+            'Aviation Tools Web Extension. Currently a Work in Progress.',
+        links: {
+            Google: 'https://chromewebstore.google.com/detail/aviation-tools/cjjhackeogffajjndfhemgniokonimin',
+            Mozilla: 'https://github.com/cssnr/aviation-tools/releases/latest',
+            GitHub: 'https://github.com/cssnr/aviation-tools',
+        },
+        fa: 'faJs',
     },
     {
         name: 'Simple Extension',
-        url: 'https://github.com/smashedr/simple-extension/',
+        url: 'https://github.com/smashedr/simple-extension',
         icon: 'https://raw.githubusercontent.com/smashedr/simple-extension/master/src/images/logo128.png',
         description:
             'Example Web Extension for copying and creating new web extensions based on Manifest V3.',
         links: {
-            GitHub: 'https://github.com/smashedr/simple-extension/',
+            GitHub: 'https://github.com/smashedr/simple-extension',
         },
+        fa: 'faJs',
     },
 ]
 
@@ -120,6 +148,7 @@ const webApps = [
             GitHub: 'https://github.com/django-files/django-files',
             Website: 'https://smwc.world/',
         },
+        fa: 'faPython',
     },
     {
         name: 'SMWC ROM Archive',
@@ -131,6 +160,7 @@ const webApps = [
             GitHub: 'https://github.com/cssnr/smwc-web',
             Website: 'https://smwc.world/',
         },
+        fa: 'faPython',
     },
 ]
 
@@ -143,6 +173,7 @@ const githubActions = [
         links: {
             GitHub: 'https://github.com/cssnr/stack-deploy-action',
         },
+        fa: 'faShell',
     },
     {
         name: 'Mozilla Addon Update File',
@@ -152,6 +183,7 @@ const githubActions = [
         links: {
             GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
         },
+        fa: 'faPython',
     },
     {
         name: 'Push Artifacts',
@@ -160,6 +192,7 @@ const githubActions = [
         links: {
             GitHub: 'https://github.com/cssnr/push-artifacts-action',
         },
+        fa: 'faShell',
     },
     {
         name: 'Cloudflare Purge Cache',
@@ -168,6 +201,30 @@ const githubActions = [
         links: {
             GitHub: 'https://github.com/cssnr/cf-purge-cache-action',
         },
+        fa: 'faPython',
+    },
+]
+const otherSoftware = [
+    {
+        name: 'Vultr Python',
+        url: 'https://github.com/cssnr/vultr-python',
+        description: 'Vultr Cloud Hosting Python 3 Library.',
+        links: {
+            GitHub: 'https://github.com/cssnr/vultr-python',
+            Vultr: 'https://www.vultr.com/?ref=6905748',
+        },
+        fa: 'faPython',
+    },
+    {
+        name: 'Zipline CLI',
+        url: 'https://github.com/cssnr/zipline-cli',
+        description: 'Command Line Interface for Zipline and Django Files.',
+        links: {
+            GitHub: 'https://github.com/cssnr/zipline-cli',
+            Zipline: 'https://github.com/diced/zipline',
+            'Django Files': 'https://github.com/django-files/django-files',
+        },
+        fa: 'faPython',
     },
 ]
 
@@ -188,6 +245,10 @@ async function domContentLoaded() {
     console.debug('Add githubActions')
     for (const data of githubActions) {
         addCard(data, actionsContainer)
+    }
+    console.debug('Add githubActions')
+    for (const data of otherSoftware) {
+        addCard(data, otherContainer)
     }
 }
 
@@ -211,7 +272,7 @@ function addCard(data, parent) {
     } else {
         img.remove()
     }
-    const title = card.querySelector('h3 > a')
+    const title = card.querySelector('h4 > a')
     title.textContent = data.name
     const p = card.querySelector('p')
     p.textContent = data.description
@@ -229,5 +290,14 @@ function addCard(data, parent) {
         footer.appendChild(document.createTextNode(' - '))
     }
     footer.removeChild(footer.lastChild)
+
+    if (data.fa) {
+        const div = document.createElement('div')
+        console.info('data.fa:', data.fa)
+        const icon = faIcons[data.fa].cloneNode(true)
+        div.appendChild(icon)
+        div.style.float = 'right'
+        footer.appendChild(div)
+    }
     parent.appendChild(card)
 }
