@@ -24,8 +24,8 @@ const webExtensions = [
         links: {
             Google: 'https://chromewebstore.google.com/detail/link-extractor/ifefifghpkllfibejafbakmflidjcjfp',
             Mozilla: 'https://addons.mozilla.org/addon/link-extractor',
-            GitHub: 'https://github.com/cssnr/link-extractor',
             Website: 'https://link-extractor.cssnr.com/',
+            GitHub: 'https://github.com/cssnr/link-extractor',
         },
         fa: 'faJs',
     },
@@ -38,8 +38,8 @@ const webExtensions = [
         links: {
             Google: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc',
             Mozilla: 'https://addons.mozilla.org/addon/open-links-in-new-tab',
-            GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
             Website: 'https://open-links-in-new-tab.cssnr.com/',
+            GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
         },
         fa: 'faJs',
     },
@@ -52,8 +52,8 @@ const webExtensions = [
         links: {
             Google: 'https://chromewebstore.google.com/detail/playdrift-extension/anlkpnbhiiojmedlkchcdmigkdccnmcn',
             Mozilla: 'https://addons.mozilla.org/addon/playdrift-extension',
-            GitHub: 'https://github.com/cssnr/playdrift-extension',
             Website: 'https://playdrift-extension.cssnr.com/',
+            GitHub: 'https://github.com/cssnr/playdrift-extension',
         },
         fa: 'faJs',
     },
@@ -66,8 +66,8 @@ const webExtensions = [
         links: {
             Google: 'https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej',
             Mozilla: 'https://addons.mozilla.org/addon/django-files',
-            GitHub: 'https://github.com/django-files/web-extension',
             Website: 'https://django-files.github.io/',
+            GitHub: 'https://github.com/django-files/web-extension',
         },
         fa: 'faJs',
     },
@@ -80,8 +80,8 @@ const webExtensions = [
         links: {
             Google: 'https://chromewebstore.google.com/detail/smwc-web-extension/foalfafgmnglcgpgkhhmcfhjgmdcjide',
             Mozilla: 'https://addons.mozilla.org/addon/smwc-web-extension',
-            GitHub: 'https://github.com/cssnr/smwc-web-extension',
             Website: 'https://smwc.world/',
+            GitHub: 'https://github.com/cssnr/smwc-web-extension',
         },
         fa: 'faJs',
     },
@@ -94,8 +94,8 @@ const webExtensions = [
         links: {
             Google: 'https://chromewebstore.google.com/detail/asn-plus/phcbcnpmcbkcnijkpfohkdmcofcofibh',
             Mozilla: 'https://addons.mozilla.org/addon/asn-plus',
-            GitHub: 'https://github.com/cssnr/asn-plus',
             Website: 'https://asn-plus.cssnr.com/',
+            GitHub: 'https://github.com/cssnr/asn-plus',
         },
         fa: 'faJs',
     },
@@ -145,8 +145,8 @@ const webApps = [
         description:
             'A Feature Packed Self-Hosted Django/Docker File Manager for Sharing Files with ShareX, Flameshot and Much more.',
         links: {
-            GitHub: 'https://github.com/django-files/django-files',
             Website: 'https://smwc.world/',
+            GitHub: 'https://github.com/django-files/django-files',
         },
         fa: 'faPython',
     },
@@ -157,8 +157,20 @@ const webApps = [
         description:
             'SMWCentral ROM Archive to archive, download, send notifications, plus patch and play SMW ROMs online.',
         links: {
-            GitHub: 'https://github.com/cssnr/smwc-web',
             Website: 'https://smwc.world/',
+            GitHub: 'https://github.com/cssnr/smwc-web',
+        },
+        fa: 'faPython',
+    },
+    {
+        name: 'SlashGIF',
+        url: 'https://slashgif.com/',
+        icon: 'https://slashgif.com/static/images/slashgif.png',
+        description:
+            'Slack App to search for a random GIF and preview it, before posting publicly.',
+        links: {
+            Website: 'https://slashgif.com/',
+            GitHub: 'https://github.com/cssnr/slashgif-site',
         },
         fa: 'faPython',
     },
@@ -197,7 +209,7 @@ const githubActions = [
     {
         name: 'Cloudflare Purge Cache',
         url: 'https://github.com/cssnr/cf-purge-cache-action',
-        description: 'Pushes Build Artifacts to a Remote Host using rsync.',
+        description: 'Easily Purge Cloudflare Cache.',
         links: {
             GitHub: 'https://github.com/cssnr/cf-purge-cache-action',
         },
@@ -206,12 +218,23 @@ const githubActions = [
 ]
 const otherSoftware = [
     {
+        name: "Carl's Cogs",
+        url: 'https://github.com/smashedr/carl-cogs',
+        description:
+            'Red Discord Bot Cogs. Commands and Packages for the Red Discord Bot.',
+        links: {
+            'Red Discord Bot': 'https://github.com/Cog-Creators/Red-DiscordBot',
+            GitHub: 'https://github.com/cssnr/vultr-python',
+        },
+        fa: 'faPython',
+    },
+    {
         name: 'Vultr Python',
         url: 'https://github.com/cssnr/vultr-python',
         description: 'Vultr Cloud Hosting Python 3 Library.',
         links: {
-            GitHub: 'https://github.com/cssnr/vultr-python',
             Vultr: 'https://www.vultr.com/?ref=6905748',
+            GitHub: 'https://github.com/cssnr/vultr-python',
         },
         fa: 'faPython',
     },
@@ -220,9 +243,9 @@ const otherSoftware = [
         url: 'https://github.com/cssnr/zipline-cli',
         description: 'Command Line Interface for Zipline and Django Files.',
         links: {
-            GitHub: 'https://github.com/cssnr/zipline-cli',
             Zipline: 'https://github.com/diced/zipline',
             'Django Files': 'https://github.com/django-files/django-files',
+            GitHub: 'https://github.com/cssnr/zipline-cli',
         },
         fa: 'faPython',
     },
