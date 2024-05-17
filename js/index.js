@@ -59,14 +59,14 @@ const webExtensions = [
     },
     {
         name: 'Django Files Extension',
-        url: 'https://django-files.github.io/',
+        url: 'https://django-files.github.io/extension/',
         icon: 'https://raw.githubusercontent.com/django-files/web-extension/master/src/media/logo128.png',
         description:
             'Web Extension for Django Files to view recent uploads, shorten URLs, and upload any Image, Video or Audio.',
         links: {
             Google: 'https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej',
             Mozilla: 'https://addons.mozilla.org/addon/django-files',
-            Website: 'https://django-files.github.io/',
+            Website: 'https://django-files.github.io/extension/',
             GitHub: 'https://github.com/django-files/web-extension',
         },
         fa: 'faJs',
