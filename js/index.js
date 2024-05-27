@@ -45,7 +45,7 @@ async function domContentLoaded() {
  * @param {HTMLElement} parent
  */
 function addCard(data, parent) {
-    console.debug('addCard:', data)
+    // console.debug('addCard:', data)
     const card = infoCard.cloneNode(true)
     const links = card.querySelectorAll('.url-link')
     for (const link of links) {
@@ -79,7 +79,6 @@ function addCard(data, parent) {
 
     if (data.fa) {
         const div = document.createElement('div')
-        console.info('data.fa:', data.fa)
         const icon = faIcons[data.fa].cloneNode(true)
         div.appendChild(icon)
         div.style.float = 'right'

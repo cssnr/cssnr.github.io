@@ -24,34 +24,14 @@ uninstallResponse.addEventListener('input', function (e) {
  */
 async function domContentLoaded() {
     console.debug('DOMContentLoaded')
-    const source = document.querySelector(
-        'div.feedback-clone > div.form-switch'
-    )
-    console.debug('source:', source)
-    const inputs1 = document.getElementById('inputs1')
-    const inputs2 = document.getElementById('inputs2')
-    const half = Math.floor(webExtensions.length / 2)
-    let count = 0
-    for (const data of webExtensions) {
-        count += 1
-        // console.debug('data:', data)
-        const div = source.cloneNode(true)
-        // console.debug('div:', div)
-        const id = data.name.replaceAll(' ', '-')
-        // console.debug('id:', id)
-        const input = div.querySelector('input')
-        input.id = id
-        // console.debug('input:', input)
-        const label = div.querySelector('label')
-        label.setAttribute('for', id)
-        label.textContent = data.name
-        // console.debug('label:', label)
-        console.debug(`count: ${count} <= ${half}`)
-        if (count > half) {
-            inputs1.appendChild(div)
-        } else {
-            inputs2.appendChild(div)
-        }
+    const parent = document.getElementById('feedback')
+    const apps = [webExtensions, webApps, githubActions]
+    const combined = apps.flat()
+    for (const app of combined) {
+        const option = document.createElement('option')
+        option.value = app.name
+        option.textContent = app.name
+        parent.appendChild(option)
     }
 }
 
@@ -60,24 +40,18 @@ async function formSubmit(event) {
     event.preventDefault()
     errorAlert.style.display = 'none'
     const url = this[0].value
-    const notUsed = this[1].checked
-    const notExpected = this[2].checked
-    const notWorking = this[3].checked
-    const feedbackText = this[4].value
-    if (!(notUsed || notExpected || notWorking || feedbackText)) {
-        return console.warn('No Data to Send.')
+    const app = this[1].value
+    const text = this[2].value.trim()
+    if (!text) {
+        uninstallResponse.focus()
+        return console.warn('No Feedback to Send.')
     }
     submitBtn.classList.add('disabled')
     const lines = [
-        uninstallMessage,
+        `CSSNR GitHub Feedback for: **${app}**`,
         `\`${navigator.userAgent}\``,
-        `${getBoolIcon(notUsed)} Not Used`,
-        `${getBoolIcon(notExpected)} Not as Expected`,
-        `${getBoolIcon(notWorking)} Not Working`,
+        `\`\`\`\n${text}\n\`\`\``,
     ]
-    if (feedbackText) {
-        lines.push(`\`\`\`\n${feedbackText}\n\`\`\``)
-    }
     // console.debug('lines:', lines)
     const response = await sendDiscord(url, lines.join('\n'))
     console.debug('response:', response)
@@ -107,12 +81,4 @@ async function sendDiscord(url, content) {
         body: JSON.stringify(body),
     }
     return await fetch(url, opts)
-}
-
-function getBoolIcon(value) {
-    if (value) {
-        return '✅'
-    } else {
-        return '🔳'
-    }
 }
