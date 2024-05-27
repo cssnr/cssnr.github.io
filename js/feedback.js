@@ -1,5 +1,7 @@
 // JS uninstall.html
 
+document.addEventListener('DOMContentLoaded', domContentLoaded)
+
 const uninstallMessage = 'CSSNR GitHub Feedback.'
 const discordUsername = 'CSSNR'
 const discordAvatar = 'https://cssnr.github.io/media/logo.png'
@@ -11,33 +13,45 @@ const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
 
 uninstallForm.addEventListener('submit', formSubmit)
+
 uninstallResponse.addEventListener('input', function (e) {
     inputCount.textContent = this.value.length
 })
+
+/**
+ * DOMContentLoaded Callback
+ * @function domContentLoaded
+ */
+async function domContentLoaded() {
+    console.debug('DOMContentLoaded')
+    const parent = document.getElementById('feedback')
+    const apps = [webExtensions, webApps, githubActions]
+    const combined = apps.flat()
+    for (const app of combined) {
+        const option = document.createElement('option')
+        option.value = app.name
+        option.textContent = app.name
+        parent.appendChild(option)
+    }
+}
 
 async function formSubmit(event) {
     console.debug('formSubmit:', event, this)
     event.preventDefault()
     errorAlert.style.display = 'none'
     const url = this[0].value
-    const notUsed = this[1].checked
-    const notExpected = this[2].checked
-    const notWorking = this[3].checked
-    const feedbackText = this[4].value
-    if (!(notUsed || notExpected || notWorking || feedbackText)) {
-        return console.warn('No Data to Send.')
+    const app = this[1].value
+    const text = this[2].value.trim()
+    if (!text) {
+        uninstallResponse.focus()
+        return console.warn('No Feedback to Send.')
     }
     submitBtn.classList.add('disabled')
     const lines = [
-        uninstallMessage,
+        `CSSNR GitHub Feedback for: **${app}**`,
         `\`${navigator.userAgent}\``,
-        `${getBoolIcon(notUsed)} Not Used`,
-        `${getBoolIcon(notExpected)} Not as Expected`,
-        `${getBoolIcon(notWorking)} Not Working`,
+        `\`\`\`\n${text}\n\`\`\``,
     ]
-    if (feedbackText) {
-        lines.push(`\`\`\`\n${feedbackText}\n\`\`\``)
-    }
     // console.debug('lines:', lines)
     const response = await sendDiscord(url, lines.join('\n'))
     console.debug('response:', response)
@@ -67,12 +81,4 @@ async function sendDiscord(url, content) {
         body: JSON.stringify(body),
     }
     return await fetch(url, opts)
-}
-
-function getBoolIcon(value) {
-    if (value) {
-        return '✅'
-    } else {
-        return '🔳'
-    }
 }
