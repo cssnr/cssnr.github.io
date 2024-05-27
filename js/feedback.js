@@ -1,5 +1,7 @@
 // JS uninstall.html
 
+document.addEventListener('DOMContentLoaded', domContentLoaded)
+
 const uninstallMessage = 'CSSNR GitHub Feedback.'
 const discordUsername = 'CSSNR'
 const discordAvatar = 'https://cssnr.github.io/media/logo.png'
@@ -11,9 +13,47 @@ const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
 
 uninstallForm.addEventListener('submit', formSubmit)
+
 uninstallResponse.addEventListener('input', function (e) {
     inputCount.textContent = this.value.length
 })
+
+/**
+ * DOMContentLoaded Callback
+ * @function domContentLoaded
+ */
+async function domContentLoaded() {
+    console.debug('DOMContentLoaded')
+    const source = document.querySelector(
+        'div.feedback-clone > div.form-switch'
+    )
+    console.debug('source:', source)
+    const inputs1 = document.getElementById('inputs1')
+    const inputs2 = document.getElementById('inputs2')
+    const half = Math.floor(webExtensions.length / 2)
+    let count = 0
+    for (const data of webExtensions) {
+        count += 1
+        // console.debug('data:', data)
+        const div = source.cloneNode(true)
+        // console.debug('div:', div)
+        const id = data.name.replaceAll(' ', '-')
+        // console.debug('id:', id)
+        const input = div.querySelector('input')
+        input.id = id
+        // console.debug('input:', input)
+        const label = div.querySelector('label')
+        label.setAttribute('for', id)
+        label.textContent = data.name
+        // console.debug('label:', label)
+        console.debug(`count: ${count} <= ${half}`)
+        if (count > half) {
+            inputs1.appendChild(div)
+        } else {
+            inputs2.appendChild(div)
+        }
+    }
+}
 
 async function formSubmit(event) {
     console.debug('formSubmit:', event, this)

@@ -14,7 +14,7 @@ description: Feedback
 <div class="d-flex flex-column h-100 align-items-center">
     <div class="d-flex flex-grow-1 justify-content-center align-items-center w-100">
         <div class="row flex-grow-1">
-            <div class="col-sm-12 col-md-8 col-lg-6 m-auto">
+            <div class="col-sm-12 col-md-10 col-lg-8 m-auto">
                 <div id="login-outer" class="m-auto p-3">
                     <div class="justify-content-center align-items-center mb-2 d-flex">
                         <img src="/media/logo.png" class="img-fluid float-start me-2" alt="PlayDrift Extension" height="42" width="42">
@@ -25,18 +25,16 @@ description: Feedback
                     </p>
                     <form id="uninstall-form">
                         <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
-                        <div class="form-check form-switch fs-5">
-                            <input class="form-check-input" type="checkbox" role="switch" id="not-used">
-                            <label class="form-check-label text-success-emphasis" for="not-used">Do Not Need or Not Used</label>
+
+                        {% comment %}<select id="feedback" class="form-select form-select-lg mb-3" aria-label="Select Feedback Reason">{% endcomment %}
+                            {% comment %}<option selected>-- Select Feedback Reason --</option>{% endcomment %}
+                        {% comment %}</select>{% endcomment %}
+
+                        <div class="row">
+                            <div id="inputs1" class="col-12 col-md-6"></div>
+                            <div id="inputs2" class="col-12 col-md-6"></div>
                         </div>
-                        <div class="form-check form-switch fs-5">
-                            <input class="form-check-input" type="checkbox" role="switch" id="not-expected">
-                            <label class="form-check-label text-warning-emphasis" for="not-expected">Does Not Work as Expected</label>
-                        </div>
-                        <div class="form-check form-switch fs-5">
-                            <input class="form-check-input" type="checkbox" role="switch" id="not-working">
-                            <label class="form-check-label text-danger-emphasis" for="not-working">Not Working or Broken</label>
-                        </div>
+
                         <div class="my-2">
                             <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
                             <textarea class="form-control" id="uninstall-response" rows="4" maxlength="500"
@@ -53,4 +51,12 @@ description: Feedback
     </div>
 </div>
 
+<div class="d-none feedback-clone">
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch">
+        <label class="form-check-label"></label>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/config.js"></script>
 <script type="text/javascript" src="/js/feedback.js"></script>
