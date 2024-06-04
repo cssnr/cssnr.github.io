@@ -84,6 +84,20 @@ const webExtensions = [
         fa: 'faJs',
     },
     {
+        name: 'HLS Video Downloader',
+        url: 'https://github.com/cssnr/hls-video-downloader',
+        icon: 'https://raw.githubusercontent.com/cssnr/hls-video-downloader/master/src/images/logo128.png',
+        description:
+            'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
+        links: {
+            Google: 'https://chromewebstore.google.com/detail/text-formatter/mpmiiaolodhanoalpjncddpmnkbjicbo',
+            Mozilla: 'https://addons.mozilla.org/addon/hls-video-downloader',
+            Client: 'https://github.com/cssnr/hls-downloader-client',
+            GitHub: 'https://github.com/cssnr/text-formatter',
+        },
+        fa: 'faJs',
+    },
+    {
         name: 'Text Formatter',
         url: 'https://github.com/cssnr/text-formatter',
         icon: 'https://raw.githubusercontent.com/cssnr/text-formatter/master/src/images/logo128.png',
