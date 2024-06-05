@@ -176,6 +176,17 @@ const webApps = [
 
 const githubActions = [
     {
+        name: 'VirusTotal Scan',
+        url: 'https://github.com/cssnr/virustotal-action',
+        description:
+            'Scan Release Artifacts with VirusTotal and Update Release Notes.',
+        links: {
+            Actions: 'https://github.com/marketplace/actions/virustotal-action',
+            GitHub: 'https://github.com/cssnr/virustotal-action',
+        },
+        fa: 'faJs',
+    },
+    {
         name: 'Stack Deploy',
         url: 'https://github.com/cssnr/stack-deploy-action',
         description:
@@ -191,6 +202,8 @@ const githubActions = [
         description:
             'Update the Mozilla Firefox Update JSON File after a Release.',
         links: {
+            Actions:
+                'https://github.com/marketplace/actions/update-mozilla-update-json',
             GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
         },
         fa: 'faPython',
