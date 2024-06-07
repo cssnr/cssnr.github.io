@@ -93,7 +93,7 @@ const webExtensions = [
             Google: 'https://chromewebstore.google.com/detail/text-formatter/mpmiiaolodhanoalpjncddpmnkbjicbo',
             Mozilla: 'https://addons.mozilla.org/addon/hls-video-downloader',
             Client: 'https://github.com/cssnr/hls-downloader-client',
-            GitHub: 'https://github.com/cssnr/text-formatter',
+            GitHub: 'https://github.com/cssnr/hls-video-downloader',
         },
         fa: 'faJs',
     },
