@@ -177,12 +177,24 @@ const webApps = [
 const githubActions = [
     {
         name: 'VirusTotal Scan',
-        url: 'https://github.com/cssnr/virustotal-action',
+        url: 'https://github.com/marketplace/actions/virustotal-action',
         description:
             'Scan Release Artifacts with VirusTotal and Update Release Notes.',
         links: {
             Actions: 'https://github.com/marketplace/actions/virustotal-action',
             GitHub: 'https://github.com/cssnr/virustotal-action',
+        },
+        fa: 'faJs',
+    },
+    {
+        name: 'Update Version Tags',
+        url: 'https://github.com/marketplace/actions/update-version-tags-action',
+        description:
+            'Update Version Tags on Push or Release for Semantic Versions..',
+        links: {
+            Actions:
+                'https://github.com/marketplace/actions/update-version-tags-action',
+            GitHub: 'https://github.com/cssnr/update-version-tags-action',
         },
         fa: 'faJs',
     },
@@ -197,13 +209,13 @@ const githubActions = [
         fa: 'faShell',
     },
     {
-        name: 'Mozilla Addon Update File',
-        url: 'https://github.com/cssnr/mozilla-addon-update-action',
+        name: 'Mozilla Addon Update',
+        url: 'https://github.com/marketplace/actions/mozilla-addon-update-action',
         description:
             'Update the Mozilla Firefox Update JSON File after a Release.',
         links: {
             Actions:
-                'https://github.com/marketplace/actions/update-mozilla-update-json',
+                'https://github.com/marketplace/actions/mozilla-addon-update-action',
             GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
         },
         fa: 'faPython',
