@@ -1,3 +1,8 @@
+const Google = (id) =>
+    `https://img.shields.io/chrome-web-store/users/${id}?logo=google&logoColor=white&label=%20&labelColor=4285F4&color=4285F4`
+const Mozilla = (id) =>
+    `https://img.shields.io/amo/users/${id}?logo=mozilla&logoColor=white&label=%20&labelColor=E66000&color=E66000`
+
 const webExtensions = [
     {
         name: 'Link Extractor',
@@ -12,6 +17,10 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/link-extractor',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'ifefifghpkllfibejafbakmflidjcjfp',
+            Mozilla: 'link-extractor',
+        },
     },
     {
         name: 'Open Links in New Tab',
@@ -26,6 +35,10 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'efahmjakjnnmleokcaomicgfhobabdkc',
+            Mozilla: 'open-links-in-new-tab',
+        },
     },
     {
         name: 'PlayDrift Extension',
@@ -40,6 +53,10 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/playdrift-extension',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'anlkpnbhiiojmedlkchcdmigkdccnmcn',
+            Mozilla: 'playdrift-extension',
+        },
     },
     {
         name: 'Django Files Extension',
@@ -54,6 +71,10 @@ const webExtensions = [
             GitHub: 'https://github.com/django-files/web-extension',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'abpbiefojfkekhkjnpakpekkpeibnjej',
+            Mozilla: 'django-files',
+        },
     },
     {
         name: 'SMWC Web Extension',
@@ -68,6 +89,10 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/smwc-web-extension',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'foalfafgmnglcgpgkhhmcfhjgmdcjide',
+            Mozilla: 'smwc-web-extension',
+        },
     },
     {
         name: 'ASN Plus',
@@ -82,6 +107,10 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/asn-plus',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'phcbcnpmcbkcnijkpfohkdmcofcofibh',
+            Mozilla: 'asn-plus',
+        },
     },
     {
         name: 'HLS Video Downloader',
@@ -96,6 +125,10 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/hls-video-downloader',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
+            Mozilla: 'hls-video-downloader',
+        },
     },
     {
         name: 'Text Formatter',
@@ -108,6 +141,9 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/text-formatter',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'medimbembaeldnglneiipkenpagjfcdj',
+        },
     },
     {
         name: 'Aviation Tools',
@@ -121,6 +157,9 @@ const webExtensions = [
             GitHub: 'https://github.com/cssnr/aviation-tools',
         },
         fa: 'faJs',
+        badges: {
+            Google: 'cjjhackeogffajjndfhemgniokonimin',
+        },
     },
     {
         name: 'Simple Extension',
