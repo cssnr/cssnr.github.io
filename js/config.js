@@ -229,11 +229,22 @@ const githubActions = [
         name: 'Update Version Tags',
         url: 'https://github.com/marketplace/actions/update-version-tags-action',
         description:
-            'Update Version Tags on Push or Release for Semantic Versions..',
+            'Update Version Tags on Push or Release for Semantic Versions.',
         links: {
             Actions:
                 'https://github.com/marketplace/actions/update-version-tags-action',
             GitHub: 'https://github.com/cssnr/update-version-tags-action',
+        },
+        fa: 'faJs',
+    },
+    {
+        name: 'Update JSON Value',
+        url: 'https://github.com/marketplace/actions/update-json-value-action',
+        description: 'Update JSON file Value(s) for Publishing.',
+        links: {
+            Actions:
+                'https://github.com/marketplace/actions/update-json-value-action',
+            GitHub: 'https://github.com/cssnr/update-json-value-action',
         },
         fa: 'faJs',
     },
