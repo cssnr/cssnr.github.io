@@ -207,7 +207,6 @@ const webApps = [
             'Slack App to search for a random GIF and preview it, before posting publicly.',
         links: {
             Website: 'https://slashgif.com/',
-            GitHub: 'https://github.com/cssnr/slashgif-site',
         },
         fa: 'faPython',
     },
