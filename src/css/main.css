@@ -5,3 +5,8 @@
     display: none;
     z-index: 3;
 }
+
+footer li + li::before {
+    content: '| ';
+    margin-right: 8px;
+}

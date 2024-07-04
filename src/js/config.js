@@ -172,6 +172,27 @@ const webExtensions = [
         },
         fa: 'faJs',
     },
+    {
+        name: 'Web Enhancer',
+        url: 'https://github.com/smashedr/web-enhancer',
+        icon: 'https://raw.githubusercontent.com/smashedr/web-enhancer/master/src/images/logo128.png',
+        description:
+            'Upcoming Web Extension with Various Browser Enhancements.',
+        links: {
+            GitHub: 'https://github.com/smashedr/web-enhancer',
+        },
+        fa: 'faJs',
+    },
+    {
+        name: 'Site Tools',
+        url: 'https://github.com/smashedr/site-tools',
+        icon: 'https://raw.githubusercontent.com/smashedr/site-tools/master/src/images/logo128.png',
+        description: 'Upcoming Web Extension with Various Site Modifications.',
+        links: {
+            GitHub: 'https://github.com/smashedr/site-tools',
+        },
+        fa: 'faJs',
+    },
 ]
 
 const webApps = [

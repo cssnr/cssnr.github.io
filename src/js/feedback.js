@@ -1,8 +1,5 @@
 // JS uninstall.html
 
-document.addEventListener('DOMContentLoaded', domContentLoaded)
-
-const uninstallMessage = 'CSSNR GitHub Feedback.'
 const discordUsername = 'CSSNR'
 const discordAvatar = 'https://cssnr.github.io/media/logo.png'
 
@@ -13,10 +10,11 @@ const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
 
 uninstallForm.addEventListener('submit', formSubmit)
-
 uninstallResponse.addEventListener('input', function (e) {
     inputCount.textContent = this.value.length
 })
+
+document.addEventListener('DOMContentLoaded', domContentLoaded)
 
 /**
  * DOMContentLoaded Callback
@@ -58,7 +56,10 @@ async function formSubmit(event) {
     submitBtn.classList.remove('disabled')
     if (response.status >= 200 && response.status <= 299) {
         console.debug('Success')
-        window.location = '/'
+        const redirect = new URL(window.location.origin)
+        redirect.searchParams.append('feedback', 'yes')
+        redirect.pathname = '/'
+        window.location = redirect
     } else {
         console.warn(`Error ${response.status}`, response)
         errorAlert.textContent = `Error ${response.status}: ${response.statusText}`

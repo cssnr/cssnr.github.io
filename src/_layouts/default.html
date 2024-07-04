@@ -40,7 +40,7 @@
 <body class="d-flex flex-column h-100">
 
 <header>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm" aria-label="Primary Navigation">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ "/" | relative_url }}">
                 <img src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" alt="logo"></a>
@@ -59,6 +59,8 @@
                             Feedback</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ site.github_url }}" target="_blank" rel="noopener">
                             GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.discord_invite }}" target="_blank" rel="noopener">
+                            Discord <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -71,27 +73,27 @@
     </div>
 </main>
 
-<footer class="footer mt-auto  flex-shrink-0">
-    <div class="container-fluid p-3">
+<footer class="footer mt-auto px-1 flex-shrink-0">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-4">
-                <p><a class="link-body-emphasis text-decoration-none" href="{{ site.github_url }}" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> {{ site.site_name }}</a></p>
+            <div class="col-12 col-sm-5 py-2">
+                <a class="link-body-emphasis text-decoration-none" href="{{ site.github_url }}" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> {{ site.site_name }}</a>
             </div>
-            <div class="col-12 col-sm-8 text-sm-end">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="{{ "/" | relative_url }}">
-                            Home</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'About' %}fw-bold{% endif %}" href="{{ "/about" | relative_url }}">
-                            About</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Feedback' %}fw-bold{% endif %}" href="{{ "/feedback" | relative_url }}">
-                            Feedback</a></li>
-                </ul>
+            <div class="col-12 col-sm-7 py-2 text-sm-end">
+                <nav aria-label="Secondary Navigation">
+                    <ol class="list-inline mb-1">
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="{{ "/" | relative_url }}">
+                                Home</a></li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none {% if page.title == 'About' %}fw-bold{% endif %}" href="{{ "/about" | relative_url }}">
+                                About</a></li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none {% if page.title == 'Feedback' %}fw-bold{% endif %}" href="{{ "/feedback" | relative_url }}">
+                                Feedback</a></li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>

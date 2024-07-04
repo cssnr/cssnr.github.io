@@ -20,6 +20,14 @@ const faIcons = {
  */
 async function domContentLoaded() {
     console.debug('DOMContentLoaded')
+    const searchParams = new URLSearchParams(window.location.search)
+    const feedback = searchParams.get('feedback')
+    // console.debug('feedback:', feedback)
+    if (feedback) {
+        document.getElementById('feedback').classList.remove('d-none')
+        history.pushState(null, '', location.href.split('?')[0])
+    }
+
     console.debug('Add webExtensions')
     for (const data of webExtensions) {
         addCard(data, extContainer)
