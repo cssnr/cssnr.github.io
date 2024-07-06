@@ -269,6 +269,15 @@ const githubActions = [
         fa: 'faJs',
     },
     {
+        name: 'Parse Issue Form',
+        url: 'https://github.com/cssnr/parse-issue-form-action',
+        description: 'Parse Issue Forms Into Individual Outputs.',
+        links: {
+            GitHub: 'https://github.com/cssnr/parse-issue-form-action',
+        },
+        fa: 'faJs',
+    },
+    {
         name: 'Stack Deploy',
         url: 'https://github.com/cssnr/stack-deploy-action',
         description:

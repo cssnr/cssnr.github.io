@@ -1,0 +1,47 @@
+{
+  "embeds": [
+    {
+      "thumbnail": {
+        "url": "https://cssnr.github.io/media/logo.png",
+        "width": 128,
+        "height": 128
+      },
+      "author": {
+        "name": "Website",
+        "url": "https://cssnr.github.io/"
+      },
+      "fields": [
+        {
+          "name": "Motto",
+          "value": "> Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime...",
+          "inline": false
+        },
+        {
+          "name": "Admins",
+          "value": "<@111150265075298304>, <@111148006983614464>",
+          "inline": true
+        },
+        {
+          "name": "Created",
+          "value": "<t:1634449620:R>",
+          "inline": true
+        },
+        {
+          "name": "Links",
+          "value": "[Website](https://cssnr.github.io/) | [GitHub](https://github.com/cssnr/) | [Discord](https://discord.gg/wXy6m2X8wY)",
+          "inline": false
+        },
+        {
+          "name": "⭐ Featured App: Django Files",
+          "value": "[Django Files](https://django-files.github.io/) | [Django Files Web Extension](https://django-files.github.io/extension/) | [Zipline CLI](https://github.com/cssnr/zipline-cli)",
+          "inline": false
+        }
+      ],
+      "color": 35406,
+      "type": "rich",
+      "description": "Welcome to the CSSNR Discord Server.\n\n\uD83D\uDCAC General Chat <#899177026706096138>\n\uD83D\uDECE\uFE0F Support/Help <#1258926117029548122>\n\uD83D\uDCA1 Make Requests <#1258926177070878781>\n\nCurrent development includes Web Applications and API's, Web Extension, GitHub Actions and Docker; primarily using Python and JavaScript.",
+      "url": "https://discord.gg/WFCnRNTZVT",
+      "title": "CSSNR"
+    }
+  ]
+}
