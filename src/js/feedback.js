@@ -1,7 +1,12 @@
 // JS uninstall.html
 
-const discordUsername = 'CSSNR'
-const discordAvatar = 'https://cssnr.github.io/media/logo.png'
+const url = new URL(window.location)
+const redirect = new URL(url.origin)
+redirect.searchParams.append('feedback', 'yes')
+redirect.pathname = '/'
+
+const discordUsername = 'Link Extractor'
+const discordAvatar = 'https://link-extractor.cssnr.com/media/logo.png'
 
 const uninstallForm = document.getElementById('uninstall-form')
 const uninstallResponse = document.getElementById('uninstall-response')
@@ -10,18 +15,15 @@ const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
 
 uninstallForm.addEventListener('submit', formSubmit)
-uninstallResponse.addEventListener('input', function (e) {
+
+uninstallResponse.addEventListener('input', function () {
     inputCount.textContent = this.value.length
 })
 
-document.addEventListener('DOMContentLoaded', domContentLoaded)
-
-/**
- * DOMContentLoaded Callback
- * @function domContentLoaded
- */
-async function domContentLoaded() {
+document.addEventListener('DOMContentLoaded', function () {
     console.debug('DOMContentLoaded')
+    const selected = url.searchParams.get('app')
+
     const parent = document.getElementById('feedback')
     const apps = [webExtensions, webApps, githubActions]
     const combined = apps.flat()
@@ -29,9 +31,12 @@ async function domContentLoaded() {
         const option = document.createElement('option')
         option.value = app.name
         option.textContent = app.name
+        if (selected && app.name === selected) {
+            option.selected = true
+        }
         parent.appendChild(option)
     }
-}
+})
 
 async function formSubmit(event) {
     console.debug('formSubmit:', event, this)
@@ -55,10 +60,6 @@ async function formSubmit(event) {
     console.debug('response:', response)
     submitBtn.classList.remove('disabled')
     if (response.status >= 200 && response.status <= 299) {
-        console.debug('Success')
-        const redirect = new URL(window.location.origin)
-        redirect.searchParams.append('feedback', 'yes')
-        redirect.pathname = '/'
         window.location = redirect
     } else {
         console.warn(`Error ${response.status}`, response)
@@ -69,6 +70,7 @@ async function formSubmit(event) {
 
 async function sendDiscord(url, content) {
     // console.debug('sendDiscord', url, content)
+    // console.debug('content.length', content.length)
     const body = {
         username: discordUsername,
         avatar_url: discordAvatar,

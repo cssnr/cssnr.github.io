@@ -1,3 +1,5 @@
+/* CSS for global */
+
 #back-to-top {
     position: fixed;
     bottom: 64px;
@@ -6,7 +8,24 @@
     z-index: 3;
 }
 
-footer li + li::before {
-    content: '| ';
-    margin-right: 8px;
+.toast-container {
+    max-width: 260px;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .right-icons {
+        display: flex;
+        flex-direction: row;
+    }
+    .right-icons .nav-item {
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 576px) {
+    footer li + li::before {
+        content: '•';
+        margin-right: 0.3rem;
+    }
 }
