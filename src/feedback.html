@@ -7,15 +7,10 @@ title: Feedback
 description: Feedback
 ---
 
-{% comment %}<video id="bgvid" playsinline autoplay muted loop>{% endcomment %}
-    {% comment %}<source src="{{ "/media/loop1.webm" | relative_url }}" type="video/mp4" id="bgvidsrc">{% endcomment %}
-{% comment %}</video>{% endcomment %}
-
 <div class="d-flex align-items-center h-100">
-    <div class="d-flex flex-grow-1 justify-content-center align-items-center w-100 my-2">
-        <div class="col-sm-12 col-md-10 col-lg-8 col-xxl-6 m-auto">
-            <div id="login-outer" class="m-auto p-3 rounded rounded-4">
-                <div class="justify-content-center align-items-center mb-2 d-flex">
+    <div class="col-sm-12 col-md-10 col-lg-8 col-xxl-6 m-auto">
+        <div id="login-outer" class="py-3 px-1 px-sm-3 mb-3 me-1 rounded rounded-4">
+            <div class="justify-content-center align-items-center d-flex">
                     <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-2" alt="PlayDrift Extension" height="42" width="42">
                     <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
                 </div>
@@ -39,7 +34,6 @@ description: Feedback
                         Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
                 </form>
                 <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
-            </div>
         </div>
     </div>
 </div>

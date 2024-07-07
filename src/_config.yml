@@ -6,6 +6,14 @@ url: https://cssnr.github.io
 author: Shane
 site_name: CSSNR GitHub Pages
 
+menu:
+  - name: Home
+    link: /
+  - name: About
+    link: /about/
+  - name: Feedback
+    link: /feedback/
+
 github_url: https://github.com/cssnr
 
 discord_invite: https://discord.gg/wXy6m2X8wY
