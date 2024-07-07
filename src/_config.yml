@@ -10,9 +10,9 @@ menu:
   - name: Home
     link: /
   - name: About
-    link: /about/
+    link: /about
   - name: Feedback
-    link: /feedback/
+    link: /feedback
 
 github_url: https://github.com/cssnr
 
