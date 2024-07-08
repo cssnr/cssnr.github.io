@@ -273,6 +273,7 @@ const githubActions = [
         url: 'https://github.com/cssnr/parse-issue-form-action',
         description: 'Parse Issue Forms Into Individual Outputs.',
         links: {
+            Actions: 'https://github.com/marketplace/actions/parse-issue-form',
             GitHub: 'https://github.com/cssnr/parse-issue-form-action',
         },
         fa: 'faJs',
