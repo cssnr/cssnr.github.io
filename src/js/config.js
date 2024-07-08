@@ -321,6 +321,17 @@ const githubActions = [
 ]
 const otherSoftware = [
     {
+        name: 'Zipline CLI',
+        url: 'https://github.com/cssnr/zipline-cli',
+        description: 'Command Line Interface for Zipline and Django Files.',
+        links: {
+            Zipline: 'https://github.com/diced/zipline',
+            'Django Files': 'https://github.com/django-files/django-files',
+            GitHub: 'https://github.com/cssnr/zipline-cli',
+        },
+        fa: 'faPython',
+    },
+    {
         name: "Carl's Cogs",
         url: 'https://github.com/smashedr/carl-cogs',
         description:
@@ -334,7 +345,7 @@ const otherSoftware = [
     {
         name: 'Vultr Python',
         url: 'https://github.com/cssnr/vultr-python',
-        description: 'Vultr Cloud Hosting Python 3 Library.',
+        description: 'Vultr Cloud Hosting API Python 3 Library.',
         links: {
             Vultr: 'https://www.vultr.com/?ref=6905748',
             GitHub: 'https://github.com/cssnr/vultr-python',
@@ -342,13 +353,26 @@ const otherSoftware = [
         fa: 'faPython',
     },
     {
-        name: 'Zipline CLI',
-        url: 'https://github.com/cssnr/zipline-cli',
-        description: 'Command Line Interface for Zipline and Django Files.',
+        name: 'Flask Random Image',
+        url: 'https://github.com/smashedr/flask-random-image',
+        description: 'Flask App to Redirect to a Random Image.',
         links: {
-            Zipline: 'https://github.com/diced/zipline',
-            'Django Files': 'https://github.com/django-files/django-files',
-            GitHub: 'https://github.com/cssnr/zipline-cli',
+            Example: 'https://flask-image.cssnr.com/',
+            Pages: 'https://github.com/smashedr/random-image/',
+            GitHub: 'https://github.com/smashedr/flask-random-image',
+        },
+        fa: 'faPython',
+    },
+    {
+        name: 'YouTube Embed/Redirect',
+        url: 'https://github.com/smashedr/youtube-embed/',
+        description:
+            'GitHub Pages and Userscript to Redirect YouTube to an Embed.',
+        links: {
+            Userscript:
+                'https://github.com/smashedr/youtube-embed/raw/master/src/youtube-redirect.user.js',
+            Pages: 'https://smashedr.github.io/youtube-embed/',
+            GitHub: 'https://github.com/smashedr/youtube-embed/',
         },
         fa: 'faPython',
     },
