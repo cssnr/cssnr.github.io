@@ -8,35 +8,33 @@ description: General Feedback and Inquiries
 ---
 
 <div class="d-flex align-items-center h-100">
-    <div class="col-sm-12 col-md-10 col-lg-8 col-xxl-6 m-auto">
-        <div id="login-outer" class="py-3 px-1 px-sm-3 mb-3 me-1 rounded rounded-4">
-            <div class="justify-content-center align-items-center d-flex">
-                    <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-2" alt="PlayDrift Extension" height="42" width="42">
-                    <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
-                </div>
-                <p class="text-center lead">
-                    Provide General Feedback, Ask Questions, or Select an Application.
-                </p>
-                <form id="uninstall-form">
-                    <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
-
-                    <select id="feedback" class="form-select form-select-lg mb-3" aria-label="Select Feedback Reason">
-                        <option value="General Feedback" selected>Select an Application (Optional)</option>
-                    </select>
-
-                    <div class="my-2">
-                        <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
-                        <textarea class="form-control" id="uninstall-response" rows="5" maxlength="1000"
-                                  placeholder="Questions, Comments, Concerns, etc..." autofocus></textarea>
-                        <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
-                    </div>
-                    <button id="submit-btn" class="btn btn-success w-100" type="submit">
-                        Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
-                </form>
-                <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
+    <div id="content-wrapper" class="p-3 mb-3 mx-auto w-100 rounded rounded-4">
+        <div class="justify-content-center align-items-center d-flex">
+                <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-2" alt="PlayDrift Extension" height="42" width="42">
+                <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
         </div>
-    </div>
-</div>
+        <p class="text-center lead">
+            Provide General Feedback, Ask Questions, or Select an Application.
+        </p>
+        <form id="uninstall-form">
+            <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
+
+            <select id="feedback" class="form-select form-select-lg mb-3" aria-label="Select Feedback Reason">
+                <option value="General Feedback" selected>Select an Application (Optional)</option>
+            </select>
+
+            <div class="my-2">
+                <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
+                <textarea class="form-control" id="uninstall-response" rows="5" maxlength="1000"
+                          placeholder="Questions, Comments, Concerns, etc..." autofocus></textarea>
+                <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
+            </div>
+            <button id="submit-btn" class="btn btn-success w-100" type="submit">
+                Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
+        </form>
+        <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
+    </div> <!-- content-wrapper -->
+</div> <!-- d-flex -->
 
 <script type="text/javascript" src="{{ "/js/config.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/feedback.js" | relative_url }}"></script>

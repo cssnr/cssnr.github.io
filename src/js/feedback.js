@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const selected = url.searchParams.get('app')
 
     const parent = document.getElementById('feedback')
-    const apps = [webExtensions, webApps, githubActions]
+    const apps = [webExtensions, webApps, githubActions, otherSoftware]
     const combined = apps.flat()
     for (const app of combined) {
         const option = document.createElement('option')
