@@ -137,7 +137,7 @@ function addCard(data, parent) {
     link.rel = 'noopener'
     for (const [text, href] of Object.entries(data.links)) {
         const a = link.cloneNode(true)
-        a.classList.add('text-decoration-none')
+        // a.classList.add('text-decoration-none')
         a.title = text
         a.href = href
         if (data.badges?.hasOwnProperty(text)) {
@@ -148,11 +148,17 @@ function addCard(data, parent) {
             const img = document.createElement('img')
             img.src = src
             img.alt = text
-            a.classList.add('me-2')
+            a.classList.add('me-2', 'hvr-grow')
             a.appendChild(img)
             footer.appendChild(a)
         } else {
             a.textContent = text
+            a.classList.add(
+                'link-offset-2-hover',
+                'link-underline',
+                'link-underline-opacity-0',
+                'link-underline-opacity-75-hover'
+            )
             footer.appendChild(a)
             footer.appendChild(document.createTextNode(' - '))
         }
