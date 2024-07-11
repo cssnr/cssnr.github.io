@@ -4,15 +4,15 @@ encoding: utf-8
 url: https://cssnr.github.io
 
 author: Shane
-site_name: CSSNR GitHub Pages
+site_name: CSSNR
 
 menu:
   - name: Home
     link: /
   - name: About
-    link: /about
+    link: /about/
   - name: Feedback
-    link: /feedback
+    link: /feedback/
 
 github_url: https://github.com/cssnr
 
