@@ -8,7 +8,7 @@ description: General Feedback and Inquiries
 ---
 
 <div class="d-flex align-items-center h-100">
-    <div id="content-wrapper" class="p-3 mb-3 mx-auto w-100 rounded rounded-4">
+    <div id="content-wrapper" class="p-3 mb-3 mx-auto w-100 rounded rounded-4 animate__animated animate__backInDown">
         <div class="justify-content-center align-items-center d-flex">
                 <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-2" alt="PlayDrift Extension" height="42" width="42">
                 <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
@@ -19,13 +19,13 @@ description: General Feedback and Inquiries
         <form id="uninstall-form">
             <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
 
-            <select id="feedback" class="form-select form-select-lg mb-3" aria-label="Select Feedback Reason">
+            <select id="app-list" class="form-select form-select-lg mb-3" aria-label="Select Feedback Reason">
                 <option value="General Feedback" selected>Select an Application (Optional)</option>
             </select>
 
             <div class="my-2">
-                <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
-                <textarea class="form-control" id="uninstall-response" rows="5" maxlength="1000"
+                <label for="feedback-text" class="form-label visually-hidden">Uninstall Feedback</label>
+                <textarea class="form-control" id="feedback-text" rows="5" maxlength="1000"
                           placeholder="Questions, Comments, Concerns, etc..." autofocus></textarea>
                 <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
             </div>
@@ -35,6 +35,8 @@ description: General Feedback and Inquiries
         <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
     </div> <!-- content-wrapper -->
 </div> <!-- d-flex -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.0.2/tsparticles.bundle.min.js" integrity="sha512-MM4W2ywPFL6GyTpBoj7PU6nyv2jJg47rLI8kEAL8vk20RHtAqIe9KdweahKUk+OivrdpZoMYfMi271ZdS6tRnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script type="text/javascript" src="{{ "/js/config.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/feedback.js" | relative_url }}"></script>

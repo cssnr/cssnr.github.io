@@ -1,8 +1,5 @@
 body {
     background: url('https://flask-image.cssnr.com/') no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
