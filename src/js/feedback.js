@@ -36,7 +36,7 @@ contentWrapper.addEventListener(
 document.addEventListener('DOMContentLoaded', function () {
     // console.debug('DOMContentLoaded')
     const selected = url.searchParams.get('app')
-    const parent = document.getElementById('app-list')
+    const appList = document.getElementById('app-list')
     const apps = [webExtensions, webApps, githubActions, otherSoftware]
     const combined = apps.flat()
     for (const app of combined) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selected && app.name === selected) {
             option.selected = true
         }
-        parent.appendChild(option)
+        appList.appendChild(option)
     }
 
     tsParticles.load({
@@ -93,7 +93,7 @@ async function formSubmit(event) {
             errorAlert.style.display = 'block'
         }
     } catch (e) {
-        console.warn(`Error:`, e)
+        console.error(e)
         errorAlert.textContent = `Error: ${e.message}`
         errorAlert.style.display = 'block'
     }
