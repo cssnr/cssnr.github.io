@@ -14,12 +14,58 @@ const faIcons = {
     faShell: document.querySelector('.clone .fa-terminal'),
 }
 
+// // Scroll Handlers
+// const scrollDdown = document.getElementById('scroll-down')
+// const scrollOffset = 100
+// let scrollEnd = false
+// let timeoutId
+//
+// window.addEventListener('scroll', onScroll)
+//
+// function onScroll() {
+//     console.log('SCROLL')
+//     // If user scrolls to end, remove instantly
+//     if (
+//         window.innerHeight + window.scrollY + scrollOffset >=
+//         document.documentElement.scrollHeight
+//     ) {
+//         if (!scrollEnd) {
+//             scrollEnd = true
+//             console.log('END OF DOCUMENT')
+//             scrollDdown.classList.add('d-none')
+//         }
+//     }
+//     // } else {
+//     //     scrollEnd = false
+//     // }
+//     // Otherwise remove after 1 second
+//     if (!timeoutId) {
+//         console.log('SET TIMEOUT')
+//         timeoutId = setTimeout(() => {
+//             console.log('1000 MS TIMEOUT')
+//             scrollDdown.classList.add('d-none')
+//         }, 1000)
+//     }
+// }
+//
+// window.addEventListener('resize', checkScroll)
+//
+// function checkScroll() {
+//     if (
+//         document.documentElement.clientHeight + scrollOffset >
+//         document.documentElement.scrollHeight
+//     ) {
+//         console.log('NO SCROLL BAR')
+//         scrollDdown.classList.add('d-none')
+//     }
+// }
+
 /**
  * DOMContentLoaded Callback
  * @function domContentLoaded
  */
 async function domContentLoaded() {
-    console.debug('DOMContentLoaded')
+    // console.debug('DOMContentLoaded')
     const searchParams = new URLSearchParams(window.location.search)
     const feedback = searchParams.get('feedback')
     // console.debug('feedback:', feedback)
@@ -28,22 +74,37 @@ async function domContentLoaded() {
         history.pushState(null, '', location.href.split('?')[0])
     }
 
-    console.debug('Add webExtensions')
+    // console.debug('Add webExtensions')
     for (const data of webExtensions) {
         addCard(data, extContainer)
     }
-    console.debug('Add webApps')
+    // console.debug('Add webApps')
     for (const data of webApps) {
         addCard(data, appsContainer)
     }
-    console.debug('Add githubActions')
+    // console.debug('Add githubActions')
     for (const data of githubActions) {
         addCard(data, actionsContainer)
     }
-    console.debug('Add githubActions')
+    // console.debug('Add otherSoftware')
     for (const data of otherSoftware) {
         addCard(data, otherContainer)
     }
+
+    // checkScroll()
+
+    AOS.init({ disable: 'mobile' })
+    // AOS.init()
+
+    // anime({
+    //     targets: '#scroll-down',
+    //     translateY: [
+    //         { value: -25, duration: 1500 },
+    //         { value: 0, duration: 1500 },
+    //     ],
+    //     easing: 'easeInOutSine',
+    //     loop: true,
+    // })
 }
 
 /**
@@ -80,10 +141,10 @@ function addCard(data, parent) {
         a.title = text
         a.href = href
         if (data.badges?.hasOwnProperty(text)) {
-            console.log('text:', text)
-            console.log('href:', href)
+            // console.debug('text:', text)
+            // console.debug('href:', href)
             const src = eval(text)(data.badges[text])
-            console.log('src:', src)
+            // console.debug('src:', src)
             const img = document.createElement('img')
             img.src = src
             img.alt = text

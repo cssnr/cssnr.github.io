@@ -1,5 +1,9 @@
 /* CSS for global */
 
+body {
+    overflow-x: hidden;
+}
+
 #back-to-top {
     position: fixed;
     bottom: 64px;
@@ -7,6 +11,26 @@
     display: none;
     z-index: 3;
 }
+
+/*#scroll-down {*/
+/*    position: fixed;*/
+/*    bottom: 10px;*/
+
+/*    !*left: 50%;*!*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin: 0 auto;*/
+/*    width: fit-content;*/
+
+/*    pointer-events: none;*/
+/*    user-select: none;*/
+
+/*    !*text-shadow:*!*/
+/*    !*    0 0 3px #000,*!*/
+/*    !*    0 0 6px #000,*!*/
+/*    !*    0 0 9px #000,*!*/
+/*    !*    0 0 12px #000;*!*/
+/*}*/
 
 .toast-container {
     max-width: 260px;
