@@ -38,14 +38,10 @@ body {
 }
 
 @media (max-width: 575px) {
-    .right-icons {
-        display: flex;
-        flex-direction: row;
-    }
-    .right-icons .nav-link {
+    .nav-icons .nav-link {
         padding-right: 7px;
     }
-    .right-icons .nav-item + .nav-item .nav-link {
+    .nav-icons .nav-item + .nav-item .nav-link {
         padding-left: 7px;
     }
 }
@@ -69,11 +65,9 @@ body {
     transition-duration: 0.3s;
     transition-property: transform;
 }
-
 .hvr-grow:hover {
     transform: scale(1.1);
 }
-
 .hvr-grow-lg:hover {
     transform: scale(1.2);
 }

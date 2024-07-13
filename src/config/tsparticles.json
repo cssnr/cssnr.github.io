@@ -19,12 +19,13 @@
   },
   "detectRetina": true,
   "duration": 0,
-  "fpsLimit": 120,
+  "fpsLimit": 60,
   "interactivity": {
     "detectsOn": "window",
     "events": {
       "onClick": {
-        "enable": false
+        "enable": false,
+        "mode": "push"
       },
       "onDiv": {
         "selectors": {},
@@ -84,7 +85,7 @@
         "radius": 60
       },
       "grab": {
-        "distance": 400,
+        "distance": 500,
         "links": {
           "blink": false,
           "consent": false,
@@ -281,7 +282,7 @@
         "mode": "delete",
         "value": 0
       },
-      "value": 100
+      "value": 120
     },
     "opacity": {
       "value": {
