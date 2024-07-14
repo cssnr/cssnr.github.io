@@ -19,16 +19,42 @@ description: About CSSNR GitHub Organization.
 
     <div class="d-flex flex-column flex-md-row">
         <div class="me-md-3">
-    <a href="https://github.com/smashedr" target="_blank" rel="noopener">
-        <img src="https://github-readme-stats.vercel.app/api?username=smashedr&theme=dark&show_icons=true&hide_rank=true&show=reviews&card_width=350"
-             alt="GitHub Stats"  class="img-fluid mb-2"></a>
+            <a href="https://github.com/smashedr" target="_blank" rel="noopener">
+                <picture>
+                    <source
+                            srcset="https://github-readme-stats.vercel.app/api?username=smashedr&theme=dark&show_icons=true&hide_rank=true&show=reviews&card_width=350"
+                            media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"
+                    />
+                    <source
+                            srcset="https://github-readme-stats.vercel.app/api?username=smashedr&theme=default&show_icons=true&hide_rank=true&show=reviews&card_width=350"
+                            media="(prefers-color-scheme: light)"
+                    />
+                    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=smashedr&show_icons=true&hide_rank=true&show=reviews&card_width=350" />
+                </picture>
+            </a>
         </div><!-- flex item -->
         <div class="me-md-3">
-    <a href="https://github.com/smashedr" target="_blank" rel="noopener">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=smashedr&theme=dark&layout=donut "
-             alt="Top Languages"  class="img-fluid mb-2"></a>
+            <a href="https://github.com/smashedr" target="_blank" rel="noopener">
+                <picture>
+                    <source
+                            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=smashedr&theme=dark&layout=donut"
+                            media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"
+                    />
+                    <source
+                            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=smashedr&theme=default&layout=donut"
+                            media="(prefers-color-scheme: light)"
+                    />
+                    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=smashedr&layout=donut" />
+                </picture>
+            </a>
         </div><!-- flex item -->
     </div><!-- flex row-md -->
+
+    <p class="fst-italic">
+        Note: These stats only include personal repositories; however, most my work is done in the
+        <a href="{{ site.github_url }}" target="_blank" rel="noopener">CSSNR Organization</a>
+        due to the extra features provided for GitHub Organizations.
+    </p>
 
     <div class="d-flex flex-column flex-md-row">
         <div class="me-md-5">
@@ -78,3 +104,5 @@ description: About CSSNR GitHub Organization.
 
     <p class="lead">More Information Coming Soon...</p>
 </div>
+
+{% comment %}<script type="text/javascript" src="{{ "/js/about.js" | relative_url }}"></script>{% endcomment %}

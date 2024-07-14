@@ -89,15 +89,18 @@ async function formSubmit(event) {
             window.location = redirect
         } else {
             console.warn(`Error ${response.status}`, response)
-            errorAlert.textContent = `Error ${response.status}: ${response.statusText}`
-            errorAlert.style.display = 'block'
+            showError(`Error ${response.status}: ${response.statusText}`)
         }
     } catch (e) {
         console.error(e)
-        errorAlert.textContent = `Error: ${e.message}`
-        errorAlert.style.display = 'block'
+        showError(`Error: ${e.message}`)
     }
     submitBtn.classList.remove('disabled')
+}
+
+function showError(message) {
+    errorAlert.querySelector('.alert').textContent = message
+    errorAlert.style.display = 'block'
 }
 
 async function sendDiscord(url, content) {
