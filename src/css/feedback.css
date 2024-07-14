@@ -11,14 +11,14 @@ body {
 #content-wrapper {
     max-width: 800px;
     backdrop-filter: blur(6px);
-    filter: drop-shadow(15px 15px 12px #000000);
 }
 
 [data-bs-theme='dark'] #content-wrapper {
     background: rgba(0 0 0 / 50%);
+    filter: drop-shadow(15px 15px 12px #000000);
 }
 [data-bs-theme='light'] #content-wrapper {
-    background: rgba(255 255 255 / 50%);
+    background: rgba(255 255 255 / 60%);
 }
 
 [data-bs-theme='dark'] .form-control {
