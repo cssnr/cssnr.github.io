@@ -14,27 +14,27 @@ body {
 }
 
 [data-bs-theme='dark'] #content-wrapper {
-    background: rgba(0 0 0 / 50%);
+    background-color: rgba(0 0 0 / 50%);
     filter: drop-shadow(15px 15px 12px #000000);
 }
 [data-bs-theme='light'] #content-wrapper {
-    background: rgba(255 255 255 / 60%);
+    background-color: rgba(255 255 255 / 60%);
 }
 
 [data-bs-theme='dark'] .form-control {
-    background: rgba(0 0 0 / 50%);
+    background-color: rgba(0 0 0 / 50%);
 }
 [data-bs-theme='light'] .form-control {
-    background: rgba(255 255 255 / 50%);
+    background-color: rgba(255 255 255 / 50%);
 }
 
 [data-bs-theme='dark'] .navbar,
 [data-bs-theme='dark'] .footer {
     backdrop-filter: blur(6px);
-    background: rgba(0 0 0 / 50%) !important;
+    background-color: rgba(0 0 0 / 50%) !important;
 }
 [data-bs-theme='light'] .navbar,
 [data-bs-theme='light'] .footer {
     backdrop-filter: blur(6px);
-    background: rgba(255 255 255 / 50%) !important;
+    background-color: rgba(255 255 255 / 50%) !important;
 }
