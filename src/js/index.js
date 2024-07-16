@@ -15,50 +15,38 @@ const faIcons = {
 }
 
 // // Scroll Handlers
-// const scrollDdown = document.getElementById('scroll-down')
-// const scrollOffset = 100
-// let scrollEnd = false
-// let timeoutId
-//
-// window.addEventListener('scroll', onScroll)
-//
-// function onScroll() {
-//     console.log('SCROLL')
-//     // If user scrolls to end, remove instantly
-//     if (
-//         window.innerHeight + window.scrollY + scrollOffset >=
-//         document.documentElement.scrollHeight
-//     ) {
-//         if (!scrollEnd) {
-//             scrollEnd = true
-//             console.log('END OF DOCUMENT')
-//             scrollDdown.classList.add('d-none')
-//         }
-//     }
-//     // } else {
-//     //     scrollEnd = false
-//     // }
-//     // Otherwise remove after 1 second
-//     if (!timeoutId) {
-//         console.log('SET TIMEOUT')
-//         timeoutId = setTimeout(() => {
-//             console.log('1000 MS TIMEOUT')
-//             scrollDdown.classList.add('d-none')
-//         }, 1000)
-//     }
-// }
-//
-// window.addEventListener('resize', checkScroll)
-//
+window.addEventListener('scroll', onScroll, { once: true })
+const scrollDdown = document.getElementById('scroll-down')
+
+function onScroll() {
+    console.log('SCROLL')
+    scrollDdown.classList.add('d-none')
+    // window.removeEventListener('scroll', onScroll)
+}
+
 // function checkScroll() {
 //     if (
-//         document.documentElement.clientHeight + scrollOffset >
+//         document.documentElement.clientHeight >
 //         document.documentElement.scrollHeight
 //     ) {
 //         console.log('NO SCROLL BAR')
 //         scrollDdown.classList.add('d-none')
+//     } else {
+//         console.log('SCROLLING AVAILABLE')
 //     }
 // }
+
+function checkScroll() {
+    if (
+        document.documentElement.clientHeight ===
+        document.documentElement.scrollHeight
+    ) {
+        console.log('NO SCROLL BAR')
+        scrollDdown.classList.add('d-none')
+    } else {
+        console.log('SCROLLING AVAILABLE')
+    }
+}
 
 /**
  * DOMContentLoaded Callback
@@ -91,7 +79,7 @@ async function domContentLoaded() {
         addCard(data, otherContainer)
     }
 
-    // checkScroll()
+    checkScroll()
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()
