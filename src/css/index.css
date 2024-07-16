@@ -1,0 +1,45 @@
+#scroll-down {
+    position: fixed;
+    bottom: 10px;
+
+    /*left: 50%;*/
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+[data-bs-theme='dark'] #scroll-down {
+    text-shadow:
+        0 0 3px #000,
+        0 0 6px #000,
+        0 0 9px #000,
+        0 0 12px #000;
+}
+
+[data-bs-theme='light'] #scroll-down {
+    text-shadow:
+        0 0 3px #f8f9fa,
+        0 0 6px #f8f9fa,
+        0 0 9px #f8f9fa,
+        0 0 12px #f8f9fa;
+}
+
+.bounce {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 30px;
+    }
+    100% {
+        bottom: 0;
+    }
+}

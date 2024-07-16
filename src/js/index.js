@@ -19,32 +19,18 @@ window.addEventListener('scroll', onScroll, { once: true })
 const scrollDdown = document.getElementById('scroll-down')
 
 function onScroll() {
-    console.log('SCROLL')
-    scrollDdown.classList.add('d-none')
-    // window.removeEventListener('scroll', onScroll)
+    localStorage.setItem('scrollShown', 'yes')
+    setTimeout(() => scrollDdown.classList.add('d-none'), 500)
 }
-
-// function checkScroll() {
-//     if (
-//         document.documentElement.clientHeight >
-//         document.documentElement.scrollHeight
-//     ) {
-//         console.log('NO SCROLL BAR')
-//         scrollDdown.classList.add('d-none')
-//     } else {
-//         console.log('SCROLLING AVAILABLE')
-//     }
-// }
 
 function checkScroll() {
     if (
-        document.documentElement.clientHeight ===
+        document.documentElement.clientHeight <
         document.documentElement.scrollHeight
     ) {
-        console.log('NO SCROLL BAR')
-        scrollDdown.classList.add('d-none')
-    } else {
-        console.log('SCROLLING AVAILABLE')
+        console.debug('Scroll Detected, Showing Scroll Down.')
+        scrollDdown.classList.remove('d-none')
+        localStorage.setItem('scrollShown', 'yes')
     }
 }
 
@@ -79,7 +65,9 @@ async function domContentLoaded() {
         addCard(data, otherContainer)
     }
 
-    checkScroll()
+    if (!localStorage.getItem('scrollShown')) {
+        checkScroll()
+    }
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()
