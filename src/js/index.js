@@ -19,8 +19,11 @@ window.addEventListener('scroll', onScroll, { once: true })
 const scrollDdown = document.getElementById('scroll-down')
 
 function onScroll() {
-    localStorage.setItem('scrollShown', 'yes')
-    setTimeout(() => scrollDdown.classList.add('d-none'), 500)
+    if (!localStorage.getItem('scrollShown')) {
+        console.debug('Scroll Event Detected, Disabling Scroll Notification.')
+        localStorage.setItem('scrollShown', 'yes')
+        setTimeout(() => scrollDdown.classList.add('d-none'), 500)
+    }
 }
 
 function checkScroll() {
@@ -28,8 +31,10 @@ function checkScroll() {
         document.documentElement.clientHeight <
         document.documentElement.scrollHeight
     ) {
-        console.debug('Scroll Detected, Showing Scroll Down.')
+        console.debug('Scrolling Detected, Showing Scroll Notification.')
         scrollDdown.classList.remove('d-none')
+    } else {
+        console.debug('No Scrolling, Disabling Scroll Notification.')
         localStorage.setItem('scrollShown', 'yes')
     }
 }
