@@ -15,50 +15,29 @@ const faIcons = {
 }
 
 // // Scroll Handlers
-// const scrollDdown = document.getElementById('scroll-down')
-// const scrollOffset = 100
-// let scrollEnd = false
-// let timeoutId
-//
-// window.addEventListener('scroll', onScroll)
-//
-// function onScroll() {
-//     console.log('SCROLL')
-//     // If user scrolls to end, remove instantly
-//     if (
-//         window.innerHeight + window.scrollY + scrollOffset >=
-//         document.documentElement.scrollHeight
-//     ) {
-//         if (!scrollEnd) {
-//             scrollEnd = true
-//             console.log('END OF DOCUMENT')
-//             scrollDdown.classList.add('d-none')
-//         }
-//     }
-//     // } else {
-//     //     scrollEnd = false
-//     // }
-//     // Otherwise remove after 1 second
-//     if (!timeoutId) {
-//         console.log('SET TIMEOUT')
-//         timeoutId = setTimeout(() => {
-//             console.log('1000 MS TIMEOUT')
-//             scrollDdown.classList.add('d-none')
-//         }, 1000)
-//     }
-// }
-//
-// window.addEventListener('resize', checkScroll)
-//
-// function checkScroll() {
-//     if (
-//         document.documentElement.clientHeight + scrollOffset >
-//         document.documentElement.scrollHeight
-//     ) {
-//         console.log('NO SCROLL BAR')
-//         scrollDdown.classList.add('d-none')
-//     }
-// }
+window.addEventListener('scroll', onScroll, { once: true })
+const scrollDdown = document.getElementById('scroll-down')
+
+function onScroll() {
+    if (!localStorage.getItem('scrollShown')) {
+        console.debug('Scroll Event Detected, Disabling Scroll Notification.')
+        localStorage.setItem('scrollShown', 'yes')
+        setTimeout(() => scrollDdown.classList.add('d-none'), 500)
+    }
+}
+
+function checkScroll() {
+    if (
+        document.documentElement.clientHeight <
+        document.documentElement.scrollHeight
+    ) {
+        console.debug('Scrolling Detected, Showing Scroll Notification.')
+        scrollDdown.classList.remove('d-none')
+    } else {
+        console.debug('No Scrolling, Disabling Scroll Notification.')
+        localStorage.setItem('scrollShown', 'yes')
+    }
+}
 
 /**
  * DOMContentLoaded Callback
@@ -91,7 +70,9 @@ async function domContentLoaded() {
         addCard(data, otherContainer)
     }
 
-    // checkScroll()
+    if (!localStorage.getItem('scrollShown')) {
+        checkScroll()
+    }
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()
