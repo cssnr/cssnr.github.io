@@ -289,6 +289,18 @@ const githubActions = [
         fa: 'faShell',
     },
     {
+        name: 'Portainer Stack Deploy',
+        url: 'https://github.com/cssnr/portainer-stack-deploy-action',
+        description:
+            'Deploy Docker Stack to Remote Host using SSH Authentication.',
+        links: {
+            Actions:
+                'https://github.com/marketplace/actions/portainer-stack-deploy-action',
+            GitHub: 'https://github.com/cssnr/portainer-stack-deploy-action',
+        },
+        fa: 'faShell',
+    },
+    {
         name: 'Mozilla Addon Update',
         url: 'https://github.com/marketplace/actions/mozilla-addon-update-action',
         description:

@@ -6,7 +6,7 @@ redirect.searchParams.append('feedback', 'yes')
 redirect.pathname = '/'
 
 const discordUsername = 'Link Extractor'
-const discordAvatar = 'https://link-extractor.cssnr.com/media/logo.png'
+const discordAvatar = 'https://cssnr.github.io/media/logo.png'
 
 const contentWrapper = document.getElementById('content-wrapper')
 const uninstallForm = document.getElementById('uninstall-form')
@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
 async function formSubmit(event) {
     console.debug('formSubmit:', event)
     event.preventDefault()
-    errorAlert.style.display = 'none'
+    errorAlert.classList.add('d-none')
+    // error.innerHTML = ''
     const url = event.target.elements['discord-webhook'].value
     // console.debug('url:', url)
     const app = event.target.elements['app-list'].value
@@ -81,7 +82,7 @@ async function formSubmit(event) {
         const response = await sendDiscord(url, lines.join('\n'))
         console.debug('response:', response)
         submitBtn.classList.remove('disabled')
-        if (response.status >= 200 && response.status <= 299) {
+        if (response.ok) {
             contentWrapper.classList.add(
                 'animate__animated',
                 'animate__backOutUp'
@@ -99,8 +100,13 @@ async function formSubmit(event) {
 }
 
 function showError(message) {
-    errorAlert.querySelector('.alert').textContent = message
-    errorAlert.style.display = 'block'
+    // const alert = document.querySelector('#clone > .alert').cloneNode(true)
+    // errorAlert.querySelector('span').textContent = message
+    errorAlert.textContent = message
+    errorAlert.classList.remove('d-none')
+    // error.appendChild(alert)
+    // const bsAlert = new bootstrap.Alert(alert)
+    // setTimeout(() => bsAlert.close(), 10000)
 }
 
 async function sendDiscord(url, content) {

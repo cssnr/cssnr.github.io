@@ -31,15 +31,17 @@ description: General Feedback and Inquiries.
             <button id="submit-btn" class="btn btn-success w-100" type="submit">
                 Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
         </form>
-        <div id="error-alert" style="display: none;">
-            <div class="alert alert-danger fade show text-center mt-3" role="alert"></div>
-            <div class="alert alert-warning fade show text-center" role="alert">
-                <b>Note:</b> Privacy Badger and other content blockers may block <b>discord.com</b> by default.
-                You will need to allow <b>discord.com</b> to submit this form since it uses a Discord webhook.
-            </div>
-        </div>
+        <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-2 mb-0 d-none" role="alert"></div>
+        {% comment %}<div id="error"></div>{% endcomment %}
     </div> <!-- content-wrapper -->
 </div> <!-- d-flex -->
+
+{% comment %}<div id="clone" class="d-none">{% endcomment %}
+    {% comment %}<div class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert">{% endcomment %}
+        {% comment %}<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>{% endcomment %}
+        {% comment %}<span>Error</span>{% endcomment %}
+    {% comment %}</div>{% endcomment %}
+{% comment %}</div>{% endcomment %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.0.2/tsparticles.bundle.min.js" integrity="sha512-MM4W2ywPFL6GyTpBoj7PU6nyv2jJg47rLI8kEAL8vk20RHtAqIe9KdweahKUk+OivrdpZoMYfMi271ZdS6tRnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
