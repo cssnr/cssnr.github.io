@@ -298,7 +298,7 @@ const githubActions = [
                 'https://github.com/marketplace/actions/portainer-stack-deploy-action',
             GitHub: 'https://github.com/cssnr/portainer-stack-deploy-action',
         },
-        fa: 'faShell',
+        fa: 'faJs',
     },
     {
         name: 'Mozilla Addon Update',
