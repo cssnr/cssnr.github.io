@@ -129,7 +129,8 @@ function addCard(data, parent) {
             const img = document.createElement('img')
             img.src = src
             img.alt = text
-            a.classList.add('me-2', 'hvr-grow')
+            img.classList.add('mb-1', 'hvr-grow')
+            a.classList.add('me-2')
             a.appendChild(img)
             footer.appendChild(a)
         } else {
