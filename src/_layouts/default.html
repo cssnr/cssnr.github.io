@@ -49,7 +49,7 @@
 <header>
     <nav class="navbar navbar-expand-sm bg-body-tertiary mb-2" aria-label="Primary Navigation">
         <div class="container-fluid">
-            <a class="mx-2 hvr-grow" href="{{ "/" | relative_url }}">
+            <a class="px-2" href="{{ "/" | relative_url }}">
                 <img src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" alt="logo" class="my-auto"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -88,7 +88,7 @@
 <footer class="footer mt-auto px-1 flex-shrink-0 bg-body-tertiary">
     <div class="container-fluid py-2">
         <div class="d-flex flex-column flex-md-row">
-            <div class="me-md-auto">
+            <div class="me-md-auto mb-1 mb-md-0">
                 <a class="text-decoration-none link-body-emphasis" href="{{ site.github_url }}" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i> {{ site.site_name }}</a>
             </div>
@@ -96,7 +96,7 @@
                 <nav aria-label="Secondary Navigation">
                     <ol class="list-inline mb-1 d-flex flex-column flex-sm-row">
                         {% for item in site.menu %}
-                            <li class="list-inline-item">
+                            <li class="list-inline-item mb-1 mb-sm-0">
                                 <a class="text-decoration-none link-body-emphasis {% if page.title == item.name %}fw-bold{% endif %}"
                                    href="{{ item.link | relative_url }}" {% if item.external %}target="_blank"{% endif %}>
                                     {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
@@ -114,7 +114,7 @@
 </footer>
 
 <button type="button" class="btn btn-outline-secondary" id="back-to-top">
-    <i class="fa-regular fa-square-caret-up hvr-grow-lg"></i>
+    <i class="fa-regular fa-square-caret-up"></i>
 </button> <!-- back-to-top -->
 
 <div aria-live="polite" aria-atomic="true" class="">

@@ -367,16 +367,27 @@ const otherSoftware = [
     {
         name: 'Flask Random Image',
         url: 'https://github.com/smashedr/flask-random-image',
-        description: 'Flask App to Redirect to a Random Image.',
+        description:
+            'Flask App to Redirect to a Random Image designed for Docker.',
         links: {
-            Example: 'https://flask-image.cssnr.com/',
+            API: 'https://flask-image.cssnr.com/',
             Pages: 'https://github.com/smashedr/random-image/',
             GitHub: 'https://github.com/smashedr/flask-random-image',
         },
         fa: 'faPython',
     },
     {
-        name: 'YouTube Embed/Redirect',
+        name: 'Discord Webhook Relay',
+        url: 'https://github.com/smashedr/node-discord-hook',
+        description:
+            'Discord Webhook Relay built in NodeJS designed for Docker.',
+        links: {
+            GitHub: 'https://github.com/smashedr/node-discord-hook',
+        },
+        fa: 'faJs',
+    },
+    {
+        name: 'YouTube Embed Redirect',
         url: 'https://github.com/smashedr/youtube-embed/',
         description:
             'GitHub Pages and Userscript to Redirect YouTube to an Embed.',
