@@ -10,13 +10,14 @@ Website for CSSNR GitHub Organization: https://cssnr.github.io/
 
 For more information join us on Discord: https://discord.gg/wXy6m2X8wY
 
-## Development
+# Development
 
 Install Jekyll: https://jekyllrb.com/docs/installation/
 
 Run: `jekyll serve -s src -o`
 
-This will build the site from the `src` directory, open it in your browser, watch for file changes, automatically rebuild the site and refresh the site in your browser; enjoy =)
+This will build the site from the `src` directory, open it in your browser, watch for file changes, automatically
+rebuild the site and refresh the site in your browser; enjoy...
 
 For more information see `jekyll help` and `jekyll serve --help` or visit: https://jekyllrb.com/docs/
 

@@ -60,7 +60,7 @@ async function formSubmit(event) {
     event.preventDefault()
     errorAlert.classList.add('d-none')
     // error.innerHTML = ''
-    const url = event.target.elements['discord-webhook'].value
+    const url = event.target.elements['relay-url'].value
     // console.debug('url:', url)
     const app = event.target.elements['app-list'].value
     // console.debug('app:', app)
@@ -72,9 +72,14 @@ async function formSubmit(event) {
         return console.warn('No Feedback Provided to Send.')
     }
     submitBtn.classList.add('disabled')
+    const parser = new UAParser()
+    const r = parser.getResult()
+    const type = r.browser.type ? ` - ${r.browser.type}` : ''
     const lines = [
         `CSSNR GitHub Feedback for: **${app}**`,
-        `\`${navigator.userAgent}\``,
+        `**Browser**: ${r.browser.name} ${r.browser.major} (${r.engine.name} - ${r.browser.version})`,
+        `**System**: ${r.os.name} ${r.os.version} (${r.cpu.architecture}${type})`,
+        `**Referrer**: <${document.referrer || 'no-referrer'}>`,
         `\`\`\`\n${text}\n\`\`\``,
     ]
     // console.debug('lines:', lines)
