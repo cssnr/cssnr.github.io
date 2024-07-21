@@ -79,9 +79,11 @@ async function formSubmit(event) {
         `CSSNR GitHub Feedback for: **${app}**`,
         `**Browser**: ${r.browser.name} ${r.browser.major} (${r.engine.name} - ${r.browser.version})`,
         `**System**: ${r.os.name} ${r.os.version} (${r.cpu.architecture}${type})`,
-        `**Referrer**: <${document.referrer || 'no-referrer'}>`,
         `\`\`\`\n${text}\n\`\`\``,
     ]
+    if (document.referrer) {
+        lines.splice(3, 0, `**Referrer**: <${document.referrer}>`)
+    }
     // console.debug('lines:', lines)
     try {
         const response = await sendDiscord(url, lines.join('\n'))
