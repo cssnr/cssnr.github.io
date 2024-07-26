@@ -9,9 +9,10 @@ const actionsContainer = document.getElementById('actions-container')
 const otherContainer = document.getElementById('other-container')
 
 const faIcons = {
-    faPython: document.querySelector('.clone .fa-python'),
-    faJs: document.querySelector('.clone .fa-js'),
-    faShell: document.querySelector('.clone .fa-terminal'),
+    faPython: document.querySelector('.clone .devicon-python-plain'),
+    faJs: document.querySelector('.clone .devicon-javascript-plain'),
+    faTs: document.querySelector('.clone .devicon-typescript-plain'),
+    faShell: document.querySelector('.clone .devicon-powershell-plain'),
 }
 
 // // Scroll Handlers
@@ -73,6 +74,14 @@ async function domContentLoaded() {
     if (!localStorage.getItem('scrollShown')) {
         checkScroll()
     }
+
+    document
+        .querySelectorAll('[data-bs-toggle="tooltip"]')
+        .forEach((el) => new bootstrap.Tooltip(el))
+
+    document
+        .querySelectorAll('[data-bs-toggle="popover"]')
+        .forEach((el) => new bootstrap.Popover(el))
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()

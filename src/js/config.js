@@ -330,6 +330,33 @@ const githubActions = [
         },
         fa: 'faPython',
     },
+    {
+        name: 'JavaScript Template Action',
+        url: 'https://github.com/smashedr/js-test-action',
+        description: 'Template for JavaScript Actions.',
+        links: {
+            GitHub: 'https://github.com/smashedr/js-test-action',
+        },
+        fa: 'faJs',
+    },
+    {
+        name: 'TypeScript Template Action',
+        url: 'https://github.com/smashedr/ts-test-action',
+        description: 'Template for TypeScript Actions.',
+        links: {
+            GitHub: 'https://github.com/smashedr/ts-test-action',
+        },
+        fa: 'faTs',
+    },
+    {
+        name: 'Python Template Action',
+        url: 'https://github.com/smashedr/py-test-action',
+        description: 'Template for Python Actions.',
+        links: {
+            GitHub: 'https://github.com/smashedr/py-test-action',
+        },
+        fa: 'faPython',
+    },
 ]
 const otherSoftware = [
     {
