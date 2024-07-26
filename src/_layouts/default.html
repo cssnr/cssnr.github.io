@@ -36,6 +36,8 @@
 
     {% if page.title == 'Home' %}
         <link rel="stylesheet" href="{{ "/css/index.css" | relative_url }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css" integrity="sha512-BlFCHJWngPEHme4TwlEob6dPLfoNaQBTTISPwr4344nxR353w2vgGZ7GiSadbbeR20cJeeM0u1I2lAZuIZ1aOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        {% comment %}<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />{% endcomment %}
     {% endif %}
     {% if page.title == 'Feedback' %}
         <link rel="stylesheet" href="{{ "/css/feedback.css" | relative_url }}">
