@@ -9,7 +9,81 @@ const devIcons = {
     powershell: document.querySelector('#clone > .devicon-powershell-plain'),
 }
 
-document.addEventListener('DOMContentLoaded', domContentLoaded)
+const dtOptions = {
+    info: true,
+    processing: true,
+    responsive: true,
+    pageLength: -1,
+    lengthMenu: [
+        [-1, 10, 25, 50, 100, 250, 500, 1000],
+        ['All', 10, 25, 50, 100, 250, 500, 1000],
+    ],
+    language: {
+        emptyTable: '',
+        lengthMenu: '_MENU_',
+        search: '',
+        searchPlaceholder: 'Type to Filter...',
+        zeroRecords: '',
+    },
+    // columnDefs: [
+    //     { targets: 0, render: genUrl, visible: true, className: '' },
+    //     { targets: '_all', visible: false },
+    // ],
+    columns: [
+        // { data: 'icon' },
+        { data: 'name' },
+        { data: 'description' },
+        // { data: 'links' },
+        { data: 'fa' },
+    ],
+    search: {
+        regex: true,
+    },
+    stateSave: true,
+    stateSaveParams: function (settings, data) {
+        data.search.search = ''
+    },
+}
+
+document
+    .querySelectorAll('.view-toggle')
+    .forEach((el) => el.addEventListener('click', toggleView))
+
+function toggleView(event) {
+    const btn = event.target.closest('button')
+    if (btn.id === 'cards-view') {
+        toggleCards()
+    }
+    if (btn.id === 'list-view') {
+        toggleList()
+    }
+}
+
+const cards = document.getElementById('cards')
+const table = document.getElementById('table')
+const cardsViewBtn = document.getElementById('cards-view')
+const listViewBtn = document.getElementById('list-view')
+
+function toggleCards() {
+    cards.classList.remove('d-none')
+    table.classList.add('d-none')
+    cardsViewBtn.classList.remove('btn-outline-secondary')
+    cardsViewBtn.classList.add('btn-secondary')
+    listViewBtn.classList.add('btn-outline-secondary')
+    listViewBtn.classList.remove('btn-secondary')
+    localStorage.setItem('view', 'cards')
+    AOS.init({ disable: 'mobile' })
+}
+
+function toggleList() {
+    table.classList.remove('d-none')
+    cards.classList.add('d-none')
+    listViewBtn.classList.remove('btn-outline-secondary')
+    listViewBtn.classList.add('btn-secondary')
+    cardsViewBtn.classList.add('btn-outline-secondary')
+    cardsViewBtn.classList.remove('btn-secondary')
+    localStorage.setItem('view', 'list')
+}
 
 // Scroll Handlers
 window.addEventListener('scroll', onScroll, { once: true })
@@ -36,6 +110,8 @@ function checkScroll() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', domContentLoaded)
+
 /**
  * DOMContentLoaded Callback
  * @function domContentLoaded
@@ -59,15 +135,26 @@ async function domContentLoaded() {
         }
     }
 
-    if (!localStorage.getItem('scrollShown')) {
-        checkScroll()
-    }
+    const apps = [].concat(...Object.values(config))
+    const table = new DataTable('#data-table', dtOptions)
+    table.rows.add(apps).draw()
 
     document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((el) => new bootstrap.Tooltip(el))
 
-    AOS.init({ disable: 'mobile' })
+    const view = localStorage.getItem('view')
+    if (!view || view === 'cards') {
+        toggleCards()
+    } else {
+        toggleList()
+    }
+
+    if (!localStorage.getItem('scrollShown')) {
+        checkScroll()
+    }
+
+    // AOS.init({ disable: 'mobile' })
     // AOS.init()
 
     // if (window.scrollY !== 0) {

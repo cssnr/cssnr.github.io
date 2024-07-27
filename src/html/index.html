@@ -6,7 +6,21 @@ description: Projects and Information on CSSNR GitHub Development.
 ---
 
 <div class="container-fluid">
+
+    <div class="float-end" style="z-index: 1009; position: relative;">
+        <button type="button" class="btn btn-outline-secondary view-toggle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover"
+                data-bs-title="Card View" id="cards-view">
+            <i class="fa-solid fa-table"></i>
+        </button>
+        <button type="button" class="btn btn-outline-secondary view-toggle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover"
+                data-bs-title="List View" id="list-view">
+            <i class="fa-solid fa-table-list"></i>
+        </button>
+    </div>
+
     <h1 class="animate__animated animate__zoomIn"><i class="fa-brands fa-github me-2"></i> {{ site.site_name }}</h1>
+
+
 
     <p class="lead">
         Website for <a href="{{ site.github_url }}" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover" target="_blank" rel="noopener">
@@ -28,28 +42,51 @@ description: Projects and Information on CSSNR GitHub Development.
         </p>
     </div>
 
-    <p>
-        <a href="#web-extensions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            Web Extensions</a> &bull;
-        <a href="#web-apps" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            Web Apps</a> &bull;
-        <a href="#github-actions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            GitHub Actions</a> &bull;
-        <a href="#other-software" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            Other Software</a>
-    </p>
+    <div id="cards" class="d-none">
+        <p>
+            <a href="#web-extensions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                Web Extensions</a> &bull;
+            <a href="#web-apps" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                Web Apps</a> &bull;
+            <a href="#github-actions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                GitHub Actions</a> &bull;
+            <a href="#other-software" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                Other Software</a>
+        </p>
 
-    <h2 id="web-extensions">Web Extensions</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webExtensions"></div>
+        <h2 id="web-extensions">Web Extensions</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webExtensions"></div>
 
-    <h2 id="web-apps" class="" data-aos="zoom-in">Web Apps</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webApps"></div>
+        <h2 id="web-apps" class="" data-aos="zoom-in">Web Apps</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webApps"></div>
 
-    <h2 id="github-actions" class="" data-aos="zoom-in">GitHub Actions</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="githubActions"></div>
+        <h2 id="github-actions" class="" data-aos="zoom-in">GitHub Actions</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="githubActions"></div>
 
-    <h2 id="other-software" class="" data-aos="zoom-in">Other Software</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="otherSoftware"></div>
+        <h2 id="other-software" class="" data-aos="zoom-in">Other Software</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="otherSoftware"></div>
+    </div>
+    <div id="table" class="d-none">
+        <table class="table" id="data-table">
+            <thead>
+            <tr>
+                {% comment %}<th scope="col"></th>{% endcomment %}
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                {% comment %}<th scope="col">Links</th>{% endcomment %}
+                <th scope="col">Icon</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% comment %}<tr>{% endcomment %}
+                {% comment %}<th scope="row">1</th>{% endcomment %}
+                {% comment %}<td>Mark</td>{% endcomment %}
+                {% comment %}<td>Otto</td>{% endcomment %}
+                {% comment %}<td>@mdo</td>{% endcomment %}
+            {% comment %}</tr>{% endcomment %}
+            </tbody>
+        </table>
+    </div>
 
 </div> <!-- container -->
 
@@ -85,6 +122,15 @@ description: Projects and Information on CSSNR GitHub Development.
 
 {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
 {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+{% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+{% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+{% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/dataTables.dataTables.min.js" integrity="sha512-fQmyZE5e3plaa6ADOXBM17WshoZzDIvo7sR4GC1VsmSKqm13Ed8cO2kPwFPAOoeF0RcdhuQQlPq46X/HnPmllg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+{% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/dataTables.bootstrap.min.js" integrity="sha512-F0E+jKGaUC90odiinxkfeS3zm9uUT1/lpusNtgXboaMdA3QFMUez0pBmAeXGXtGxoGZg3bLmrkSkbK1quua4/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/2.1.2/js/dataTables.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/2.1.2/js/dataTables.bootstrap5.js" type="text/javascript"></script>
+
 
 <script type="text/javascript" src="{{ "/js/config.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/index.js" | relative_url }}"></script>
