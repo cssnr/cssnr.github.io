@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.debug('DOMContentLoaded')
     const selected = url.searchParams.get('app')
     const appList = document.getElementById('app-list')
-    const apps = [webExtensions, webApps, githubActions, otherSoftware]
+    const apps = [].concat(...Object.values(config))
     const combined = apps.flat()
     for (const app of combined) {
         const option = document.createElement('option')

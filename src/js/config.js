@@ -274,7 +274,7 @@ const config = {
         {
             name: 'VirusTotal Scan',
             github: 'cssnr/virustotal-action',
-            url: 'https://github.com/marketplace/actions/virustotal-action',
+            url: 'https://github.com/cssnr/virustotal-action',
             description:
                 'Scan Release Artifacts with VirusTotal and Update Release Notes.',
             // badges: {},
@@ -287,7 +287,7 @@ const config = {
         {
             name: 'Update Version Tags',
             github: 'cssnr/update-version-tags-action',
-            url: 'https://github.com/marketplace/actions/update-version-tags-action',
+            url: 'https://github.com/cssnr/update-version-tags-action',
             description:
                 'Update Version Tags on Push or Release for Semantic Versions.',
             // badges: {},
@@ -300,7 +300,7 @@ const config = {
         {
             name: 'Update JSON Value',
             github: 'cssnr/update-json-value-action',
-            url: 'https://github.com/marketplace/actions/update-json-value-action',
+            url: 'https://github.com/cssnr/update-json-value-action',
             description: 'Update JSON file Value(s) for Publishing.',
             // badges: {},
             links: {
@@ -350,7 +350,7 @@ const config = {
         {
             name: 'Mozilla Addon Update',
             github: 'cssnr/mozilla-addon-update-action',
-            url: 'https://github.com/marketplace/actions/mozilla-addon-update-action',
+            url: 'https://github.com/cssnr/mozilla-addon-update-action',
             description:
                 'Update the Mozilla Firefox Update JSON File after a Release.',
             // badges: {},
@@ -490,6 +490,18 @@ const config = {
                 Userscript:
                     'https://github.com/smashedr/youtube-embed/raw/master/src/youtube-redirect.user.js',
                 Pages: 'https://smashedr.github.io/youtube-embed/',
+            },
+            fa: 'python',
+        },
+        {
+            name: 'Docker Nginx Static',
+            github: 'cssnr/docker-nginx-static',
+            url: 'https://github.com/cssnr/docker-nginx-static',
+            description: 'Nginx Docker Image for Serving Static Files.',
+            // badges: {},
+            links: {
+                Package:
+                    'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
             },
             fa: 'python',
         },
