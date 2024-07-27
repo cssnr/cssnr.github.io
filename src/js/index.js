@@ -25,16 +25,11 @@ const dtOptions = {
         searchPlaceholder: 'Type to Filter...',
         zeroRecords: '',
     },
-    // columnDefs: [
-    //     { targets: 0, render: genUrl, visible: true, className: '' },
-    //     { targets: '_all', visible: false },
-    // ],
     columns: [
-        // { data: 'icon' },
-        { data: 'name' },
+        { data: 'icon', render: dtImage, orderable: false },
+        { data: 'name', render: dtName },
         { data: 'description' },
-        // { data: 'links' },
-        { data: 'fa' },
+        { data: 'fa', render: dtIcon, orderable: false },
     ],
     search: {
         regex: true,
@@ -43,6 +38,33 @@ const dtOptions = {
     stateSaveParams: function (settings, data) {
         data.search.search = ''
     },
+}
+
+function dtImage(data, type, row, meta) {
+    // console.log('row:', row)
+    if (!row?.icon) {
+        return ''
+    }
+    const img = document.createElement('img')
+    img.src = row.icon
+    img.height = 20
+    img.width = 20
+    return img
+}
+
+function dtName(data, type, row, meta) {
+    // console.log('row:', row)
+    const link = document.createElement('a')
+    link.classList.add('link-body-emphasis', 'text-decoration-none', 'fw-bold')
+    link.textContent = data
+    link.href = row.url
+    return link
+}
+
+function dtIcon(data) {
+    // console.log('data:', data)
+    const icon = devIcons[data].cloneNode(true)
+    return icon
 }
 
 document
@@ -83,6 +105,7 @@ function toggleList() {
     cardsViewBtn.classList.add('btn-outline-secondary')
     cardsViewBtn.classList.remove('btn-secondary')
     localStorage.setItem('view', 'list')
+    window.dispatchEvent(new Event('resize'))
 }
 
 // Scroll Handlers

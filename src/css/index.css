@@ -43,3 +43,9 @@
         bottom: 0;
     }
 }
+
+@media (min-width: 768px) {
+    .dt-paging {
+        margin-right: 30px !important;
+    }
+}
