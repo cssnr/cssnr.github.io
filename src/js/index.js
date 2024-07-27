@@ -1,7 +1,5 @@
 // JS for index.html
 
-document.addEventListener('DOMContentLoaded', domContentLoaded)
-
 const infoCard = document.querySelector('#clone > .info-card')
 
 const devIcons = {
@@ -11,7 +9,9 @@ const devIcons = {
     powershell: document.querySelector('#clone > .devicon-powershell-plain'),
 }
 
-// // Scroll Handlers
+document.addEventListener('DOMContentLoaded', domContentLoaded)
+
+// Scroll Handlers
 window.addEventListener('scroll', onScroll, { once: true })
 const scrollDdown = document.getElementById('scroll-down')
 
@@ -69,32 +69,7 @@ async function domContentLoaded() {
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()
-
-    // anime({
-    //     targets: '#scroll-down',
-    //     translateY: [
-    //         { value: -25, duration: 1500 },
-    //         { value: 0, duration: 1500 },
-    //     ],
-    //     easing: 'easeInOutSine',
-    //     loop: true,
-    // })
 }
-
-// /**
-//  * Add Card
-//  * @function addCard
-//  * @param {Object} config
-//  */
-// function addCards(config) {
-//     for (const [selector, apps] of Object.entries(config)) {
-//         console.debug(`Add Section: ${selector}:`, apps)
-//         const parent = document.getElementById(selector)
-//         for (const data of apps) {
-//             addCard(parent, data)
-//         }
-//     }
-// }
 
 /**
  * @function addCard
@@ -104,25 +79,35 @@ async function domContentLoaded() {
 function addCard(parent, data) {
     // console.debug(`addCard: ${data.name}:`, data)
     const card = infoCard.cloneNode(true)
+
+    // Update Links
     const links = card.querySelectorAll('.url-link')
     for (const link of links) {
         link.href = data.url
         link.title = data.name
     }
+
+    // Update Image
     const img = card.querySelector('img')
     if (data.icon) {
         img.src = data.icon
     } else {
         img.remove()
     }
+
+    // Update Title and Text
     const title = card.querySelector('h4 > a')
     title.textContent = data.name
     const p = card.querySelector('p')
     p.textContent = data.description
+
+    // Update Footer
     const footer = card.querySelector('.card-footer')
     const link = document.createElement('a')
     link.target = '_blank'
     link.rel = 'noopener'
+
+    // Add Links
     for (const [text, href] of Object.entries(data.links)) {
         const a = link.cloneNode(true)
         // a.classList.add('text-decoration-none')
@@ -154,6 +139,7 @@ function addCard(parent, data) {
     }
     footer.removeChild(footer.lastChild)
 
+    // Add Devicons
     if (data.fa) {
         console.debug('devIcons:', devIcons)
         console.debug('data.fa:', data.fa)
