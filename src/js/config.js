@@ -1,3 +1,5 @@
+// JS config Object
+
 const config = {
     webExtensions: [
         {

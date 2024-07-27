@@ -101,12 +101,13 @@ function addCard(parent, data) {
     const p = card.querySelector('p')
     p.textContent = data.description
 
-    // Update Footer
+    // Get Footer
     const footer = card.querySelector('.card-footer')
-    const link = document.createElement('a')
-    link.target = '_blank'
-    link.rel = 'noopener'
+    // const link = document.createElement('a')
+    // link.target = '_blank'
+    // link.rel = 'noopener'
 
+    // Add Badges
     if (data.github) {
         addBadge(footer, 'GitHub', data.github, ghUrl(data))
     }
@@ -119,7 +120,10 @@ function addCard(parent, data) {
     // Add Links
     if (data.links) {
         for (const [text, href] of Object.entries(data.links)) {
-            const a = link.cloneNode(true)
+            // const a = link.cloneNode(true)
+            const a = document.createElement('a')
+            a.target = '_blank'
+            a.rel = 'noopener'
             // a.classList.add('text-decoration-none')
             a.title = text
             a.href = href
@@ -134,9 +138,6 @@ function addCard(parent, data) {
             footer.appendChild(document.createTextNode(' - '))
         }
         footer.removeChild(footer.lastChild)
-        // if (footer.lastChild?.textContent === ' - ') {
-        //     footer.removeChild(footer.lastChild)
-        // }
     }
 
     // Add Devicons
@@ -165,6 +166,8 @@ function addBadge(parent, badge, id, href) {
     img.classList.add('mb-1', 'hvr-grow')
 
     const a = document.createElement('a')
+    a.target = '_blank'
+    a.rel = 'noopener'
     // a.classList.add('text-decoration-none')
     a.title = badge
     a.href = href
