@@ -2,17 +2,13 @@
 
 document.addEventListener('DOMContentLoaded', domContentLoaded)
 
-const infoCard = document.querySelector('.clone > .info-card')
-// const extContainer = document.getElementById('ext-container')
-// const appsContainer = document.getElementById('apps-container')
-// const actionsContainer = document.getElementById('actions-container')
-// const otherContainer = document.getElementById('other-container')
+const infoCard = document.querySelector('#clone > .info-card')
 
-const faIcons = {
-    faPython: document.querySelector('.clone .devicon-python-plain'),
-    faJs: document.querySelector('.clone .devicon-javascript-plain'),
-    faTs: document.querySelector('.clone .devicon-typescript-plain'),
-    faShell: document.querySelector('.clone .devicon-powershell-plain'),
+const devIcons = {
+    python: document.querySelector('#clone > .devicon-python-plain'),
+    javascript: document.querySelector('#clone > .devicon-javascript-plain'),
+    typescript: document.querySelector('#clone > .devicon-typescript-plain'),
+    powershell: document.querySelector('#clone > .devicon-powershell-plain'),
 }
 
 // // Scroll Handlers
@@ -45,36 +41,23 @@ function checkScroll() {
  * @function domContentLoaded
  */
 async function domContentLoaded() {
-    // console.debug('DOMContentLoaded')
+    console.debug('DOMContentLoaded')
     const searchParams = new URLSearchParams(window.location.search)
     const feedback = searchParams.get('feedback')
-    // console.debug('feedback:', feedback)
     if (feedback) {
+        console.debug('feedback:', feedback)
         document.getElementById('feedback').classList.remove('d-none')
         history.pushState(null, '', location.href.split('?')[0])
     }
-    console.debug('Add Cards')
-    console.debug('config:', config)
-    for (const [selector, data] of Object.entries(config)) {
-        addCards(selector, data)
-    }
 
-    // // console.debug('Add webExtensions')
-    // for (const data of webExtensions) {
-    //     addCard(data, extContainer)
-    // }
-    // // console.debug('Add webApps')
-    // for (const data of webApps) {
-    //     addCard(data, appsContainer)
-    // }
-    // // console.debug('Add githubActions')
-    // for (const data of githubActions) {
-    //     addCard(data, actionsContainer)
-    // }
-    // // console.debug('Add otherSoftware')
-    // for (const data of otherSoftware) {
-    //     addCard(data, otherContainer)
-    // }
+    // addCards(config)
+    for (const [selector, apps] of Object.entries(config)) {
+        console.debug(`Add Section: ${selector}:`, apps)
+        const parent = document.getElementById(selector)
+        for (const data of apps) {
+            addCard(parent, data)
+        }
+    }
 
     if (!localStorage.getItem('scrollShown')) {
         checkScroll()
@@ -83,9 +66,6 @@ async function domContentLoaded() {
     document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((el) => new bootstrap.Tooltip(el))
-    // document
-    //     .querySelectorAll('[data-bs-toggle="popover"]')
-    //     .forEach((el) => new bootstrap.Popover(el))
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()
@@ -101,75 +81,88 @@ async function domContentLoaded() {
     // })
 }
 
-/**
- * Add Card
- * @function addCard
- * @param {String} selector
- * @param {Object[]} apps
- */
-function addCards(selector, apps) {
-    console.debug(`addCards: ${selector}:`, apps)
-    const parent = document.getElementById(selector)
-    for (const data of apps) {
-        console.debug(`add app: ${data.name}:`, data)
-        const card = infoCard.cloneNode(true)
-        const links = card.querySelectorAll('.url-link')
-        for (const link of links) {
-            link.href = data.url
-            link.title = data.name
-        }
-        const img = card.querySelector('img')
-        if (data.icon) {
-            img.src = data.icon
-        } else {
-            img.remove()
-        }
-        const title = card.querySelector('h4 > a')
-        title.textContent = data.name
-        const p = card.querySelector('p')
-        p.textContent = data.description
-        const footer = card.querySelector('.card-footer')
-        const link = document.createElement('a')
-        link.target = '_blank'
-        link.rel = 'noopener'
-        for (const [text, href] of Object.entries(data.links)) {
-            const a = link.cloneNode(true)
-            // a.classList.add('text-decoration-none')
-            a.title = text
-            a.href = href
-            if (data.badges?.hasOwnProperty(text)) {
-                // console.debug('text:', text)
-                // console.debug('href:', href)
-                const src = eval(text)(data.badges[text])
-                // console.debug('src:', src)
-                const img = document.createElement('img')
-                img.src = src
-                img.alt = text
-                img.classList.add('mb-1', 'hvr-grow')
-                a.classList.add('me-2')
-                a.appendChild(img)
-                footer.appendChild(a)
-            } else {
-                a.textContent = text
-                a.classList.add(
-                    'link-offset-2-hover',
-                    'link-underline',
-                    'link-underline-opacity-0',
-                    'link-underline-opacity-75-hover'
-                )
-                footer.appendChild(a)
-                footer.appendChild(document.createTextNode(' - '))
-            }
-        }
-        footer.removeChild(footer.lastChild)
+// /**
+//  * Add Card
+//  * @function addCard
+//  * @param {Object} config
+//  */
+// function addCards(config) {
+//     for (const [selector, apps] of Object.entries(config)) {
+//         console.debug(`Add Section: ${selector}:`, apps)
+//         const parent = document.getElementById(selector)
+//         for (const data of apps) {
+//             addCard(parent, data)
+//         }
+//     }
+// }
 
-        if (data.fa) {
-            const div = document.createElement('div')
-            const icon = faIcons[data.fa].cloneNode(true)
-            div.appendChild(icon)
-            div.style.float = 'right'
-            footer.appendChild(div)
-        }
-        parent.appendChild(card)
+/**
+ * @function addCard
+ * @param {HTMLElement} parent
+ * @param {Object} data
+ */
+function addCard(parent, data) {
+    // console.debug(`addCard: ${data.name}:`, data)
+    const card = infoCard.cloneNode(true)
+    const links = card.querySelectorAll('.url-link')
+    for (const link of links) {
+        link.href = data.url
+        link.title = data.name
     }
+    const img = card.querySelector('img')
+    if (data.icon) {
+        img.src = data.icon
+    } else {
+        img.remove()
+    }
+    const title = card.querySelector('h4 > a')
+    title.textContent = data.name
+    const p = card.querySelector('p')
+    p.textContent = data.description
+    const footer = card.querySelector('.card-footer')
+    const link = document.createElement('a')
+    link.target = '_blank'
+    link.rel = 'noopener'
+    for (const [text, href] of Object.entries(data.links)) {
+        const a = link.cloneNode(true)
+        // a.classList.add('text-decoration-none')
+        a.title = text
+        a.href = href
+        if (data.badges?.hasOwnProperty(text)) {
+            // console.debug('text:', text)
+            // console.debug('href:', href)
+            const src = eval(text)(data.badges[text])
+            // console.debug('src:', src)
+            const img = document.createElement('img')
+            img.src = src
+            img.alt = text
+            img.classList.add('mb-1', 'hvr-grow')
+            a.classList.add('me-2')
+            a.appendChild(img)
+            footer.appendChild(a)
+        } else {
+            a.textContent = text
+            a.classList.add(
+                'link-offset-2-hover',
+                'link-underline',
+                'link-underline-opacity-0',
+                'link-underline-opacity-75-hover'
+            )
+            footer.appendChild(a)
+            footer.appendChild(document.createTextNode(' - '))
+        }
+    }
+    footer.removeChild(footer.lastChild)
+
+    if (data.fa) {
+        console.debug('devIcons:', devIcons)
+        console.debug('data.fa:', data.fa)
+        console.debug('devIcons[data.fa]:', devIcons[data.fa])
+        const div = document.createElement('div')
+        const icon = devIcons[data.fa].cloneNode(true)
+        div.appendChild(icon)
+        div.style.float = 'right'
+        footer.appendChild(div)
+    }
+    parent.appendChild(card)
 }

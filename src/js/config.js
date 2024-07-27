@@ -17,7 +17,7 @@ const config = {
                 Website: 'https://link-extractor.cssnr.com/',
                 GitHub: 'https://github.com/cssnr/link-extractor',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'ifefifghpkllfibejafbakmflidjcjfp',
                 Mozilla: 'link-extractor',
@@ -36,7 +36,7 @@ const config = {
                 Website: 'https://open-links-in-new-tab.cssnr.com/',
                 GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'efahmjakjnnmleokcaomicgfhobabdkc',
                 Mozilla: 'open-links-in-new-tab',
@@ -54,7 +54,7 @@ const config = {
                 Website: 'https://playdrift-extension.cssnr.com/',
                 GitHub: 'https://github.com/cssnr/playdrift-extension',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'anlkpnbhiiojmedlkchcdmigkdccnmcn',
                 Mozilla: 'playdrift-extension',
@@ -72,7 +72,7 @@ const config = {
                 Website: 'https://django-files.github.io/extension/',
                 GitHub: 'https://github.com/django-files/web-extension',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'abpbiefojfkekhkjnpakpekkpeibnjej',
                 Mozilla: 'django-files',
@@ -90,7 +90,7 @@ const config = {
                 Website: 'https://smwc.world/',
                 GitHub: 'https://github.com/cssnr/smwc-web-extension',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'foalfafgmnglcgpgkhhmcfhjgmdcjide',
                 Mozilla: 'smwc-web-extension',
@@ -108,7 +108,7 @@ const config = {
                 Website: 'https://asn-plus.cssnr.com/',
                 GitHub: 'https://github.com/cssnr/asn-plus',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'phcbcnpmcbkcnijkpfohkdmcofcofibh',
                 Mozilla: 'asn-plus',
@@ -127,7 +127,7 @@ const config = {
                 Client: 'https://github.com/cssnr/hls-downloader-client',
                 GitHub: 'https://github.com/cssnr/hls-video-downloader',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
                 Mozilla: 'hls-video-downloader',
@@ -144,7 +144,7 @@ const config = {
                     'https://github.com/cssnr/text-formatter/releases/latest',
                 GitHub: 'https://github.com/cssnr/text-formatter',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'medimbembaeldnglneiipkenpagjfcdj',
             },
@@ -161,7 +161,7 @@ const config = {
                     'https://github.com/cssnr/aviation-tools/releases/latest',
                 GitHub: 'https://github.com/cssnr/aviation-tools',
             },
-            fa: 'faJs',
+            fa: 'javascript',
             badges: {
                 Google: 'cjjhackeogffajjndfhemgniokonimin',
             },
@@ -175,7 +175,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/simple-extension',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Web Enhancer',
@@ -186,7 +186,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/web-enhancer',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Site Tools',
@@ -197,7 +197,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/site-tools',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
     ],
 
@@ -212,7 +212,7 @@ const config = {
                 Website: 'https://smwc.world/',
                 GitHub: 'https://github.com/django-files/django-files',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'SMWC ROM Archive',
@@ -224,7 +224,7 @@ const config = {
                 Website: 'https://smwc.world/',
                 GitHub: 'https://github.com/cssnr/smwc-web',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'SlashGIF',
@@ -235,7 +235,7 @@ const config = {
             links: {
                 Website: 'https://slashgif.com/',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
     ],
 
@@ -250,7 +250,7 @@ const config = {
                     'https://github.com/marketplace/actions/virustotal-action',
                 GitHub: 'https://github.com/cssnr/virustotal-action',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Update Version Tags',
@@ -262,7 +262,7 @@ const config = {
                     'https://github.com/marketplace/actions/update-version-tags-action',
                 GitHub: 'https://github.com/cssnr/update-version-tags-action',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Update JSON Value',
@@ -273,7 +273,7 @@ const config = {
                     'https://github.com/marketplace/actions/update-json-value-action',
                 GitHub: 'https://github.com/cssnr/update-json-value-action',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Parse Issue Form',
@@ -284,7 +284,7 @@ const config = {
                     'https://github.com/marketplace/actions/parse-issue-form',
                 GitHub: 'https://github.com/cssnr/parse-issue-form-action',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Stack Deploy',
@@ -296,7 +296,7 @@ const config = {
                     'https://github.com/marketplace/actions/docker-stack-deploy',
                 GitHub: 'https://github.com/cssnr/stack-deploy-action',
             },
-            fa: 'faShell',
+            fa: 'powershell',
         },
         {
             name: 'Portainer Stack Deploy',
@@ -308,7 +308,7 @@ const config = {
                     'https://github.com/marketplace/actions/portainer-stack-deploy-action',
                 GitHub: 'https://github.com/cssnr/portainer-stack-deploy-action',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'Mozilla Addon Update',
@@ -320,7 +320,7 @@ const config = {
                     'https://github.com/marketplace/actions/mozilla-addon-update-action',
                 GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'Push Artifacts',
@@ -329,7 +329,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/cssnr/push-artifacts-action',
             },
-            fa: 'faShell',
+            fa: 'powershell',
         },
         {
             name: 'Cloudflare Purge Cache',
@@ -338,7 +338,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/cssnr/cf-purge-cache-action',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'JavaScript Template Action',
@@ -347,7 +347,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/js-test-action',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'TypeScript Template Action',
@@ -356,7 +356,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/ts-test-action',
             },
-            fa: 'faTs',
+            fa: 'typescript',
         },
         {
             name: 'Python Template Action',
@@ -365,7 +365,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/py-test-action',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
     ],
     otherSoftware: [
@@ -378,7 +378,7 @@ const config = {
                 'Django Files': 'https://github.com/django-files/django-files',
                 GitHub: 'https://github.com/cssnr/zipline-cli',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: "Carl's Cogs",
@@ -390,7 +390,7 @@ const config = {
                     'https://github.com/Cog-Creators/Red-DiscordBot',
                 GitHub: 'https://github.com/cssnr/vultr-python',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'Vultr Python',
@@ -400,7 +400,7 @@ const config = {
                 Vultr: 'https://www.vultr.com/?ref=6905748',
                 GitHub: 'https://github.com/cssnr/vultr-python',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'Flask Random Image',
@@ -412,7 +412,7 @@ const config = {
                 Pages: 'https://github.com/smashedr/random-image/',
                 GitHub: 'https://github.com/smashedr/flask-random-image',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
         {
             name: 'Discord Webhook Relay',
@@ -422,7 +422,7 @@ const config = {
             links: {
                 GitHub: 'https://github.com/smashedr/node-discord-hook',
             },
-            fa: 'faJs',
+            fa: 'javascript',
         },
         {
             name: 'YouTube Embed Redirect',
@@ -435,7 +435,7 @@ const config = {
                 Pages: 'https://smashedr.github.io/youtube-embed/',
                 GitHub: 'https://github.com/smashedr/youtube-embed/',
             },
-            fa: 'faPython',
+            fa: 'python',
         },
     ],
 }
