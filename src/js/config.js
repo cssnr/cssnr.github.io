@@ -1,4 +1,3 @@
-const GitHub = (id) => `https://img.shields.io/github/stars/${id}?label=%20`
 const Google = (id) =>
     `https://img.shields.io/chrome-web-store/users/${id}?logo=google&logoColor=white&label=&labelColor=4285F4&color=4285F4`
 const Mozilla = (id) =>

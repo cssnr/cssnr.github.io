@@ -107,6 +107,10 @@ function addCard(parent, data) {
     link.target = '_blank'
     link.rel = 'noopener'
 
+    if (data.github) {
+        addBadge(footer, 'github', data.github, ghUrl(data))
+    }
+
     // Add Links
     if (data.links) {
         for (const [text, href] of Object.entries(data.links)) {
@@ -117,7 +121,8 @@ function addCard(parent, data) {
             if (data.badges?.hasOwnProperty(text)) {
                 let src
                 if (text === 'GitHub') {
-                    src = eval(text)(data.github)
+                    // src = eval(text)(data.github)
+                    continue
                 } else {
                     src = eval(text)(data.badges[text])
                 }
@@ -142,7 +147,7 @@ function addCard(parent, data) {
                 footer.appendChild(document.createTextNode(' - '))
             }
         }
-        if (footer.lastChild.textContent === ' - ') {
+        if (footer.lastChild?.textContent === ' - ') {
             footer.removeChild(footer.lastChild)
         }
     }
@@ -159,4 +164,31 @@ function addCard(parent, data) {
         footer.appendChild(div)
     }
     parent.appendChild(card)
+}
+
+function addBadge(parent, badge, id, href) {
+    const badges = {
+        github: `https://img.shields.io/github/stars/${id}?label=%20`,
+    }
+    // console.debug(badge, id, link)
+    // console.debug(badges[badge])
+    let src = badges[badge]
+
+    // console.debug('src:', src)
+    const img = document.createElement('img')
+    img.src = src
+    // img.alt = text
+    img.classList.add('mb-1', 'hvr-grow')
+
+    const a = document.createElement('a')
+    // a.classList.add('text-decoration-none')
+    // a.title = text
+    a.href = href
+    a.classList.add('me-2')
+    a.appendChild(img)
+    parent.appendChild(a)
+}
+
+function ghUrl(data) {
+    return `https://github.com/${data.github}`
 }
