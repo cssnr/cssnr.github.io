@@ -13,12 +13,10 @@ const config = {
             description:
                 'Web Extension to easily extract, parse, or open all links/domains from a site or text with optional filters.',
             badges: {
-                GitHub: 'https://github.com/cssnr/link-extractor',
                 Google: 'ifefifghpkllfibejafbakmflidjcjfp',
                 Mozilla: 'link-extractor',
             },
             links: {
-                GitHub: 'https://github.com/cssnr/link-extractor',
                 Google: 'https://chromewebstore.google.com/detail/link-extractor/ifefifghpkllfibejafbakmflidjcjfp',
                 Mozilla: 'https://addons.mozilla.org/addon/link-extractor',
                 Website: 'https://link-extractor.cssnr.com/',
@@ -33,14 +31,12 @@ const config = {
             description:
                 'Web Extension to Open Links in New Tabs for Specified Domains or Temporarily on Any Tab.',
             links: {
-                GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
                 Google: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc',
                 Mozilla:
                     'https://addons.mozilla.org/addon/open-links-in-new-tab',
                 Website: 'https://open-links-in-new-tab.cssnr.com/',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/open-links-in-new-tab',
                 Google: 'efahmjakjnnmleokcaomicgfhobabdkc',
                 Mozilla: 'open-links-in-new-tab',
             },
@@ -54,13 +50,11 @@ const config = {
             description:
                 'PlayDrift Web Extension to view Rankings and Win/Loss Records on Player Profiles plus much more.',
             links: {
-                GitHub: 'https://github.com/cssnr/playdrift-extension',
                 Google: 'https://chromewebstore.google.com/detail/playdrift-extension/anlkpnbhiiojmedlkchcdmigkdccnmcn',
                 Mozilla: 'https://addons.mozilla.org/addon/playdrift-extension',
                 Website: 'https://playdrift-extension.cssnr.com/',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/playdrift-extension',
                 Google: 'anlkpnbhiiojmedlkchcdmigkdccnmcn',
                 Mozilla: 'playdrift-extension',
             },
@@ -74,13 +68,11 @@ const config = {
             description:
                 'Web Extension for Django Files to view recent uploads, shorten URLs, and upload any Image, Video or Audio.',
             links: {
-                GitHub: 'https://github.com/django-files/web-extension',
                 Google: 'https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej',
                 Mozilla: 'https://addons.mozilla.org/addon/django-files',
                 Website: 'https://django-files.github.io/extension/',
             },
             badges: {
-                GitHub: 'https://github.com/django-files/web-extension',
                 Google: 'abpbiefojfkekhkjnpakpekkpeibnjej',
                 Mozilla: 'django-files',
             },
@@ -94,13 +86,11 @@ const config = {
             description:
                 'Web Extension to to easily Patch and Play ROMs Online via the smwc.world site.',
             links: {
-                GitHub: 'https://github.com/cssnr/smwc-web-extension',
                 Google: 'https://chromewebstore.google.com/detail/smwc-web-extension/foalfafgmnglcgpgkhhmcfhjgmdcjide',
                 Mozilla: 'https://addons.mozilla.org/addon/smwc-web-extension',
                 Website: 'https://smwc.world/',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/smwc-web-extension',
                 Google: 'foalfafgmnglcgpgkhhmcfhjgmdcjide',
                 Mozilla: 'smwc-web-extension',
             },
@@ -114,13 +104,11 @@ const config = {
             description:
                 'Aviation Safety Network Web Extension to enable dark mode plus add additional features.',
             links: {
-                GitHub: 'https://github.com/cssnr/asn-plus',
                 Google: 'https://chromewebstore.google.com/detail/asn-plus/phcbcnpmcbkcnijkpfohkdmcofcofibh',
                 Mozilla: 'https://addons.mozilla.org/addon/asn-plus',
                 Website: 'https://asn-plus.cssnr.com/',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/asn-plus',
                 Google: 'phcbcnpmcbkcnijkpfohkdmcofcofibh',
                 Mozilla: 'asn-plus',
             },
@@ -134,14 +122,12 @@ const config = {
             description:
                 'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
             links: {
-                GitHub: 'https://github.com/cssnr/hls-video-downloader',
                 Google: 'https://chromewebstore.google.com/detail/text-formatter/mpmiiaolodhanoalpjncddpmnkbjicbo',
                 Mozilla:
                     'https://addons.mozilla.org/addon/hls-video-downloader',
                 Client: 'https://github.com/cssnr/hls-downloader-client',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/hls-video-downloader',
                 Google: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
                 Mozilla: 'hls-video-downloader',
             },
@@ -154,13 +140,11 @@ const config = {
             icon: 'https://raw.githubusercontent.com/cssnr/text-formatter/master/src/images/logo128.png',
             description: 'Web Extension for Splitting and Formatting Text.',
             links: {
-                GitHub: 'https://github.com/cssnr/text-formatter',
                 Google: 'https://chromewebstore.google.com/detail/text-formatter/medimbembaeldnglneiipkenpagjfcdj',
                 Mozilla:
                     'https://github.com/cssnr/text-formatter/releases/latest',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/text-formatter',
                 Google: 'medimbembaeldnglneiipkenpagjfcdj',
             },
             fa: 'javascript',
@@ -173,13 +157,11 @@ const config = {
             description:
                 'Aviation Tools Web Extension. Currently a Work in Progress.',
             links: {
-                GitHub: 'https://github.com/cssnr/aviation-tools',
                 Google: 'https://chromewebstore.google.com/detail/aviation-tools/cjjhackeogffajjndfhemgniokonimin',
                 Mozilla:
                     'https://github.com/cssnr/aviation-tools/releases/latest',
             },
             badges: {
-                GitHub: 'https://github.com/cssnr/aviation-tools',
                 Google: 'cjjhackeogffajjndfhemgniokonimin',
             },
             fa: 'javascript',
@@ -191,12 +173,8 @@ const config = {
             icon: 'https://raw.githubusercontent.com/smashedr/simple-extension/master/src/images/logo128.png',
             description:
                 'Example Web Extension for copying and creating new web extensions based on Manifest V3.',
-            links: {
-                GitHub: 'https://github.com/smashedr/simple-extension',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/simple-extension',
-            },
+            links: {},
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -206,12 +184,8 @@ const config = {
             icon: 'https://raw.githubusercontent.com/smashedr/web-enhancer/master/src/images/logo128.png',
             description:
                 'Upcoming Web Extension with Various Browser Enhancements.',
-            links: {
-                GitHub: 'https://github.com/smashedr/web-enhancer',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/web-enhancer',
-            },
+            links: {},
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -221,12 +195,8 @@ const config = {
             icon: 'https://raw.githubusercontent.com/smashedr/site-tools/master/src/images/logo128.png',
             description:
                 'Upcoming Web Extension with Various Site Modifications.',
-            links: {
-                GitHub: 'https://github.com/smashedr/site-tools',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/site-tools',
-            },
+            links: {},
+            badges: {},
             fa: 'javascript',
         },
     ],
@@ -240,12 +210,9 @@ const config = {
             description:
                 'A Feature Packed Self-Hosted Django/Docker File Manager for Sharing Files with ShareX, Flameshot and Much more.',
             links: {
-                GitHub: 'https://github.com/django-files/django-files',
                 Website: 'https://smwc.world/',
             },
-            badges: {
-                GitHub: 'https://github.com/django-files/django-files',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -256,12 +223,9 @@ const config = {
             description:
                 'SMWCentral ROM Archive to archive, download, send notifications, plus patch and play SMW ROMs online.',
             links: {
-                GitHub: 'https://github.com/cssnr/smwc-web',
                 Website: 'https://smwc.world/',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/smwc-web',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -272,12 +236,9 @@ const config = {
             description:
                 'Slack App to search for a random GIF and preview it, before posting publicly.',
             links: {
-                GitHub: 'https://github.com/cssnr/slashgif-site',
                 Website: 'https://slashgif.com/',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/slashgif-site',
-            },
+            badges: {},
             fa: 'python',
         },
     ],
@@ -290,13 +251,10 @@ const config = {
             description:
                 'Scan Release Artifacts with VirusTotal and Update Release Notes.',
             links: {
-                GitHub: 'https://github.com/cssnr/virustotal-action',
                 Actions:
                     'https://github.com/marketplace/actions/virustotal-action',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/virustotal-action',
-            },
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -306,13 +264,10 @@ const config = {
             description:
                 'Update Version Tags on Push or Release for Semantic Versions.',
             links: {
-                GitHub: 'https://github.com/cssnr/update-version-tags-action',
                 Actions:
                     'https://github.com/marketplace/actions/update-version-tags-action',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/update-version-tags-action',
-            },
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -321,13 +276,10 @@ const config = {
             url: 'https://github.com/marketplace/actions/update-json-value-action',
             description: 'Update JSON file Value(s) for Publishing.',
             links: {
-                GitHub: 'https://github.com/cssnr/update-json-value-action',
                 Actions:
                     'https://github.com/marketplace/actions/update-json-value-action',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/update-json-value-action',
-            },
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -336,13 +288,10 @@ const config = {
             url: 'https://github.com/cssnr/parse-issue-form-action',
             description: 'Parse Issue Forms Into Individual Outputs.',
             links: {
-                GitHub: 'https://github.com/cssnr/parse-issue-form-action',
                 Actions:
                     'https://github.com/marketplace/actions/parse-issue-form',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/parse-issue-form-action',
-            },
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -352,13 +301,10 @@ const config = {
             description:
                 'Deploy Docker Stack to Remote Host using SSH Authentication.',
             links: {
-                GitHub: 'https://github.com/cssnr/stack-deploy-action',
                 Actions:
                     'https://github.com/marketplace/actions/docker-stack-deploy',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/stack-deploy-action',
-            },
+            badges: {},
             fa: 'powershell',
         },
         {
@@ -368,13 +314,10 @@ const config = {
             description:
                 'Deploy Docker Stack to Remote Host using SSH Authentication.',
             links: {
-                GitHub: 'https://github.com/cssnr/portainer-stack-deploy-action',
                 Actions:
                     'https://github.com/marketplace/actions/portainer-stack-deploy-action',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/portainer-stack-deploy-action',
-            },
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -384,13 +327,10 @@ const config = {
             description:
                 'Update the Mozilla Firefox Update JSON File after a Release.',
             links: {
-                GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
                 Actions:
                     'https://github.com/marketplace/actions/mozilla-addon-update-action',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/mozilla-addon-update-action',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -399,12 +339,8 @@ const config = {
             url: 'https://github.com/cssnr/json-key-value-check-action',
             description:
                 'Verify Specified JSON Keys are equal to Specified Values.',
-            links: {
-                GitHub: 'https://github.com/cssnr/json-key-value-check-action',
-            },
-            badges: {
-                GitHub: 'https://github.com/cssnr/json-key-value-check-action',
-            },
+            links: {},
+            badges: {},
             fa: 'typescript',
         },
         {
@@ -412,12 +348,8 @@ const config = {
             github: 'cssnr/push-artifacts-action',
             url: 'https://github.com/cssnr/push-artifacts-action',
             description: 'Pushes Build Artifacts to a Remote Host using rsync.',
-            links: {
-                GitHub: 'https://github.com/cssnr/push-artifacts-action',
-            },
-            badges: {
-                GitHub: 'https://github.com/cssnr/push-artifacts-action',
-            },
+            links: {},
+            badges: {},
             fa: 'powershell',
         },
         {
@@ -425,12 +357,8 @@ const config = {
             github: 'cssnr/cf-purge-cache-action',
             url: 'https://github.com/cssnr/cf-purge-cache-action',
             description: 'Easily Purge Cloudflare Cache.',
-            links: {
-                GitHub: 'https://github.com/cssnr/cf-purge-cache-action',
-            },
-            badges: {
-                GitHub: 'https://github.com/cssnr/cf-purge-cache-action',
-            },
+            links: {},
+            badges: {},
             fa: 'python',
         },
         {
@@ -438,12 +366,8 @@ const config = {
             github: 'smashedr/js-test-action',
             url: 'https://github.com/smashedr/js-test-action',
             description: 'Template for JavaScript Actions.',
-            links: {
-                GitHub: 'https://github.com/smashedr/js-test-action',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/js-test-action',
-            },
+            links: {},
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -451,12 +375,8 @@ const config = {
             github: 'smashedr/ts-test-action',
             url: 'https://github.com/smashedr/ts-test-action',
             description: 'Template for TypeScript Actions.',
-            links: {
-                GitHub: 'https://github.com/smashedr/ts-test-action',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/ts-test-action',
-            },
+            links: {},
+            badges: {},
             fa: 'typescript',
         },
         {
@@ -464,12 +384,8 @@ const config = {
             github: 'smashedr/py-test-action',
             url: 'https://github.com/smashedr/py-test-action',
             description: 'Template for Python Actions.',
-            links: {
-                GitHub: 'https://github.com/smashedr/py-test-action',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/py-test-action',
-            },
+            links: {},
+            badges: {},
             fa: 'python',
         },
     ],
@@ -480,13 +396,10 @@ const config = {
             url: 'https://github.com/cssnr/zipline-cli',
             description: 'Command Line Interface for Zipline and Django Files.',
             links: {
-                GitHub: 'https://github.com/cssnr/zipline-cli',
                 Zipline: 'https://github.com/diced/zipline',
                 'Django Files': 'https://github.com/django-files/django-files',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/zipline-cli',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -496,13 +409,10 @@ const config = {
             description:
                 'Red Discord Bot Cogs. Commands and Packages for the Red Discord Bot.',
             links: {
-                GitHub: 'https://github.com/cssnr/vultr-python',
                 'Red Discord Bot':
                     'https://github.com/Cog-Creators/Red-DiscordBot',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/vultr-python',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -511,12 +421,9 @@ const config = {
             url: 'https://github.com/cssnr/vultr-python',
             description: 'Vultr Cloud Hosting API Python 3 Library.',
             links: {
-                GitHub: 'https://github.com/cssnr/vultr-python',
                 Vultr: 'https://www.vultr.com/?ref=6905748',
             },
-            badges: {
-                GitHub: 'https://github.com/cssnr/vultr-python',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -526,13 +433,10 @@ const config = {
             description:
                 'Flask App to Redirect to a Random Image designed for Docker.',
             links: {
-                GitHub: 'https://github.com/smashedr/flask-random-image',
                 API: 'https://flask-image.cssnr.com/',
                 Pages: 'https://github.com/smashedr/random-image/',
             },
-            badges: {
-                GitHub: 'https://github.com/smashedr/flask-random-image',
-            },
+            badges: {},
             fa: 'python',
         },
         {
@@ -541,12 +445,8 @@ const config = {
             url: 'https://github.com/smashedr/node-discord-hook',
             description:
                 'Discord Webhook Relay built in NodeJS designed for Docker.',
-            links: {
-                GitHub: 'https://github.com/smashedr/node-discord-hook',
-            },
-            badges: {
-                GitHub: 'https://github.com/smashedr/node-discord-hook',
-            },
+            links: {},
+            badges: {},
             fa: 'javascript',
         },
         {
@@ -556,14 +456,11 @@ const config = {
             description:
                 'GitHub Pages and Userscript to Redirect YouTube to an Embed.',
             links: {
-                GitHub: 'https://github.com/smashedr/youtube-embed',
                 Userscript:
                     'https://github.com/smashedr/youtube-embed/raw/master/src/youtube-redirect.user.js',
                 Pages: 'https://smashedr.github.io/youtube-embed/',
             },
-            badges: {
-                GitHub: 'https://github.com/smashedr/youtube-embed',
-            },
+            badges: {},
             fa: 'python',
         },
     ],
