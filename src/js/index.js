@@ -108,7 +108,12 @@ function addCard(parent, data) {
     link.rel = 'noopener'
 
     if (data.github) {
-        addBadge(footer, 'github', data.github, ghUrl(data))
+        addBadge(footer, 'GitHub', data.github, ghUrl(data))
+    }
+    if (data.badges) {
+        for (const [key, value] of Object.entries(data.badges)) {
+            addBadge(footer, key, value.id, value.link)
+        }
     }
 
     // Add Links
@@ -118,45 +123,24 @@ function addCard(parent, data) {
             // a.classList.add('text-decoration-none')
             a.title = text
             a.href = href
-            if (data.badges?.hasOwnProperty(text)) {
-                let src
-                if (text === 'GitHub') {
-                    // src = eval(text)(data.github)
-                    continue
-                } else {
-                    src = eval(text)(data.badges[text])
-                }
-
-                // console.debug('src:', src)
-                const img = document.createElement('img')
-                img.src = src
-                img.alt = text
-                img.classList.add('mb-1', 'hvr-grow')
-                a.classList.add('me-2')
-                a.appendChild(img)
-                footer.appendChild(a)
-            } else {
-                a.textContent = text
-                a.classList.add(
-                    'link-offset-2-hover',
-                    'link-underline',
-                    'link-underline-opacity-0',
-                    'link-underline-opacity-75-hover'
-                )
-                footer.appendChild(a)
-                footer.appendChild(document.createTextNode(' - '))
-            }
+            a.textContent = text
+            a.classList.add(
+                'link-offset-2-hover',
+                'link-underline',
+                'link-underline-opacity-0',
+                'link-underline-opacity-75-hover'
+            )
+            footer.appendChild(a)
+            footer.appendChild(document.createTextNode(' - '))
         }
-        if (footer.lastChild?.textContent === ' - ') {
-            footer.removeChild(footer.lastChild)
-        }
+        footer.removeChild(footer.lastChild)
+        // if (footer.lastChild?.textContent === ' - ') {
+        //     footer.removeChild(footer.lastChild)
+        // }
     }
 
     // Add Devicons
     if (data.fa) {
-        // console.debug('devIcons:', devIcons)
-        // console.debug('data.fa:', data.fa)
-        // console.debug('devIcons[data.fa]:', devIcons[data.fa])
         const div = document.createElement('div')
         const icon = devIcons[data.fa].cloneNode(true)
         div.appendChild(icon)
@@ -168,21 +152,21 @@ function addCard(parent, data) {
 
 function addBadge(parent, badge, id, href) {
     const badges = {
-        github: `https://img.shields.io/github/stars/${id}?label=%20`,
+        GitHub: `https://img.shields.io/github/stars/${id}?label=%20`,
+        Google: `https://img.shields.io/chrome-web-store/users/${id}?logo=google&logoColor=white&label=&labelColor=4285F4&color=4285F4`,
+        Mozilla: `https://img.shields.io/amo/users/${id}?logo=mozilla&logoColor=white&label=&labelColor=E66000&color=E66000`,
     }
-    // console.debug(badge, id, link)
-    // console.debug(badges[badge])
     let src = badges[badge]
 
     // console.debug('src:', src)
     const img = document.createElement('img')
     img.src = src
-    // img.alt = text
+    img.alt = badge
     img.classList.add('mb-1', 'hvr-grow')
 
     const a = document.createElement('a')
     // a.classList.add('text-decoration-none')
-    // a.title = text
+    a.title = badge
     a.href = href
     a.classList.add('me-2')
     a.appendChild(img)

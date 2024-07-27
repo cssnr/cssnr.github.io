@@ -1,8 +1,3 @@
-const Google = (id) =>
-    `https://img.shields.io/chrome-web-store/users/${id}?logo=google&logoColor=white&label=&labelColor=4285F4&color=4285F4`
-const Mozilla = (id) =>
-    `https://img.shields.io/amo/users/${id}?logo=mozilla&logoColor=white&label=&labelColor=E66000&color=E66000`
-
 const config = {
     webExtensions: [
         {
@@ -13,12 +8,16 @@ const config = {
             description:
                 'Web Extension to easily extract, parse, or open all links/domains from a site or text with optional filters.',
             badges: {
-                Google: 'ifefifghpkllfibejafbakmflidjcjfp',
-                Mozilla: 'link-extractor',
+                Google: {
+                    id: 'ifefifghpkllfibejafbakmflidjcjfp',
+                    link: 'https://chromewebstore.google.com/detail/link-extractor/ifefifghpkllfibejafbakmflidjcjfp',
+                },
+                Mozilla: {
+                    id: 'link-extractor',
+                    link: 'https://addons.mozilla.org/addon/link-extractor',
+                },
             },
             links: {
-                Google: 'https://chromewebstore.google.com/detail/link-extractor/ifefifghpkllfibejafbakmflidjcjfp',
-                Mozilla: 'https://addons.mozilla.org/addon/link-extractor',
                 Website: 'https://link-extractor.cssnr.com/',
             },
             fa: 'javascript',
@@ -30,15 +29,18 @@ const config = {
             icon: 'https://raw.githubusercontent.com/cssnr/open-links-in-new-tab/master/src/images/logo128.png',
             description:
                 'Web Extension to Open Links in New Tabs for Specified Domains or Temporarily on Any Tab.',
-            links: {
-                Google: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc',
-                Mozilla:
-                    'https://addons.mozilla.org/addon/open-links-in-new-tab',
-                Website: 'https://open-links-in-new-tab.cssnr.com/',
-            },
             badges: {
-                Google: 'efahmjakjnnmleokcaomicgfhobabdkc',
-                Mozilla: 'open-links-in-new-tab',
+                Google: {
+                    id: 'efahmjakjnnmleokcaomicgfhobabdkc',
+                    link: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc',
+                },
+                Mozilla: {
+                    id: 'open-links-in-new-tab',
+                    link: 'https://addons.mozilla.org/addon/open-links-in-new-tab',
+                },
+            },
+            links: {
+                Website: 'https://open-links-in-new-tab.cssnr.com/',
             },
             fa: 'javascript',
         },
@@ -49,14 +51,18 @@ const config = {
             icon: 'https://playdrift-extension.cssnr.com/media/logo.png',
             description:
                 'PlayDrift Web Extension to view Rankings and Win/Loss Records on Player Profiles plus much more.',
-            links: {
-                Google: 'https://chromewebstore.google.com/detail/playdrift-extension/anlkpnbhiiojmedlkchcdmigkdccnmcn',
-                Mozilla: 'https://addons.mozilla.org/addon/playdrift-extension',
-                Website: 'https://playdrift-extension.cssnr.com/',
-            },
             badges: {
-                Google: 'anlkpnbhiiojmedlkchcdmigkdccnmcn',
-                Mozilla: 'playdrift-extension',
+                Google: {
+                    id: 'anlkpnbhiiojmedlkchcdmigkdccnmcn',
+                    link: 'https://chromewebstore.google.com/detail/playdrift-extension/anlkpnbhiiojmedlkchcdmigkdccnmcn',
+                },
+                Mozilla: {
+                    id: 'playdrift-extension',
+                    link: 'https://addons.mozilla.org/addon/playdrift-extension',
+                },
+            },
+            links: {
+                Website: 'https://playdrift-extension.cssnr.com/',
             },
             fa: 'javascript',
         },
@@ -67,14 +73,18 @@ const config = {
             icon: 'https://raw.githubusercontent.com/django-files/web-extension/master/src/media/logo128.png',
             description:
                 'Web Extension for Django Files to view recent uploads, shorten URLs, and upload any Image, Video or Audio.',
-            links: {
-                Google: 'https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej',
-                Mozilla: 'https://addons.mozilla.org/addon/django-files',
-                Website: 'https://django-files.github.io/extension/',
-            },
             badges: {
-                Google: 'abpbiefojfkekhkjnpakpekkpeibnjej',
-                Mozilla: 'django-files',
+                Google: {
+                    id: 'abpbiefojfkekhkjnpakpekkpeibnjej',
+                    link: 'https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej',
+                },
+                Mozilla: {
+                    id: 'django-files',
+                    link: 'https://addons.mozilla.org/addon/django-files',
+                },
+            },
+            links: {
+                Website: 'https://django-files.github.io/extension/',
             },
             fa: 'javascript',
         },
@@ -85,14 +95,18 @@ const config = {
             icon: 'https://raw.githubusercontent.com/cssnr/smwc-web-extension/master/src/images/logo128.png',
             description:
                 'Web Extension to to easily Patch and Play ROMs Online via the smwc.world site.',
-            links: {
-                Google: 'https://chromewebstore.google.com/detail/smwc-web-extension/foalfafgmnglcgpgkhhmcfhjgmdcjide',
-                Mozilla: 'https://addons.mozilla.org/addon/smwc-web-extension',
-                Website: 'https://smwc.world/',
-            },
             badges: {
-                Google: 'foalfafgmnglcgpgkhhmcfhjgmdcjide',
-                Mozilla: 'smwc-web-extension',
+                Google: {
+                    id: 'foalfafgmnglcgpgkhhmcfhjgmdcjide',
+                    link: 'https://chromewebstore.google.com/detail/smwc-web-extension/foalfafgmnglcgpgkhhmcfhjgmdcjide',
+                },
+                Mozilla: {
+                    id: 'smwc-web-extension',
+                    link: 'https://addons.mozilla.org/addon/smwc-web-extension',
+                },
+            },
+            links: {
+                Website: 'https://smwc.world/',
             },
             fa: 'javascript',
         },
@@ -103,14 +117,18 @@ const config = {
             icon: 'https://asn-plus.cssnr.com/media/logo.png',
             description:
                 'Aviation Safety Network Web Extension to enable dark mode plus add additional features.',
-            links: {
-                Google: 'https://chromewebstore.google.com/detail/asn-plus/phcbcnpmcbkcnijkpfohkdmcofcofibh',
-                Mozilla: 'https://addons.mozilla.org/addon/asn-plus',
-                Website: 'https://asn-plus.cssnr.com/',
-            },
             badges: {
-                Google: 'phcbcnpmcbkcnijkpfohkdmcofcofibh',
-                Mozilla: 'asn-plus',
+                Google: {
+                    id: 'phcbcnpmcbkcnijkpfohkdmcofcofibh',
+                    link: 'https://chromewebstore.google.com/detail/asn-plus/phcbcnpmcbkcnijkpfohkdmcofcofibh',
+                },
+                Mozilla: {
+                    id: 'asn-plus',
+                    link: 'https://addons.mozilla.org/addon/asn-plus',
+                },
+            },
+            links: {
+                Website: 'https://asn-plus.cssnr.com/',
             },
             fa: 'javascript',
         },
@@ -121,15 +139,18 @@ const config = {
             icon: 'https://raw.githubusercontent.com/cssnr/hls-video-downloader/master/src/images/logo128.png',
             description:
                 'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
-            links: {
-                Google: 'https://chromewebstore.google.com/detail/text-formatter/mpmiiaolodhanoalpjncddpmnkbjicbo',
-                Mozilla:
-                    'https://addons.mozilla.org/addon/hls-video-downloader',
-                Client: 'https://github.com/cssnr/hls-downloader-client',
-            },
             badges: {
-                Google: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
-                Mozilla: 'hls-video-downloader',
+                Google: {
+                    id: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
+                    link: 'https://chromewebstore.google.com/detail/text-formatter/mpmiiaolodhanoalpjncddpmnkbjicbo',
+                },
+                Mozilla: {
+                    id: 'hls-video-downloader',
+                    link: 'https://addons.mozilla.org/addon/hls-video-downloader',
+                },
+            },
+            links: {
+                Client: 'https://github.com/cssnr/hls-downloader-client',
             },
             fa: 'javascript',
         },
@@ -139,13 +160,15 @@ const config = {
             url: 'https://github.com/cssnr/text-formatter',
             icon: 'https://raw.githubusercontent.com/cssnr/text-formatter/master/src/images/logo128.png',
             description: 'Web Extension for Splitting and Formatting Text.',
+            badges: {
+                Google: {
+                    id: 'medimbembaeldnglneiipkenpagjfcdj',
+                    link: 'https://chromewebstore.google.com/detail/text-formatter/medimbembaeldnglneiipkenpagjfcdj',
+                },
+            },
             links: {
-                Google: 'https://chromewebstore.google.com/detail/text-formatter/medimbembaeldnglneiipkenpagjfcdj',
                 Mozilla:
                     'https://github.com/cssnr/text-formatter/releases/latest',
-            },
-            badges: {
-                Google: 'medimbembaeldnglneiipkenpagjfcdj',
             },
             fa: 'javascript',
         },
@@ -156,13 +179,15 @@ const config = {
             icon: 'https://raw.githubusercontent.com/cssnr/aviation-tools/master/src/images/logo128.png',
             description:
                 'Aviation Tools Web Extension. Currently a Work in Progress.',
+            badges: {
+                Google: {
+                    id: 'cjjhackeogffajjndfhemgniokonimin',
+                    link: 'https://chromewebstore.google.com/detail/aviation-tools/cjjhackeogffajjndfhemgniokonimin',
+                },
+            },
             links: {
-                Google: 'https://chromewebstore.google.com/detail/aviation-tools/cjjhackeogffajjndfhemgniokonimin',
                 Mozilla:
                     'https://github.com/cssnr/aviation-tools/releases/latest',
-            },
-            badges: {
-                Google: 'cjjhackeogffajjndfhemgniokonimin',
             },
             fa: 'javascript',
         },
@@ -173,8 +198,8 @@ const config = {
             icon: 'https://raw.githubusercontent.com/smashedr/simple-extension/master/src/images/logo128.png',
             description:
                 'Example Web Extension for copying and creating new web extensions based on Manifest V3.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'javascript',
         },
         {
@@ -184,8 +209,8 @@ const config = {
             icon: 'https://raw.githubusercontent.com/smashedr/web-enhancer/master/src/images/logo128.png',
             description:
                 'Upcoming Web Extension with Various Browser Enhancements.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'javascript',
         },
         {
@@ -195,8 +220,8 @@ const config = {
             icon: 'https://raw.githubusercontent.com/smashedr/site-tools/master/src/images/logo128.png',
             description:
                 'Upcoming Web Extension with Various Site Modifications.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'javascript',
         },
     ],
@@ -209,10 +234,10 @@ const config = {
             icon: 'https://raw.githubusercontent.com/django-files/web-extension/master/src/media/logo128.png',
             description:
                 'A Feature Packed Self-Hosted Django/Docker File Manager for Sharing Files with ShareX, Flameshot and Much more.',
+            // badges: {},
             links: {
                 Website: 'https://smwc.world/',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -222,10 +247,10 @@ const config = {
             icon: 'https://smwc.world/static/images/logo.png',
             description:
                 'SMWCentral ROM Archive to archive, download, send notifications, plus patch and play SMW ROMs online.',
+            // badges: {},
             links: {
                 Website: 'https://smwc.world/',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -235,10 +260,10 @@ const config = {
             icon: 'https://slashgif.com/static/images/slashgif.png',
             description:
                 'Slack App to search for a random GIF and preview it, before posting publicly.',
+            // badges: {},
             links: {
                 Website: 'https://slashgif.com/',
             },
-            badges: {},
             fa: 'python',
         },
     ],
@@ -250,11 +275,11 @@ const config = {
             url: 'https://github.com/marketplace/actions/virustotal-action',
             description:
                 'Scan Release Artifacts with VirusTotal and Update Release Notes.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/virustotal-action',
             },
-            badges: {},
             fa: 'javascript',
         },
         {
@@ -263,11 +288,11 @@ const config = {
             url: 'https://github.com/marketplace/actions/update-version-tags-action',
             description:
                 'Update Version Tags on Push or Release for Semantic Versions.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/update-version-tags-action',
             },
-            badges: {},
             fa: 'javascript',
         },
         {
@@ -275,11 +300,11 @@ const config = {
             github: 'cssnr/update-json-value-action',
             url: 'https://github.com/marketplace/actions/update-json-value-action',
             description: 'Update JSON file Value(s) for Publishing.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/update-json-value-action',
             },
-            badges: {},
             fa: 'javascript',
         },
         {
@@ -287,11 +312,11 @@ const config = {
             github: 'cssnr/parse-issue-form-action',
             url: 'https://github.com/cssnr/parse-issue-form-action',
             description: 'Parse Issue Forms Into Individual Outputs.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/parse-issue-form',
             },
-            badges: {},
             fa: 'javascript',
         },
         {
@@ -300,11 +325,11 @@ const config = {
             url: 'https://github.com/cssnr/stack-deploy-action',
             description:
                 'Deploy Docker Stack to Remote Host using SSH Authentication.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/docker-stack-deploy',
             },
-            badges: {},
             fa: 'powershell',
         },
         {
@@ -313,11 +338,11 @@ const config = {
             url: 'https://github.com/cssnr/portainer-stack-deploy-action',
             description:
                 'Deploy Docker Stack to Remote Host using SSH Authentication.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/portainer-stack-deploy-action',
             },
-            badges: {},
             fa: 'javascript',
         },
         {
@@ -326,11 +351,11 @@ const config = {
             url: 'https://github.com/marketplace/actions/mozilla-addon-update-action',
             description:
                 'Update the Mozilla Firefox Update JSON File after a Release.',
+            // badges: {},
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/mozilla-addon-update-action',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -339,8 +364,8 @@ const config = {
             url: 'https://github.com/cssnr/json-key-value-check-action',
             description:
                 'Verify Specified JSON Keys are equal to Specified Values.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'typescript',
         },
         {
@@ -348,8 +373,8 @@ const config = {
             github: 'cssnr/push-artifacts-action',
             url: 'https://github.com/cssnr/push-artifacts-action',
             description: 'Pushes Build Artifacts to a Remote Host using rsync.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'powershell',
         },
         {
@@ -357,8 +382,8 @@ const config = {
             github: 'cssnr/cf-purge-cache-action',
             url: 'https://github.com/cssnr/cf-purge-cache-action',
             description: 'Easily Purge Cloudflare Cache.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'python',
         },
         {
@@ -366,8 +391,8 @@ const config = {
             github: 'smashedr/js-test-action',
             url: 'https://github.com/smashedr/js-test-action',
             description: 'Template for JavaScript Actions.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'javascript',
         },
         {
@@ -375,8 +400,8 @@ const config = {
             github: 'smashedr/ts-test-action',
             url: 'https://github.com/smashedr/ts-test-action',
             description: 'Template for TypeScript Actions.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'typescript',
         },
         {
@@ -384,8 +409,8 @@ const config = {
             github: 'smashedr/py-test-action',
             url: 'https://github.com/smashedr/py-test-action',
             description: 'Template for Python Actions.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'python',
         },
     ],
@@ -395,11 +420,11 @@ const config = {
             github: 'cssnr/zipline-cli',
             url: 'https://github.com/cssnr/zipline-cli',
             description: 'Command Line Interface for Zipline and Django Files.',
+            // badges: {},
             links: {
                 Zipline: 'https://github.com/diced/zipline',
                 'Django Files': 'https://github.com/django-files/django-files',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -408,11 +433,11 @@ const config = {
             url: 'https://github.com/smashedr/carl-cogs',
             description:
                 'Red Discord Bot Cogs. Commands and Packages for the Red Discord Bot.',
+            // badges: {},
             links: {
                 'Red Discord Bot':
                     'https://github.com/Cog-Creators/Red-DiscordBot',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -420,10 +445,10 @@ const config = {
             github: 'cssnr/vultr-python',
             url: 'https://github.com/cssnr/vultr-python',
             description: 'Vultr Cloud Hosting API Python 3 Library.',
+            // badges: {},
             links: {
                 Vultr: 'https://www.vultr.com/?ref=6905748',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -432,11 +457,11 @@ const config = {
             url: 'https://github.com/smashedr/flask-random-image',
             description:
                 'Flask App to Redirect to a Random Image designed for Docker.',
+            // badges: {},
             links: {
                 API: 'https://flask-image.cssnr.com/',
                 Pages: 'https://github.com/smashedr/random-image/',
             },
-            badges: {},
             fa: 'python',
         },
         {
@@ -445,8 +470,8 @@ const config = {
             url: 'https://github.com/smashedr/node-discord-hook',
             description:
                 'Discord Webhook Relay built in NodeJS designed for Docker.',
-            links: {},
-            badges: {},
+            // badges: {},
+            // links: {},
             fa: 'javascript',
         },
         {
@@ -455,12 +480,12 @@ const config = {
             url: 'https://github.com/smashedr/youtube-embed/',
             description:
                 'GitHub Pages and Userscript to Redirect YouTube to an Embed.',
+            // badges: {},
             links: {
                 Userscript:
                     'https://github.com/smashedr/youtube-embed/raw/master/src/youtube-redirect.user.js',
                 Pages: 'https://smashedr.github.io/youtube-embed/',
             },
-            badges: {},
             fa: 'python',
         },
     ],
