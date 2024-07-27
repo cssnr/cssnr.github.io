@@ -69,6 +69,11 @@ async function domContentLoaded() {
 
     AOS.init({ disable: 'mobile' })
     // AOS.init()
+
+    // if (window.scrollY !== 0) {
+    //     console.debug('Not at Top')
+    //     window.dispatchEvent(new Event('scroll'))
+    // }
 }
 
 /**

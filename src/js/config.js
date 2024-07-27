@@ -361,6 +361,18 @@ const config = {
             fa: 'python',
         },
         {
+            name: 'Cloudflare Purge Cache',
+            github: 'cssnr/cf-purge-cache-action',
+            url: 'https://github.com/cssnr/cf-purge-cache-action',
+            description: 'Easily Purge Cloudflare Cache.',
+            // badges: {},
+            links: {
+                Actions:
+                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
+            },
+            fa: 'python',
+        },
+        {
             name: 'Json Key Value Check',
             github: 'cssnr/json-key-value-check-action',
             url: 'https://github.com/cssnr/json-key-value-check-action',
@@ -378,18 +390,6 @@ const config = {
             // badges: {},
             // links: {},
             fa: 'powershell',
-        },
-        {
-            name: 'Cloudflare Purge Cache',
-            github: 'cssnr/cf-purge-cache-action',
-            url: 'https://github.com/cssnr/cf-purge-cache-action',
-            description: 'Easily Purge Cloudflare Cache.',
-            // badges: {},
-            links: {
-                Actions:
-                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
-            },
-            fa: 'python',
         },
         {
             name: 'JavaScript Template Action',
