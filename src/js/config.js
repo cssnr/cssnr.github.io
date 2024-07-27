@@ -257,7 +257,7 @@ const config = {
         },
         {
             name: 'SlashGIF',
-            github: 'cssnr/slashgif-site',
+            // github: 'cssnr/slashgif-site',
             url: 'https://slashgif.com/',
             icon: 'https://slashgif.com/static/images/slashgif.png',
             description:
@@ -385,7 +385,10 @@ const config = {
             url: 'https://github.com/cssnr/cf-purge-cache-action',
             description: 'Easily Purge Cloudflare Cache.',
             // badges: {},
-            // links: {},
+            links: {
+                Actions:
+                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
+            },
             fa: 'python',
         },
         {
