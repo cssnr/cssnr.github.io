@@ -52,7 +52,7 @@ async function domContentLoaded() {
 
     // addCards(config)
     for (const [selector, apps] of Object.entries(config)) {
-        console.debug(`Add Section: ${selector}:`, apps)
+        // console.debug(`Add Section: ${selector}:`, apps)
         const parent = document.getElementById(selector)
         for (const data of apps) {
             addCard(parent, data)
@@ -108,42 +108,50 @@ function addCard(parent, data) {
     link.rel = 'noopener'
 
     // Add Links
-    for (const [text, href] of Object.entries(data.links)) {
-        const a = link.cloneNode(true)
-        // a.classList.add('text-decoration-none')
-        a.title = text
-        a.href = href
-        if (data.badges?.hasOwnProperty(text)) {
-            // console.debug('text:', text)
-            // console.debug('href:', href)
-            const src = eval(text)(data.badges[text])
-            // console.debug('src:', src)
-            const img = document.createElement('img')
-            img.src = src
-            img.alt = text
-            img.classList.add('mb-1', 'hvr-grow')
-            a.classList.add('me-2')
-            a.appendChild(img)
-            footer.appendChild(a)
-        } else {
-            a.textContent = text
-            a.classList.add(
-                'link-offset-2-hover',
-                'link-underline',
-                'link-underline-opacity-0',
-                'link-underline-opacity-75-hover'
-            )
-            footer.appendChild(a)
-            footer.appendChild(document.createTextNode(' - '))
+    if (data.links) {
+        for (const [text, href] of Object.entries(data.links)) {
+            const a = link.cloneNode(true)
+            // a.classList.add('text-decoration-none')
+            a.title = text
+            a.href = href
+            if (data.badges?.hasOwnProperty(text)) {
+                let src
+                if (text === 'GitHub') {
+                    src = eval(text)(data.github)
+                } else {
+                    src = eval(text)(data.badges[text])
+                }
+
+                // console.debug('src:', src)
+                const img = document.createElement('img')
+                img.src = src
+                img.alt = text
+                img.classList.add('mb-1', 'hvr-grow')
+                a.classList.add('me-2')
+                a.appendChild(img)
+                footer.appendChild(a)
+            } else {
+                a.textContent = text
+                a.classList.add(
+                    'link-offset-2-hover',
+                    'link-underline',
+                    'link-underline-opacity-0',
+                    'link-underline-opacity-75-hover'
+                )
+                footer.appendChild(a)
+                footer.appendChild(document.createTextNode(' - '))
+            }
+        }
+        if (footer.lastChild.textContent === ' - ') {
+            footer.removeChild(footer.lastChild)
         }
     }
-    footer.removeChild(footer.lastChild)
 
     // Add Devicons
     if (data.fa) {
-        console.debug('devIcons:', devIcons)
-        console.debug('data.fa:', data.fa)
-        console.debug('devIcons[data.fa]:', devIcons[data.fa])
+        // console.debug('devIcons:', devIcons)
+        // console.debug('data.fa:', data.fa)
+        // console.debug('devIcons[data.fa]:', devIcons[data.fa])
         const div = document.createElement('div')
         const icon = devIcons[data.fa].cloneNode(true)
         div.appendChild(icon)
