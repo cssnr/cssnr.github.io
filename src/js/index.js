@@ -26,10 +26,15 @@ const dtOptions = {
         zeroRecords: '',
     },
     columns: [
-        { data: 'icon', render: dtImage, orderable: false },
-        { data: 'name', render: dtName },
-        { data: 'description' },
-        { data: 'fa', render: dtIcon, orderable: false },
+        {
+            data: 'icon',
+            render: dtImage,
+            orderable: false,
+            responsivePriority: 3,
+        },
+        { data: 'name', render: dtName, responsivePriority: 1 },
+        { data: 'description', responsivePriority: 2 },
+        { data: 'fa', render: dtIcon, orderable: false, responsivePriority: 4 },
     ],
     search: {
         regex: true,
