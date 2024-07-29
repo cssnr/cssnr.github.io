@@ -381,6 +381,19 @@ const config = {
             fa: 'python',
         },
         {
+            name: 'Web Request Action',
+            github: 'cssnr/web-request-action',
+            url: 'https://github.com/cssnr/web-request-action',
+            icon: '',
+            description:
+                'Send Web Requests like POST and GET with Axios using GitHub Actions.',
+            // badges: {},
+            links: {
+                Actions: 'https://github.com/marketplace/actions/web-request',
+            },
+            fa: 'typescript',
+        },
+        {
             name: 'Json Key Value Check',
             github: 'cssnr/json-key-value-check-action',
             url: 'https://github.com/cssnr/json-key-value-check-action',
