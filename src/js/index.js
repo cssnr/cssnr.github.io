@@ -12,7 +12,8 @@ const devIcons = {
 const dtOptions = {
     info: true,
     processing: true,
-    responsive: true,
+    // responsive: true,
+    // autoWidth: false,
     pageLength: -1,
     lengthMenu: [
         [-1, 10, 25, 50, 100, 250, 500, 1000],
@@ -31,6 +32,7 @@ const dtOptions = {
             render: dtImage,
             orderable: false,
             responsivePriority: 5,
+            className: 'd-none d-sm-table-cell',
         },
         { data: 'name', render: dtName, responsivePriority: 1 },
         { data: 'description', responsivePriority: 2 },
@@ -40,7 +42,13 @@ const dtOptions = {
             orderable: false,
             responsivePriority: 3,
         },
-        { data: 'fa', render: dtIcon, orderable: false, responsivePriority: 4 },
+        {
+            data: 'fa',
+            render: dtIcon,
+            orderable: false,
+            responsivePriority: 4,
+            // className: 'd-none d-sm-table-cell',
+        },
     ],
     search: {
         regex: true,
