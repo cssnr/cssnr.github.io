@@ -51,16 +51,16 @@
 <div id="tsparticles"></div>
 
 <header>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary mb-2" aria-label="Primary Navigation">
+    <nav aria-label="Primary Navigation" class="navbar navbar-expand-sm bg-body-tertiary mb-2">
         <div class="container-fluid">
             <a class="px-2" href="{{ "/" | relative_url }}">
-                <img src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" alt="logo" class="my-auto"></a>
+                <img alt="logo" src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" class="my-auto"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse me-auto " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     {% for item in site.menu %}
                         <li class="nav-item">
