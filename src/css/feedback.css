@@ -29,12 +29,16 @@ body {
 }
 
 [data-bs-theme='dark'] .navbar,
-[data-bs-theme='dark'] .footer {
+[data-bs-theme='dark'] .footer,
+[data-bs-theme='dark'] .dropdown-menu {
     backdrop-filter: blur(6px);
     background-color: rgba(0 0 0 / 50%) !important;
+    z-index: 1;
 }
 [data-bs-theme='light'] .navbar,
-[data-bs-theme='light'] .footer {
+[data-bs-theme='light'] .footer,
+[data-bs-theme='light'] .dropdown-menu {
     backdrop-filter: blur(6px);
     background-color: rgba(255 255 255 / 50%) !important;
+    z-index: 1;
 }
