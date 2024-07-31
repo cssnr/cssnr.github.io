@@ -30,10 +30,16 @@ const dtOptions = {
             data: 'icon',
             render: dtImage,
             orderable: false,
-            responsivePriority: 3,
+            responsivePriority: 5,
         },
         { data: 'name', render: dtName, responsivePriority: 1 },
         { data: 'description', responsivePriority: 2 },
+        {
+            data: 'github',
+            render: dtBadge,
+            orderable: false,
+            responsivePriority: 3,
+        },
         { data: 'fa', render: dtIcon, orderable: false, responsivePriority: 4 },
     ],
     search: {
@@ -64,6 +70,15 @@ function dtName(data, type, row, meta) {
     link.textContent = data
     link.href = row.url
     return link
+}
+
+function dtBadge(data, type, row) {
+    // console.log('data:', data)
+    if (data) {
+        return addBadge(null, 'GitHub', data, ghUrl(row))
+    } else {
+        return ''
+    }
 }
 
 function dtIcon(data) {
@@ -293,7 +308,11 @@ function addBadge(parent, badge, id, href) {
     a.href = href
     a.classList.add('me-2')
     a.appendChild(img)
-    parent.appendChild(a)
+    if (!parent) {
+        return a
+    } else {
+        parent.appendChild(a)
+    }
 }
 
 function ghUrl(data) {
