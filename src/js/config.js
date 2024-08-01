@@ -257,7 +257,7 @@ const config = {
         },
         {
             name: 'SlashGIF',
-            // github: 'cssnr/slashgif-site',
+            github: '',
             url: 'https://slashgif.com/',
             icon: 'https://slashgif.com/static/images/slashgif.png',
             description:
@@ -391,7 +391,7 @@ const config = {
             links: {
                 Actions: 'https://github.com/marketplace/actions/web-request',
             },
-            fa: 'typescript',
+            fa: 'javascript',
         },
         {
             name: 'Json Key Value Check',
@@ -445,6 +445,7 @@ const config = {
             fa: 'python',
         },
     ],
+
     otherSoftware: [
         {
             name: 'Zipline CLI',
@@ -536,7 +537,22 @@ const config = {
                 Package:
                     'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
             },
-            fa: 'python',
+            fa: 'docker',
+        },
+        {
+            name: 'Readme Stats Docker Image',
+            github: 'smashedr/github-readme-stats',
+            url: 'https://github.com/smashedr/github-readme-stats/',
+            icon: '',
+            description:
+                'GitHub Readme Stats Docker Images, Compose and Workflows.',
+            // badges: {},
+            links: {
+                Packages:
+                    'https://github.com/smashedr?tab=packages&repo_name=github-readme-stats',
+                Source: 'https://github.com/anuraghazra/github-readme-stats',
+            },
+            fa: 'docker',
         },
     ],
 }

@@ -7,12 +7,13 @@ const devIcons = {
     javascript: document.querySelector('#clone > .devicon-javascript-plain'),
     typescript: document.querySelector('#clone > .devicon-typescript-plain'),
     powershell: document.querySelector('#clone > .devicon-powershell-plain'),
+    docker: document.querySelector('#clone > .devicon-docker-plain'),
 }
 
 const dtOptions = {
     info: true,
     processing: true,
-    // responsive: true,
+    responsive: true,
     // autoWidth: false,
     pageLength: -1,
     lengthMenu: [
@@ -26,13 +27,21 @@ const dtOptions = {
         searchPlaceholder: 'Type to Filter...',
         zeroRecords: '',
     },
+    // responsive: {
+    //     breakpoints: [
+    //         { name: 'icon', width: 550 },
+    //         { name: 'name', width: Infinity },
+    //         { name: 'description', width: Infinity },
+    //         { name: 'github', width: Infinity },
+    //         { name: 'fa', width: 550 },
+    //     ],
+    // },
     columns: [
         {
             data: 'icon',
             render: dtImage,
             orderable: false,
             responsivePriority: 5,
-            className: 'd-none d-sm-table-cell',
         },
         { data: 'name', render: dtName, responsivePriority: 1 },
         { data: 'description', responsivePriority: 2 },
@@ -101,10 +110,10 @@ document
 
 function toggleView(event) {
     const btn = event.target.closest('button')
-    if (btn.id === 'cards-view') {
+    if (btn.dataset.view === 'cards') {
         toggleCards()
     }
-    if (btn.id === 'list-view') {
+    if (btn.dataset.view === 'list') {
         toggleList()
     }
 }
