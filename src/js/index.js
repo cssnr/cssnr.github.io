@@ -22,11 +22,11 @@ const dtOptions = {
         ['All', 5, 10, 25, 50],
     ],
     language: {
-        emptyTable: 'No Results',
-        lengthMenu: '_MENU_',
-        search: '',
+        // emptyTable: 'No Results',
+        lengthMenu: '_MENU_ Applications',
+        search: 'Filter',
         searchPlaceholder: 'Type to Filter...',
-        zeroRecords: '',
+        zeroRecords: 'No Results',
     },
     // responsive: {
     //     breakpoints: [
