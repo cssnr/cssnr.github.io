@@ -18,14 +18,18 @@ noindex: true
         <form id="uninstall-form">
             <input type="hidden" value="{{ site.relay_url }}" id="relay-url" hidden="hidden">
 
-            <select id="app-list" class="form-select form-select-lg form-control mb-3" aria-label="Select Feedback Reason">
-                <option value="General Feedback" selected>Select an Application (Optional)</option>
-            </select>
+            <label for="selected-app" class="form-label visually-hidden">Datalist example</label>
+            <input id="selected-app" class="form-control" list="app-list" placeholder="Subject or Application. Type to Search...">
+            <datalist id="app-list"></datalist>
+
+            {% comment %}<select id="app-list" class="form-select form-select-lg form-control mb-3" aria-label="Select Feedback Reason">{% endcomment %}
+                {% comment %}<option value="General Feedback" selected>Select an Application (Optional)</option>{% endcomment %}
+            {% comment %}</select>{% endcomment %}
 
             <div class="my-2">
                 <label for="feedback-text" class="form-label visually-hidden">Uninstall Feedback</label>
                 <textarea class="form-control" id="feedback-text" rows="5" maxlength="1000"
-                          placeholder="General Feedback, Comments, Concerns, etc..." autofocus></textarea>
+                          placeholder="Feedback, Comments, Concerns, etc..." autofocus></textarea>
                 <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
             </div>
             <button id="submit-btn" class="btn btn-success w-100" type="submit">

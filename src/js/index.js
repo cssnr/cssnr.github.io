@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', domContentLoaded)
  * @function domContentLoaded
  */
 async function domContentLoaded() {
-    console.debug('DOMContentLoaded')
+    // console.debug('DOMContentLoaded')
     const searchParams = new URLSearchParams(window.location.search)
     const feedback = searchParams.get('feedback')
     if (feedback) {
