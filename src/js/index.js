@@ -16,12 +16,13 @@ const dtOptions = {
     responsive: true,
     // autoWidth: false,
     pageLength: -1,
+    order: [],
     lengthMenu: [
-        [-1, 10, 25, 50, 100, 250, 500, 1000],
-        ['All', 10, 25, 50, 100, 250, 500, 1000],
+        [-1, 5, 10, 25, 50],
+        ['All', 5, 10, 25, 50],
     ],
     language: {
-        emptyTable: '',
+        emptyTable: 'No Results',
         lengthMenu: '_MENU_',
         search: '',
         searchPlaceholder: 'Type to Filter...',
@@ -44,7 +45,7 @@ const dtOptions = {
             responsivePriority: 5,
         },
         { data: 'name', render: dtName, responsivePriority: 1 },
-        { data: 'description', responsivePriority: 2 },
+        { data: 'description', responsivePriority: 2, orderable: false },
         {
             data: 'github',
             render: dtBadge,
@@ -62,10 +63,10 @@ const dtOptions = {
     search: {
         regex: true,
     },
-    stateSave: true,
-    stateSaveParams: function (settings, data) {
-        data.search.search = ''
-    },
+    // stateSave: true,
+    // stateSaveParams: function (settings, data) {
+    //     data.search.search = ''
+    // },
 }
 
 function dtImage(data, type, row, meta) {

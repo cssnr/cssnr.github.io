@@ -13,7 +13,7 @@ noindex: true
                 <h1 class="align-middle mb-0">{{ site.site_name }} {{ page.title }}</h1>
         </div>
         <p class="text-center lead">
-            Provide General Feedback or Ask a Question.
+            Provide General Feedback or Suggestions.
         </p>
         <form id="uninstall-form">
             <input type="hidden" value="{{ site.relay_url }}" id="relay-url" hidden="hidden">
@@ -25,7 +25,7 @@ noindex: true
             <div class="my-2">
                 <label for="feedback-text" class="form-label visually-hidden">Uninstall Feedback</label>
                 <textarea class="form-control" id="feedback-text" rows="5" maxlength="1000"
-                          placeholder="Questions, Comments, Concerns, etc..." autofocus></textarea>
+                          placeholder="General Feedback, Comments, Concerns, etc..." autofocus></textarea>
                 <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
             </div>
             <button id="submit-btn" class="btn btn-success w-100" type="submit">
