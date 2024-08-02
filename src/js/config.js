@@ -257,7 +257,7 @@ const config = {
         },
         {
             name: 'SlashGIF',
-            // github: 'cssnr/slashgif-site',
+            github: '',
             url: 'https://slashgif.com/',
             icon: 'https://slashgif.com/static/images/slashgif.png',
             description:
@@ -275,6 +275,7 @@ const config = {
             name: 'VirusTotal Scan',
             github: 'cssnr/virustotal-action',
             url: 'https://github.com/cssnr/virustotal-action',
+            icon: '',
             description:
                 'Scan Release Artifacts with VirusTotal and Update Release Notes.',
             // badges: {},
@@ -288,6 +289,7 @@ const config = {
             name: 'Update Version Tags',
             github: 'cssnr/update-version-tags-action',
             url: 'https://github.com/cssnr/update-version-tags-action',
+            icon: '',
             description:
                 'Update Version Tags on Push or Release for Semantic Versions.',
             // badges: {},
@@ -301,6 +303,7 @@ const config = {
             name: 'Update JSON Value',
             github: 'cssnr/update-json-value-action',
             url: 'https://github.com/cssnr/update-json-value-action',
+            icon: '',
             description: 'Update JSON file Value(s) for Publishing.',
             // badges: {},
             links: {
@@ -313,6 +316,7 @@ const config = {
             name: 'Parse Issue Form',
             github: 'cssnr/parse-issue-form-action',
             url: 'https://github.com/cssnr/parse-issue-form-action',
+            icon: '',
             description: 'Parse Issue Forms Into Individual Outputs.',
             // badges: {},
             links: {
@@ -325,6 +329,7 @@ const config = {
             name: 'Stack Deploy',
             github: 'cssnr/stack-deploy-action',
             url: 'https://github.com/cssnr/stack-deploy-action',
+            icon: '',
             description:
                 'Deploy Docker Stack to Remote Host using SSH Authentication.',
             // badges: {},
@@ -338,6 +343,7 @@ const config = {
             name: 'Portainer Stack Deploy',
             github: 'cssnr/portainer-stack-deploy-action',
             url: 'https://github.com/cssnr/portainer-stack-deploy-action',
+            icon: '',
             description:
                 'Deploy Docker Stack to Remote Host using SSH Authentication.',
             // badges: {},
@@ -351,6 +357,7 @@ const config = {
             name: 'Mozilla Addon Update',
             github: 'cssnr/mozilla-addon-update-action',
             url: 'https://github.com/cssnr/mozilla-addon-update-action',
+            icon: '',
             description:
                 'Update the Mozilla Firefox Update JSON File after a Release.',
             // badges: {},
@@ -361,9 +368,36 @@ const config = {
             fa: 'python',
         },
         {
+            name: 'Cloudflare Purge Cache',
+            github: 'cssnr/cf-purge-cache-action',
+            url: 'https://github.com/cssnr/cf-purge-cache-action',
+            icon: '',
+            description: 'Easily Purge Cloudflare Cache.',
+            // badges: {},
+            links: {
+                Actions:
+                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
+            },
+            fa: 'python',
+        },
+        {
+            name: 'Web Request Action',
+            github: 'cssnr/web-request-action',
+            url: 'https://github.com/cssnr/web-request-action',
+            icon: '',
+            description:
+                'Send Web Requests like POST and GET with Axios using GitHub Actions.',
+            // badges: {},
+            links: {
+                Actions: 'https://github.com/marketplace/actions/web-request',
+            },
+            fa: 'javascript',
+        },
+        {
             name: 'Json Key Value Check',
             github: 'cssnr/json-key-value-check-action',
             url: 'https://github.com/cssnr/json-key-value-check-action',
+            icon: '',
             description:
                 'Verify Specified JSON Keys are equal to Specified Values.',
             // badges: {},
@@ -374,27 +408,17 @@ const config = {
             name: 'Push Artifacts',
             github: 'cssnr/push-artifacts-action',
             url: 'https://github.com/cssnr/push-artifacts-action',
+            icon: '',
             description: 'Pushes Build Artifacts to a Remote Host using rsync.',
             // badges: {},
             // links: {},
             fa: 'powershell',
         },
         {
-            name: 'Cloudflare Purge Cache',
-            github: 'cssnr/cf-purge-cache-action',
-            url: 'https://github.com/cssnr/cf-purge-cache-action',
-            description: 'Easily Purge Cloudflare Cache.',
-            // badges: {},
-            links: {
-                Actions:
-                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
-            },
-            fa: 'python',
-        },
-        {
             name: 'JavaScript Template Action',
             github: 'smashedr/js-test-action',
             url: 'https://github.com/smashedr/js-test-action',
+            icon: '',
             description: 'Template for JavaScript Actions.',
             // badges: {},
             // links: {},
@@ -404,6 +428,7 @@ const config = {
             name: 'TypeScript Template Action',
             github: 'smashedr/ts-test-action',
             url: 'https://github.com/smashedr/ts-test-action',
+            icon: '',
             description: 'Template for TypeScript Actions.',
             // badges: {},
             // links: {},
@@ -413,17 +438,20 @@ const config = {
             name: 'Python Template Action',
             github: 'smashedr/py-test-action',
             url: 'https://github.com/smashedr/py-test-action',
+            icon: '',
             description: 'Template for Python Actions.',
             // badges: {},
             // links: {},
             fa: 'python',
         },
     ],
+
     otherSoftware: [
         {
             name: 'Zipline CLI',
             github: 'cssnr/zipline-cli',
             url: 'https://github.com/cssnr/zipline-cli',
+            icon: '',
             description: 'Command Line Interface for Zipline and Django Files.',
             // badges: {},
             links: {
@@ -436,6 +464,7 @@ const config = {
             name: "Carl's Cogs",
             github: 'cssnr/vultr-python',
             url: 'https://github.com/smashedr/carl-cogs',
+            icon: '',
             description:
                 'Red Discord Bot Cogs. Commands and Packages for the Red Discord Bot.',
             // badges: {},
@@ -449,6 +478,7 @@ const config = {
             name: 'Vultr Python',
             github: 'cssnr/vultr-python',
             url: 'https://github.com/cssnr/vultr-python',
+            icon: '',
             description: 'Vultr Cloud Hosting API Python 3 Library.',
             // badges: {},
             links: {
@@ -460,6 +490,7 @@ const config = {
             name: 'Flask Random Image',
             github: 'smashedr/flask-random-image',
             url: 'https://github.com/smashedr/flask-random-image',
+            icon: '',
             description:
                 'Flask App to Redirect to a Random Image designed for Docker.',
             // badges: {},
@@ -473,6 +504,7 @@ const config = {
             name: 'Discord Webhook Relay',
             github: 'smashedr/node-discord-hook',
             url: 'https://github.com/smashedr/node-discord-hook',
+            icon: '',
             description:
                 'Discord Webhook Relay built in NodeJS designed for Docker.',
             // badges: {},
@@ -483,6 +515,7 @@ const config = {
             name: 'YouTube Embed Redirect',
             github: 'smashedr/youtube-embed',
             url: 'https://github.com/smashedr/youtube-embed/',
+            icon: '',
             description:
                 'GitHub Pages and Userscript to Redirect YouTube to an Embed.',
             // badges: {},
@@ -497,13 +530,29 @@ const config = {
             name: 'Docker Nginx Static',
             github: 'cssnr/docker-nginx-static',
             url: 'https://github.com/cssnr/docker-nginx-static',
+            icon: '',
             description: 'Nginx Docker Image for Serving Static Files.',
             // badges: {},
             links: {
                 Package:
                     'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
             },
-            fa: 'python',
+            fa: 'docker',
+        },
+        {
+            name: 'Readme Stats Docker Image',
+            github: 'smashedr/github-readme-stats',
+            url: 'https://github.com/smashedr/github-readme-stats/',
+            icon: '',
+            description:
+                'GitHub Readme Stats Docker Images, Compose and Workflows.',
+            // badges: {},
+            links: {
+                Packages:
+                    'https://github.com/smashedr?tab=packages&repo_name=github-readme-stats',
+                Source: 'https://github.com/anuraghazra/github-readme-stats',
+            },
+            fa: 'docker',
         },
     ],
 }

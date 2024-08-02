@@ -10,22 +10,12 @@
 
     pointer-events: none;
     user-select: none;
-}
 
-[data-bs-theme='dark'] #scroll-down {
     text-shadow:
-        0 0 3px #000,
-        0 0 6px #000,
-        0 0 9px #000,
-        0 0 12px #000;
-}
-
-[data-bs-theme='light'] #scroll-down {
-    text-shadow:
-        0 0 3px #f8f9fa,
-        0 0 6px #f8f9fa,
-        0 0 9px #f8f9fa,
-        0 0 12px #f8f9fa;
+        0 0 3px var(--bs-body-bg),
+        0 0 6px var(--bs-body-bg),
+        0 0 9px var(--bs-body-bg),
+        0 0 12px var(--bs-body-bg);
 }
 
 .bounce {
@@ -41,5 +31,11 @@
     }
     100% {
         bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .dt-paging {
+        margin-right: 30px !important;
     }
 }

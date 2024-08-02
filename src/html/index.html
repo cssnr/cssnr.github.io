@@ -6,6 +6,18 @@ description: Projects and Information on CSSNR GitHub Development.
 ---
 
 <div class="container-fluid">
+
+    <div class="float-end" style="z-index: 9; position: relative;">
+        <button type="button" class="btn btn-outline-secondary view-toggle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover"
+                data-bs-title="Card View" id="cards-view" data-view="cards">
+            <i class="fa-solid fa-table"></i>
+        </button>
+        <button type="button" class="btn btn-outline-secondary view-toggle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover"
+                data-bs-title="List View<br>(Beta)" data-bs-html="true" id="list-view" data-view="list">
+            <i class="fa-solid fa-table-list"></i>
+        </button>
+    </div>
+
     <h1 class="animate__animated animate__zoomIn"><i class="fa-brands fa-github me-2"></i> {{ site.site_name }}</h1>
 
     <p class="lead">
@@ -28,28 +40,51 @@ description: Projects and Information on CSSNR GitHub Development.
         </p>
     </div>
 
-    <p>
-        <a href="#web-extensions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            Web Extensions</a> &bull;
-        <a href="#web-apps" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            Web Apps</a> &bull;
-        <a href="#github-actions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            GitHub Actions</a> &bull;
-        <a href="#other-software" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
-            Other Software</a>
-    </p>
+    <div id="cards" class="d-none">
+        <p>
+            <a href="#web-extensions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                Web Extensions</a> &bull;
+            <a href="#web-apps" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                Web Apps</a> &bull;
+            <a href="#github-actions" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                GitHub Actions</a> &bull;
+            <a href="#other-software" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover d-inline-block">
+                Other Software</a>
+        </p>
 
-    <h2 id="web-extensions">Web Extensions</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webExtensions"></div>
+        <h2 id="web-extensions">Web Extensions</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webExtensions"></div>
 
-    <h2 id="web-apps" class="" data-aos="zoom-in">Web Apps</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webApps"></div>
+        <h2 id="web-apps" class="" data-aos="zoom-in">Web Apps</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="webApps"></div>
 
-    <h2 id="github-actions" class="" data-aos="zoom-in">GitHub Actions</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="githubActions"></div>
+        <h2 id="github-actions" class="" data-aos="zoom-in">GitHub Actions</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="githubActions"></div>
 
-    <h2 id="other-software" class="" data-aos="zoom-in">Other Software</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="otherSoftware"></div>
+        <h2 id="other-software" class="" data-aos="zoom-in">Other Software</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4" id="otherSoftware"></div>
+    </div>
+    <div id="table" class="d-none mb-1">
+        <table class="table" id="data-table">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% comment %}<tr>{% endcomment %}
+                {% comment %}<th scope="row">1</th>{% endcomment %}
+                {% comment %}<td>Mark</td>{% endcomment %}
+                {% comment %}<td>Otto</td>{% endcomment %}
+                {% comment %}<td>@mdo</td>{% endcomment %}
+            {% comment %}</tr>{% endcomment %}
+            </tbody>
+        </table>
+    </div>
 
 </div> <!-- container -->
 
@@ -81,10 +116,19 @@ description: Projects and Information on CSSNR GitHub Development.
     <i class="devicon-python-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Python"></i>
     <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="JavaScript"></i>
     <i class="devicon-typescript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="TypeScript"></i>
+    <i class="devicon-docker-plain" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Docker"></i>
+
 </div> <!-- clone -->
 
 {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
 {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{% comment %}<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>{% endcomment %}
+<script type="text/javascript" src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/2.1.2/js/dataTables.bootstrap5.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.dataTables.js"></script>
 
 <script type="text/javascript" src="{{ "/js/config.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/index.js" | relative_url }}"></script>

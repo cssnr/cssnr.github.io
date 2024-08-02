@@ -14,7 +14,7 @@ const feedbackText = document.getElementById('feedback-text')
 const inputCount = document.getElementById('input-count')
 const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
-
+const selectedApp = document.getElementById('selected-app')
 uninstallForm.addEventListener('submit', formSubmit)
 
 feedbackText.addEventListener('input', function () {
@@ -36,16 +36,19 @@ contentWrapper.addEventListener(
 document.addEventListener('DOMContentLoaded', function () {
     // console.debug('DOMContentLoaded')
     const selected = url.searchParams.get('app')
+    if (selected) {
+        selectedApp.value = selected
+    }
     const appList = document.getElementById('app-list')
     const apps = [].concat(...Object.values(config))
     const combined = apps.flat()
     for (const app of combined) {
         const option = document.createElement('option')
         option.value = app.name
-        option.textContent = app.name
-        if (selected && app.name === selected) {
-            option.selected = true
-        }
+        // option.textContent = app.name
+        // if (selected && app.name === selected) {
+        //     option.selected = true
+        // }
         appList.appendChild(option)
     }
 

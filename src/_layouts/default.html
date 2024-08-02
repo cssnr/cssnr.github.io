@@ -10,6 +10,8 @@
         <meta name="robots" content="noindex, nofollow">
     {% endif %}
 
+    <meta name="darkreader-lock">
+
     <meta name="author" content="{{ site.author }}"/>
     <meta name="title" content="{{ site.site_name }} - {{ page.title }}"/>
     <meta name="description" content="{{ site.site_name }} - {{ page.description }}"/>
@@ -37,7 +39,7 @@
     {% if page.title == 'Home' %}
         <link rel="stylesheet" href="{{ "/css/index.css" | relative_url }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css" integrity="sha512-BlFCHJWngPEHme4TwlEob6dPLfoNaQBTTISPwr4344nxR353w2vgGZ7GiSadbbeR20cJeeM0u1I2lAZuIZ1aOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        {% comment %}<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />{% endcomment %}
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.2/css/dataTables.bootstrap5.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% endif %}
     {% if page.title == 'Feedback' %}
         <link rel="stylesheet" href="{{ "/css/feedback.css" | relative_url }}">
@@ -49,16 +51,16 @@
 <div id="tsparticles"></div>
 
 <header>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary mb-2" aria-label="Primary Navigation">
+    <nav aria-label="Primary Navigation" class="navbar navbar-expand-sm bg-body-tertiary mb-2">
         <div class="container-fluid">
             <a class="px-2" href="{{ "/" | relative_url }}">
-                <img src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" alt="logo" class="my-auto"></a>
+                <img alt="logo" src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" class="my-auto"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse me-auto " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     {% for item in site.menu %}
                         <li class="nav-item">
@@ -67,19 +69,35 @@
                                 {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
                         </li>
                     {% endfor %}
-                </ul>
+                </ul> <!-- main navigation -->
                 <ul class="navbar-nav nav-icons d-flex flex-row">
+
                     <li class="nav-item">
                         <a class="nav-link hvr-grow-lg" href="{{ site.discord_invite }}" target="_blank" rel="noopener">
                             <i class="fa-brands fa-discord fa-xl"></i></a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link hvr-grow-lg" href="{{ site.github_url }}" target="_blank" rel="noopener">
                             <i class="fa-brands fa-github fa-xl"></i></a>
                     </li>
-                </ul>
-            </div>
-        </div>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link hvr-grow ms-1" id="bd-theme-disabled" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 56px;">
+                            <i id="theme-icon" class="fa-solid fa-circle-half-stroke fa-lg" style="min-width: 20px;"></i> <i class="fa-solid fa-caret-down fa-xs mx-1"></i></a>
+                        <ul class="dropdown-menu auto dropdown-menu-end" aria-labelledby="bd-theme-disabled">
+                            <li><button class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-regular fa-moon" style="min-width: 16px;"></i> <span class="ms-3">Dark</span></button></li>
+                            <li><button class="dropdown-item" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun" style="min-width: 16px;"></i> <span class="ms-3">Light</span></button></li>
+                            <li><button class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke" style="min-width: 16px;"></i> <span class="ms-3">Auto</span></button></li>
+                        </ul>
+                    </li>
+
+                </ul> <!-- icons -->
+            </div> <!-- navbar -->
+        </div> <!-- container -->
     </nav>
 </header>
 

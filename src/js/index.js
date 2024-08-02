@@ -7,9 +7,144 @@ const devIcons = {
     javascript: document.querySelector('#clone > .devicon-javascript-plain'),
     typescript: document.querySelector('#clone > .devicon-typescript-plain'),
     powershell: document.querySelector('#clone > .devicon-powershell-plain'),
+    docker: document.querySelector('#clone > .devicon-docker-plain'),
 }
 
-document.addEventListener('DOMContentLoaded', domContentLoaded)
+const dtOptions = {
+    info: true,
+    processing: true,
+    responsive: true,
+    // autoWidth: false,
+    pageLength: -1,
+    order: [],
+    lengthMenu: [
+        [-1, 5, 10, 25, 50],
+        ['All', 5, 10, 25, 50],
+    ],
+    language: {
+        // emptyTable: 'No Results',
+        lengthMenu: '_MENU_ Applications',
+        search: 'Filter',
+        searchPlaceholder: 'Type to Filter...',
+        zeroRecords: 'No Results',
+    },
+    // responsive: {
+    //     breakpoints: [
+    //         { name: 'icon', width: 550 },
+    //         { name: 'name', width: Infinity },
+    //         { name: 'description', width: Infinity },
+    //         { name: 'github', width: Infinity },
+    //         { name: 'fa', width: 550 },
+    //     ],
+    // },
+    columns: [
+        {
+            data: 'icon',
+            render: dtImage,
+            orderable: false,
+            responsivePriority: 5,
+        },
+        { data: 'name', render: dtName, responsivePriority: 1 },
+        { data: 'description', responsivePriority: 2, orderable: false },
+        {
+            data: 'github',
+            render: dtBadge,
+            orderable: false,
+            responsivePriority: 3,
+        },
+        {
+            data: 'fa',
+            render: dtIcon,
+            orderable: false,
+            responsivePriority: 4,
+            // className: 'd-none d-sm-table-cell',
+        },
+    ],
+    search: {
+        regex: true,
+    },
+    // stateSave: true,
+    // stateSaveParams: function (settings, data) {
+    //     data.search.search = ''
+    // },
+}
+
+function dtImage(data, type, row, meta) {
+    // console.log('row:', row)
+    if (!row?.icon) {
+        return ''
+    }
+    const img = document.createElement('img')
+    img.src = row.icon
+    img.height = 20
+    img.width = 20
+    return img
+}
+
+function dtName(data, type, row, meta) {
+    // console.log('row:', row)
+    const link = document.createElement('a')
+    link.classList.add('link-body-emphasis', 'text-decoration-none', 'fw-bold')
+    link.textContent = data
+    link.href = row.url
+    return link
+}
+
+function dtBadge(data, type, row) {
+    // console.log('data:', data)
+    if (data) {
+        return addBadge(null, 'GitHub', data, ghUrl(row))
+    } else {
+        return ''
+    }
+}
+
+function dtIcon(data) {
+    // console.log('data:', data)
+    const icon = devIcons[data].cloneNode(true)
+    return icon
+}
+
+document
+    .querySelectorAll('.view-toggle')
+    .forEach((el) => el.addEventListener('click', toggleView))
+
+function toggleView(event) {
+    const btn = event.target.closest('button')
+    if (btn.dataset.view === 'cards') {
+        toggleCards()
+    }
+    if (btn.dataset.view === 'list') {
+        toggleList()
+    }
+}
+
+const cards = document.getElementById('cards')
+const table = document.getElementById('table')
+const cardsViewBtn = document.getElementById('cards-view')
+const listViewBtn = document.getElementById('list-view')
+
+function toggleCards() {
+    cards.classList.remove('d-none')
+    table.classList.add('d-none')
+    cardsViewBtn.classList.remove('btn-outline-secondary')
+    cardsViewBtn.classList.add('btn-secondary')
+    listViewBtn.classList.add('btn-outline-secondary')
+    listViewBtn.classList.remove('btn-secondary')
+    localStorage.setItem('view', 'cards')
+    AOS.init({ disable: 'mobile' })
+}
+
+function toggleList() {
+    table.classList.remove('d-none')
+    cards.classList.add('d-none')
+    listViewBtn.classList.remove('btn-outline-secondary')
+    listViewBtn.classList.add('btn-secondary')
+    cardsViewBtn.classList.add('btn-outline-secondary')
+    cardsViewBtn.classList.remove('btn-secondary')
+    localStorage.setItem('view', 'list')
+    window.dispatchEvent(new Event('resize'))
+}
 
 // Scroll Handlers
 window.addEventListener('scroll', onScroll, { once: true })
@@ -36,12 +171,14 @@ function checkScroll() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', domContentLoaded)
+
 /**
  * DOMContentLoaded Callback
  * @function domContentLoaded
  */
 async function domContentLoaded() {
-    console.debug('DOMContentLoaded')
+    // console.debug('DOMContentLoaded')
     const searchParams = new URLSearchParams(window.location.search)
     const feedback = searchParams.get('feedback')
     if (feedback) {
@@ -59,16 +196,32 @@ async function domContentLoaded() {
         }
     }
 
-    if (!localStorage.getItem('scrollShown')) {
-        checkScroll()
-    }
+    const apps = [].concat(...Object.values(config))
+    const table = new DataTable('#data-table', dtOptions)
+    table.rows.add(apps).draw()
 
     document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((el) => new bootstrap.Tooltip(el))
 
-    AOS.init({ disable: 'mobile' })
+    const view = localStorage.getItem('view')
+    if (!view || view === 'cards') {
+        toggleCards()
+    } else {
+        toggleList()
+    }
+
+    if (!localStorage.getItem('scrollShown')) {
+        checkScroll()
+    }
+
+    // AOS.init({ disable: 'mobile' })
     // AOS.init()
+
+    // if (window.scrollY !== 0) {
+    //     console.debug('Not at Top')
+    //     window.dispatchEvent(new Event('scroll'))
+    // }
 }
 
 /**
@@ -173,7 +326,11 @@ function addBadge(parent, badge, id, href) {
     a.href = href
     a.classList.add('me-2')
     a.appendChild(img)
-    parent.appendChild(a)
+    if (!parent) {
+        return a
+    } else {
+        parent.appendChild(a)
+    }
 }
 
 function ghUrl(data) {
