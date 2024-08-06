@@ -5,7 +5,7 @@ const redirect = new URL(url.origin)
 redirect.searchParams.append('feedback', 'yes')
 redirect.pathname = '/'
 
-const discordUsername = 'Link Extractor'
+const discordUsername = 'CSSNR'
 const discordAvatar = 'https://cssnr.github.io/media/logo.png'
 
 const contentWrapper = document.getElementById('content-wrapper')
@@ -79,7 +79,7 @@ async function formSubmit(event) {
     const r = parser.getResult()
     const type = r.browser.type ? ` - ${r.browser.type}` : ''
     const lines = [
-        `CSSNR GitHub Feedback for: **${app}**`,
+        `CSSNR Feedback for: **${app || 'General'}**`,
         `**Browser**: ${r.browser.name} ${r.browser.major} (${r.engine.name} - ${r.browser.version})`,
         `**System**: ${r.os.name} ${r.os.version} (${r.cpu.architecture}${type})`,
         `\`\`\`\n${text}\n\`\`\``,
