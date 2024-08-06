@@ -30,6 +30,21 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v4
 
+      - name: "Setup Node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: "Install Dependencies"
+        run: |
+          npm install
+
+      #- name: "Update Cache Version"
+      #  run: |
+      #    echo "Updating Cache to Version: v${GITHUB_RUN_NUMBER}"
+      #    sed -i "0,/v1/s//v${GITHUB_RUN_NUMBER}/" src/sw.js
+      #    head src/sw.js -n 4
+
       - name: "Configure Pages"
         uses: actions/configure-pages@v5
 

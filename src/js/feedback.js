@@ -65,7 +65,7 @@ async function formSubmit(event) {
     // error.innerHTML = ''
     const url = event.target.elements['relay-url'].value
     // console.debug('url:', url)
-    const app = event.target.elements['app-list'].value
+    const app = event.target.elements['selected-app'].value
     // console.debug('app:', app)
     const text = event.target.elements['feedback-text'].value
     // console.debug('text:', text)

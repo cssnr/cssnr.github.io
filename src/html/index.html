@@ -75,14 +75,7 @@ description: Projects and Information on CSSNR GitHub Development.
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody>
-            {% comment %}<tr>{% endcomment %}
-                {% comment %}<th scope="row">1</th>{% endcomment %}
-                {% comment %}<td>Mark</td>{% endcomment %}
-                {% comment %}<td>Otto</td>{% endcomment %}
-                {% comment %}<td>@mdo</td>{% endcomment %}
-            {% comment %}</tr>{% endcomment %}
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
 
@@ -109,9 +102,6 @@ description: Projects and Information on CSSNR GitHub Development.
             <div class="card-footer"></div>
         </div>
     </div>
-    {% comment %}<i class="fa-brands fa-js" title="JavaScript"></i>{% endcomment %}
-    {% comment %}<i class="fa-brands fa-python" title="Python"></i>{% endcomment %}
-    {% comment %}<i class="fa-solid fa-terminal" title="Shell Script"></i>{% endcomment %}
     <i class="devicon-powershell-plain" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Shell Script"></i>
     <i class="devicon-python-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Python"></i>
     <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="JavaScript"></i>
@@ -122,13 +112,12 @@ description: Projects and Information on CSSNR GitHub Development.
 
 {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
 {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-{% comment %}<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>{% endcomment %}
-<script type="text/javascript" src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/2.1.2/js/dataTables.bootstrap5.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.dataTables.js"></script>
+<script type="text/javascript" src="{{ "/dist/jquery/jquery.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/dist/datatables/dataTables.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/dist/datatables/dataTables.bootstrap5.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/dist/datatables/dataTables.responsive.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/dist/datatables/responsive.dataTables.min.js" | relative_url }}"></script>
 
 <script type="text/javascript" src="{{ "/js/config.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/index.js" | relative_url }}"></script>
