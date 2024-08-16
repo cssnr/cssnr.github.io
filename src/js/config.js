@@ -47,6 +47,28 @@ const config = {
             fa: 'javascript',
         },
         {
+            name: 'Auto Auth',
+            github: 'cssnr/auto-auth',
+            url: 'https://github.com/cssnr/auto-auth',
+            icon: 'https://raw.githubusercontent.com/cssnr/auto-auth/master/src/images/logo128.png',
+            description:
+                'Web Extension for Automatic Basic HTTP Authentication with many Options and Features.',
+            badges: {
+                Google: {
+                    id: 'gpoiggobidhogpmmlakahiaaegibnogm',
+                    link: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/gpoiggobidhogpmmlakahiaaegibnogm',
+                },
+                Mozilla: {
+                    id: 'auto-auth',
+                    link: 'https://addons.mozilla.org/addon/auto-auth',
+                },
+            },
+            links: {
+                Website: 'https://github.com/cssnr/auto-auth',
+            },
+            fa: 'javascript',
+        },
+        {
             name: 'PlayDrift Extension',
             github: 'cssnr/playdrift-extension',
             url: 'https://playdrift-extension.cssnr.com/',
@@ -526,6 +548,20 @@ const config = {
             },
             fa: 'python',
         },
+        {
+            name: 'Docker Nginx Proxy',
+            github: 'cssnr/docker-nginx-proxy',
+            url: 'https://github.com/cssnr/docker-nginx-proxy',
+            icon: '',
+            description: 'Nginx Docker Image for Proxying to Other Services.',
+            // badges: {},
+            links: {
+                Package:
+                    'https://github.com/cssnr/docker-nginx-proxy/pkgs/container/docker-nginx-proxy',
+            },
+            fa: 'docker',
+        },
+
         {
             name: 'Docker Nginx Static',
             github: 'cssnr/docker-nginx-static',
