@@ -63,7 +63,7 @@ const config = {
                     link: 'https://addons.mozilla.org/addon/cache-cleaner-addon',
                 },
             },
-            links: {},
+            // links: {},
             fa: 'javascript',
         },
         {
@@ -83,7 +83,7 @@ const config = {
                     link: 'https://addons.mozilla.org/addon/auto-auth',
                 },
             },
-            links: {},
+            // links: {},
             fa: 'javascript',
         },
         {
