@@ -47,6 +47,26 @@ const config = {
             fa: 'javascript',
         },
         {
+            name: 'Cache Cleaner',
+            github: 'cssnr/cache-cleaner',
+            url: 'https://github.com/cssnr/cache-cleaner',
+            icon: 'https://raw.githubusercontent.com/cssnr/cache-cleaner/master/src/images/logo128.png',
+            description:
+                'Web Extension for Automatic Basic HTTP Authentication with many Options and Features.',
+            badges: {
+                Google: {
+                    id: 'nbkhplnnajkikghffmincdbipjalpobi',
+                    link: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/nbkhplnnajkikghffmincdbipjalpobi',
+                },
+                Mozilla: {
+                    id: 'cache-cleaner-addon',
+                    link: 'https://addons.mozilla.org/addon/cache-cleaner-addon',
+                },
+            },
+            links: {},
+            fa: 'javascript',
+        },
+        {
             name: 'Auto Auth',
             github: 'cssnr/auto-auth',
             url: 'https://github.com/cssnr/auto-auth',
@@ -63,9 +83,7 @@ const config = {
                     link: 'https://addons.mozilla.org/addon/auto-auth',
                 },
             },
-            links: {
-                Website: 'https://github.com/cssnr/auto-auth',
-            },
+            links: {},
             fa: 'javascript',
         },
         {
@@ -425,6 +443,17 @@ const config = {
             // badges: {},
             // links: {},
             fa: 'typescript',
+        },
+        {
+            name: 'Env to/from Json',
+            github: 'cssnr/env-json-action',
+            url: 'https://github.com/cssnr/env-json-action',
+            icon: '',
+            description:
+                'Convert Environment File to/from a JSON File w/ Outputs.',
+            // badges: {},
+            // links: {},
+            fa: 'javascript',
         },
         {
             name: 'Push Artifacts',
