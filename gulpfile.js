@@ -47,7 +47,7 @@ gulp.task('devicon', () => {
                 'node_modules/devicon/fonts/devicon.ttf',
                 'node_modules/devicon/fonts/devicon.woff',
             ],
-            { base: 'node_modules/devicon' }
+            { base: 'node_modules/devicon', encoding: false }
         )
         .pipe(gulp.dest('src/dist/devicon'))
 })
@@ -59,7 +59,10 @@ gulp.task('fontawesome', () => {
                 'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
                 'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
             ],
-            { base: 'node_modules/@fortawesome/fontawesome-free' }
+            {
+                base: 'node_modules/@fortawesome/fontawesome-free',
+                encoding: false,
+            }
         )
         .pipe(gulp.dest('src/dist/fontawesome'))
 })

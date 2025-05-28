@@ -7,6 +7,7 @@ const devIcons = {
     javascript: document.querySelector('#clone > .devicon-javascript-plain'),
     typescript: document.querySelector('#clone > .devicon-typescript-plain'),
     powershell: document.querySelector('#clone > .devicon-powershell-plain'),
+    kotlin: document.querySelector('#clone > .devicon-kotlin-plain'),
     docker: document.querySelector('#clone > .devicon-docker-plain'),
 }
 

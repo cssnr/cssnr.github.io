@@ -268,6 +268,69 @@ const config = {
         },
     ],
 
+    mobileApps: [
+        {
+            name: 'Django Files Android',
+            github: 'django-files/android-client',
+            url: 'https://django-files.github.io/android',
+            icon: 'https://raw.githubusercontent.com/django-files/web-extension/master/src/media/logo128.png',
+            description:
+                'Android Application for sharing, uploading, and viewing files hosted on Django Files server.',
+            // badges: {},
+            links: {
+                Download:
+                    'https://github.com/django-files/android-client/releases/latest/download/django-files.apk',
+                Website: 'https://django-files.github.io/android/',
+            },
+            fa: 'kotlin',
+        },
+        {
+            name: 'Zipline Android',
+            github: 'cssnr/zipline-android',
+            url: 'https://github.com/cssnr/zipline-android',
+            icon: 'https://raw.githubusercontent.com/cssnr/zipline-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+            description:
+                'Android Application for sharing, uploading, and viewing files hosted on Zipline v4 server.',
+            // badges: {},
+            links: {
+                Download:
+                    'https://github.com/cssnr/zipline-android/releases/latest/download/zipline.apk',
+                Zipline: 'https://github.com/diced/zipline',
+            },
+            fa: 'kotlin',
+        },
+        {
+            name: 'NOAA Weather',
+            github: 'cssnr/noaa-weather-android',
+            url: 'https://github.com/cssnr/noaa-weather-android',
+            icon: 'https://raw.githubusercontent.com/cssnr/noaa-weather-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+            description:
+                'Android Application for viewing NOAA weather.gov information and forecast with a widget.',
+            // badges: {},
+            links: {
+                Download:
+                    'https://github.com/cssnr/noaa-weather-android/releases/latest/download/noaa-weather.apk',
+                NOAA: 'https://www.weather.gov/',
+            },
+            fa: 'kotlin',
+        },
+        {
+            name: 'Tibs3DPrints Android',
+            github: 'cssnr/tibs3dprints-android',
+            url: 'https://github.com/cssnr/tibs3dprints-android',
+            icon: 'https://raw.githubusercontent.com/cssnr/tibs3dprints-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+            description:
+                'Android Application for Tibs3DPrints website with recent news and alerts for updates.',
+            // badges: {},
+            links: {
+                Download:
+                    'https://github.com/cssnr/tibs3dprints-android/releases/latest/download/noaa-weather.apk',
+                Website: 'https://tibs3dprints.com/',
+            },
+            fa: 'kotlin',
+        },
+    ],
+
     webApps: [
         {
             name: 'Django Files',
