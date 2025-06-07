@@ -315,6 +315,22 @@ const config = {
             fa: 'kotlin',
         },
         {
+            name: 'Remote Wallpaper',
+            github: 'cssnr/remote-wallpaper-android',
+            url: 'https://github.com/cssnr/remote-wallpaper-android',
+            icon: 'https://raw.githubusercontent.com/cssnr/remote-wallpaper-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+            description:
+                'Set a Random Wallpaper from a Remote Source at set intervals or manually from the widget.',
+            // badges: {},
+            links: {
+                Download:
+                    'https://github.com/cssnr/remote-wallpaper-android/releases/latest/download/remote-wallpaper.apk',
+                Picsum: 'https://picsum.photos/',
+                Aviation: 'https://smashedr.github.io/random-image/',
+            },
+            fa: 'kotlin',
+        },
+        {
             name: 'Tibs3DPrints Android',
             github: 'cssnr/tibs3dprints-android',
             url: 'https://github.com/cssnr/tibs3dprints-android',
