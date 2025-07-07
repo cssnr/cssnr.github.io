@@ -47,6 +47,26 @@ const config = {
             fa: 'javascript',
         },
         {
+            name: 'Auto Auth',
+            github: 'cssnr/auto-auth',
+            url: 'https://github.com/cssnr/auto-auth',
+            icon: 'https://raw.githubusercontent.com/cssnr/auto-auth/master/src/images/logo128.png',
+            description:
+                'Web Extension for Automatic Basic HTTP Authentication with many Options and Features.',
+            badges: {
+                Google: {
+                    id: 'gpoiggobidhogpmmlakahiaaegibnogm',
+                    link: 'https://chromewebstore.google.com/detail/auto-auth/gpoiggobidhogpmmlakahiaaegibnogm',
+                },
+                Mozilla: {
+                    id: 'auto-auth',
+                    link: 'https://addons.mozilla.org/addon/auto-auth',
+                },
+            },
+            // links: {},
+            fa: 'javascript',
+        },
+        {
             name: 'Cache Cleaner',
             github: 'cssnr/cache-cleaner',
             url: 'https://github.com/cssnr/cache-cleaner',
@@ -56,7 +76,7 @@ const config = {
             badges: {
                 Google: {
                     id: 'nbkhplnnajkikghffmincdbipjalpobi',
-                    link: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/nbkhplnnajkikghffmincdbipjalpobi',
+                    link: 'https://chromewebstore.google.com/detail/cache-cleaner/nbkhplnnajkikghffmincdbipjalpobi',
                 },
                 Mozilla: {
                     id: 'cache-cleaner-addon',
@@ -67,23 +87,47 @@ const config = {
             fa: 'javascript',
         },
         {
-            name: 'Auto Auth',
-            github: 'cssnr/auto-auth',
-            url: 'https://github.com/cssnr/auto-auth',
-            icon: 'https://raw.githubusercontent.com/cssnr/auto-auth/master/src/images/logo128.png',
+            name: 'HLS Video Downloader',
+            github: 'cssnr/hls-video-downloader',
+            url: 'https://github.com/cssnr/hls-video-downloader',
+            icon: 'https://raw.githubusercontent.com/cssnr/hls-video-downloader/master/src/images/logo128.png',
             description:
-                'Web Extension for Automatic Basic HTTP Authentication with many Options and Features.',
+                'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
             badges: {
                 Google: {
-                    id: 'gpoiggobidhogpmmlakahiaaegibnogm',
-                    link: 'https://chromewebstore.google.com/detail/open-links-in-new-tab/gpoiggobidhogpmmlakahiaaegibnogm',
+                    id: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
+                    link: 'https://chromewebstore.google.com/detail/hls-video-downloader/mpmiiaolodhanoalpjncddpmnkbjicbo',
                 },
                 Mozilla: {
-                    id: 'auto-auth',
-                    link: 'https://addons.mozilla.org/addon/auto-auth',
+                    id: 'hls-video-downloader',
+                    link: 'https://addons.mozilla.org/addon/hls-video-downloader',
                 },
             },
-            // links: {},
+            links: {
+                Client: 'https://github.com/cssnr/hls-downloader-client',
+            },
+            fa: 'javascript',
+        },
+        {
+            name: 'Obtainium Extension',
+            github: 'cssnr/obtainium-extension',
+            url: 'https://github.com/cssnr/obtainium-extension',
+            icon: 'https://raw.githubusercontent.com/cssnr/obtainium-extension/master/src/images/logo128.png',
+            description:
+                'Obtainium Extension for Desktop and Firefox Android to help installing apps through Obtainium.',
+            badges: {
+                Google: {
+                    id: 'flmepeihikildcikjbmikbbmbeemedja',
+                    link: 'https://chromewebstore.google.com/detail/obtainium-extension/flmepeihikildcikjbmikbbmbeemedja',
+                },
+                Mozilla: {
+                    id: 'obtainium-extension',
+                    link: 'https://addons.mozilla.org/addon/obtainium-extension',
+                },
+            },
+            links: {
+                Client: 'https://github.com/cssnr/obtainium-extension',
+            },
             fa: 'javascript',
         },
         {
@@ -171,28 +215,6 @@ const config = {
             },
             links: {
                 Website: 'https://asn-plus.cssnr.com/',
-            },
-            fa: 'javascript',
-        },
-        {
-            name: 'HLS Video Downloader',
-            github: 'cssnr/hls-video-downloader',
-            url: 'https://github.com/cssnr/hls-video-downloader',
-            icon: 'https://raw.githubusercontent.com/cssnr/hls-video-downloader/master/src/images/logo128.png',
-            description:
-                'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
-            badges: {
-                Google: {
-                    id: 'mpmiiaolodhanoalpjncddpmnkbjicbo',
-                    link: 'https://chromewebstore.google.com/detail/text-formatter/mpmiiaolodhanoalpjncddpmnkbjicbo',
-                },
-                Mozilla: {
-                    id: 'hls-video-downloader',
-                    link: 'https://addons.mozilla.org/addon/hls-video-downloader',
-                },
-            },
-            links: {
-                Client: 'https://github.com/cssnr/hls-downloader-client',
             },
             fa: 'javascript',
         },

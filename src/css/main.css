@@ -53,3 +53,11 @@ body {
 .hvr-grow-lg:hover {
     transform: scale(1.2);
 }
+
+.heart:hover {
+    color: #ff0400 !important;
+}
+
+.discord:hover {
+    color: #7785cc !important;
+}

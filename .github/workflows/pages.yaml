@@ -6,7 +6,9 @@ on:
       - "master"
     paths:
       - "src/**"
-      - ".github/workflows/build.yaml"
+      - "gulpfile.js"
+      - "package.json"
+      - ".github/workflows/pages.yaml"
   workflow_dispatch:
 
 permissions:
@@ -55,6 +57,12 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
+
+      - name: "Send Failure Notification"
+        if: ${{ failure() }}
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
 
   deploy:
     name: "Deploy"
