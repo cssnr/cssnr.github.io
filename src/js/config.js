@@ -279,7 +279,7 @@ const config = {
             // badges: {},
             links: {
                 Download:
-                    'https://github.com/django-files/android-client/releases/latest/download/django-files.apk',
+                    'https://github.com/django-files/android-client/releases/latest/download/app-release.apk',
                 Website: 'https://django-files.github.io/android/',
             },
             fa: 'kotlin',
@@ -294,7 +294,7 @@ const config = {
             // badges: {},
             links: {
                 Download:
-                    'https://github.com/cssnr/zipline-android/releases/latest/download/zipline.apk',
+                    'https://github.com/cssnr/zipline-android/releases/latest/download/app-release.apk',
                 Zipline: 'https://github.com/diced/zipline',
             },
             fa: 'kotlin',
@@ -309,7 +309,7 @@ const config = {
             // badges: {},
             links: {
                 Download:
-                    'https://github.com/cssnr/noaa-weather-android/releases/latest/download/noaa-weather.apk',
+                    'https://github.com/cssnr/noaa-weather-android/releases/latest/download/app-release.apk',
                 NOAA: 'https://www.weather.gov/',
             },
             fa: 'kotlin',
@@ -324,7 +324,7 @@ const config = {
             // badges: {},
             links: {
                 Download:
-                    'https://github.com/cssnr/remote-wallpaper-android/releases/latest/download/remote-wallpaper.apk',
+                    'https://github.com/cssnr/remote-wallpaper-android/releases/latest/download/app-release.apk',
                 Picsum: 'https://picsum.photos/',
                 Aviation: 'https://smashedr.github.io/random-image/',
             },
@@ -340,7 +340,7 @@ const config = {
             // badges: {},
             links: {
                 Download:
-                    'https://github.com/cssnr/tibs3dprints-android/releases/latest/download/noaa-weather.apk',
+                    'https://github.com/cssnr/tibs3dprints-android/releases/latest/download/app-release.apk',
                 Website: 'https://tibs3dprints.com/',
             },
             fa: 'kotlin',
@@ -391,6 +391,34 @@ const config = {
 
     githubActions: [
         {
+            name: 'Stack Deploy',
+            github: 'cssnr/stack-deploy-action',
+            url: 'https://github.com/cssnr/stack-deploy-action',
+            icon: '',
+            description:
+                'Deploy Docker Stack to Remote Host using SSH Authentication.',
+            // badges: {},
+            links: {
+                Actions:
+                    'https://github.com/marketplace/actions/docker-stack-deploy',
+            },
+            fa: 'powershell',
+        },
+        {
+            name: 'Portainer Stack Deploy',
+            github: 'cssnr/portainer-stack-deploy-action',
+            url: 'https://github.com/cssnr/portainer-stack-deploy-action',
+            icon: '',
+            description:
+                'Deploy Docker Stack to Remote Host using SSH Authentication.',
+            // badges: {},
+            links: {
+                Actions:
+                    'https://github.com/marketplace/actions/portainer-stack-deploy-action',
+            },
+            fa: 'javascript',
+        },
+        {
             name: 'VirusTotal Scan',
             github: 'cssnr/virustotal-action',
             url: 'https://github.com/cssnr/virustotal-action',
@@ -403,6 +431,19 @@ const config = {
                     'https://github.com/marketplace/actions/virustotal-action',
             },
             fa: 'javascript',
+        },
+        {
+            name: 'Cloudflare Purge Cache',
+            github: 'cssnr/cf-purge-cache-action',
+            url: 'https://github.com/cssnr/cf-purge-cache-action',
+            icon: '',
+            description: 'Easily Purge Cloudflare Cache.',
+            // badges: {},
+            links: {
+                Actions:
+                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
+            },
+            fa: 'python',
         },
         {
             name: 'Update Version Tags',
@@ -445,34 +486,6 @@ const config = {
             fa: 'javascript',
         },
         {
-            name: 'Stack Deploy',
-            github: 'cssnr/stack-deploy-action',
-            url: 'https://github.com/cssnr/stack-deploy-action',
-            icon: '',
-            description:
-                'Deploy Docker Stack to Remote Host using SSH Authentication.',
-            // badges: {},
-            links: {
-                Actions:
-                    'https://github.com/marketplace/actions/docker-stack-deploy',
-            },
-            fa: 'powershell',
-        },
-        {
-            name: 'Portainer Stack Deploy',
-            github: 'cssnr/portainer-stack-deploy-action',
-            url: 'https://github.com/cssnr/portainer-stack-deploy-action',
-            icon: '',
-            description:
-                'Deploy Docker Stack to Remote Host using SSH Authentication.',
-            // badges: {},
-            links: {
-                Actions:
-                    'https://github.com/marketplace/actions/portainer-stack-deploy-action',
-            },
-            fa: 'javascript',
-        },
-        {
             name: 'Mozilla Addon Update',
             github: 'cssnr/mozilla-addon-update-action',
             url: 'https://github.com/cssnr/mozilla-addon-update-action',
@@ -483,19 +496,6 @@ const config = {
             links: {
                 Actions:
                     'https://github.com/marketplace/actions/mozilla-addon-update-action',
-            },
-            fa: 'python',
-        },
-        {
-            name: 'Cloudflare Purge Cache',
-            github: 'cssnr/cf-purge-cache-action',
-            url: 'https://github.com/cssnr/cf-purge-cache-action',
-            icon: '',
-            description: 'Easily Purge Cloudflare Cache.',
-            // badges: {},
-            links: {
-                Actions:
-                    'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
             },
             fa: 'python',
         },
@@ -573,6 +573,16 @@ const config = {
             // badges: {},
             // links: {},
             fa: 'python',
+        },
+        {
+            name: 'Docker Template Action',
+            github: 'smashedr/docker-test-action',
+            url: 'https://github.com/smashedr/docker-test-action',
+            icon: '',
+            description: 'Template for Docker Container Actions.',
+            // badges: {},
+            // links: {},
+            fa: 'docker',
         },
     ],
 

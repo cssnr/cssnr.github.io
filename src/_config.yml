@@ -13,6 +13,9 @@ menu:
     link: /about/
   - name: Feedback
     link: /feedback/
+  - name: Support
+    link: https://ko-fi.com/cssnr
+    external: true
 
 github_url: https://github.com/cssnr
 discord_invite: https://discord.gg/wXy6m2X8wY

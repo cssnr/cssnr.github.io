@@ -7,14 +7,24 @@ noindex: true
 ---
 
 <div class="d-flex align-items-center h-100">
-    <div id="content-wrapper" class="p-3 mb-3 mx-auto w-100 rounded rounded-4 animate__animated animate__backInDown">
+    <div id="content-wrapper" class="p-3 mb-3 mx-auto w-100 text-center rounded rounded-4 animate__animated animate__backInDown">
         <div class="justify-content-center align-items-center d-flex">
-                <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-3" alt="PlayDrift Extension" height="42" width="42">
-                <h1 class="align-middle mb-0">{{ site.site_name }} {{ page.title }}</h1>
+            <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-3" alt="PlayDrift Extension" height="42" width="42">
+            <h1 class="align-middle mb-0">{{ site.site_name }} {{ page.title }}</h1>
         </div>
-        <p class="text-center lead">
+        <p class="lead mb-1">
             Provide General Feedback or Suggestions.
         </p>
+        <a href="https://ko-fi.com/cssnr" class="text-decoration-none" target="_blank" rel="noopener">
+            <picture>
+                <source srcset="{{ "/media/kofi_dark.png" | relative_url }}"
+                        media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)" />
+                <source srcset="{{ "/media/kofi_blue.png" | relative_url }}"
+                        media="(prefers-color-scheme: light)" />
+                <img alt="Support on Ko-fi" class="mb-1" height="36" src="{{ "/media/kofi_dark.png" | relative_url }}" />
+            </picture>
+        </a>
+
         <form id="uninstall-form">
             <input type="hidden" value="{{ site.relay_url }}" id="relay-url" hidden="hidden">
 
@@ -27,7 +37,7 @@ noindex: true
             {% comment %}</select>{% endcomment %}
 
             <div class="my-2">
-                <label for="feedback-text" class="form-label visually-hidden">Uninstall Feedback</label>
+                <label for="feedback-text" class="form-label visually-hidden">Feedback</label>
                 <textarea class="form-control" id="feedback-text" rows="5" maxlength="1000"
                           placeholder="Feedback, Comments, Concerns, etc..." autofocus></textarea>
                 <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
