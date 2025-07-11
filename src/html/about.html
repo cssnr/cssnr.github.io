@@ -8,7 +8,7 @@ description: About CSSNR GitHub Organization.
 <div class="container-fluid">
     <h1 class="animate__animated animate__zoomIn"><i class="fa-regular fa-address-card me-2"></i> {{ page.title }}</h1>
 
-    <div class="d-flex flex-column flex-sm-row align-items-start" style="min-height: 24px;">
+    <div class="d-flex flex-column flex-wrap  flex-sm-row align-items-start" style="min-height: 24px;">
         <a href="https://github.com/cssnr" class="me-2 mb-1" target="_blank" rel="noopener">
             <img alt="GitHub Org Stars" src="https://img.shields.io/github/stars/cssnr?label=Org%20Stars" height="24"></a>
         <a href="https://github.com/orgs/cssnr/followers" class="me-2 mb-1" target="_blank" rel="noopener">
@@ -43,7 +43,7 @@ description: About CSSNR GitHub Organization.
                             srcset="https://github-readme-stats.cssnr.com/?username=smashedr&theme=default&show_icons=true&hide_rank=true&show=reviews&card_width=350"
                             media="(prefers-color-scheme: light)"
                     />
-                    <img alt="GitHub Stats Dynamic Display" src="https://github-readme-stats.cssnr.com/?username=smashedr&show_icons=true&hide_rank=true&show=reviews&card_width=350" />
+                    <img alt="GitHub Stats Dynamic Display" class="img-fluid" src="https://github-readme-stats.cssnr.com/?username=smashedr&show_icons=true&hide_rank=true&show=reviews&card_width=350" />
                 </picture>
             </a>
         </div><!-- flex item -->
@@ -58,7 +58,7 @@ description: About CSSNR GitHub Organization.
                             srcset="https://github-readme-stats.cssnr.com/top-langs/?username=smashedr&theme=default&layout=donut"
                             media="(prefers-color-scheme: light)"
                     />
-                    <img alt="Top Languages Dynamic Display" src="https://github-readme-stats.cssnr.com/top-langs/?username=smashedr&layout=donut" />
+                    <img alt="Top Languages Dynamic Display" class="img-fluid" src="https://github-readme-stats.cssnr.com/top-langs/?username=smashedr&layout=donut" />
                 </picture>
             </a>
         </div><!-- flex item -->
@@ -123,7 +123,8 @@ description: About CSSNR GitHub Organization.
     <h1>Support</h1>
     <p>Please consider making a donation to support this development...</p>
     <a href="{{ site.kofi_url }}" target="_blank" rel="noopener">
-        <img alt="Support on Ko-fi" src="{{ "/media/kofi_blue.png" | relative_url }}" height="64">
+        <img alt="Support on Ko-fi" class="img-fluid hvr-grow" style="max-height: 64px;"
+             src="{{ "/media/kofi_blue.png" | relative_url }}">
     </a>
 
     <p class="lead mt-3">More Information Coming Soon...</p>

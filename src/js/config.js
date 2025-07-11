@@ -109,6 +109,28 @@ const config = {
             fa: 'javascript',
         },
         {
+            name: 'Zipline Extension',
+            github: 'cssnr/zipline-extension',
+            url: 'https://github.com/cssnr/zipline-extension',
+            icon: 'https://raw.githubusercontent.com/cssnr/zipline-extension/master/src/media/logo128.png',
+            description:
+                'Zipline Web Extension to Upload, View and Edit files from a Zipline v4 Server.',
+            badges: {
+                Google: {
+                    id: 'flmepeihikildcikjbmikbbmbeemedja',
+                    link: 'https://chromewebstore.google.com/detail/zipline-extension/flmepeihikildcikjbmikbbmbeemedja',
+                },
+                Mozilla: {
+                    id: 'zipline-extension',
+                    link: 'https://addons.mozilla.org/addon/zipline-extension',
+                },
+            },
+            links: {
+                Zipline: 'https://github.com/diced/zipline',
+            },
+            fa: 'javascript',
+        },
+        {
             name: 'Obtainium Extension',
             github: 'cssnr/obtainium-extension',
             url: 'https://github.com/cssnr/obtainium-extension',
@@ -126,7 +148,7 @@ const config = {
                 },
             },
             links: {
-                Client: 'https://github.com/cssnr/obtainium-extension',
+                Obtainium: 'https://github.com/ImranR98/Obtainium',
             },
             fa: 'javascript',
         },

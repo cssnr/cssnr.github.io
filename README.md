@@ -3,7 +3,7 @@
 [![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/cssnr.github.io?logo=htmx&logoColor=white)](https://github.com/cssnr/cssnr.github.io)
 [![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&logoColor=white&label=org%20stars)](https://github.com/cssnr/)
 [![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=Support)](https://ko-fi.com/cssnr)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=support)](https://ko-fi.com/cssnr)
 
 # CSSNR GitHub Pages
 
@@ -15,7 +15,7 @@ For more information join us on Discord: https://discord.gg/wXy6m2X8wY
 
 Install Jekyll: https://jekyllrb.com/docs/installation/
 
-Run: `jekyll serve -s src -o`
+Run: `jekyll serve -s src -o -l`
 
 This will build the site from the `src` directory, open it in your browser, watch for file changes, automatically
 rebuild the site and refresh the site in your browser; enjoy...
