@@ -72,7 +72,7 @@ const config = {
             url: 'https://github.com/cssnr/cache-cleaner',
             icon: 'https://raw.githubusercontent.com/cssnr/cache-cleaner/master/src/images/logo128.png',
             description:
-                'Web Extension for Automatic Basic HTTP Authentication with many Options and Features.',
+                'Easily clear cache and auto-reload with a single key press. Includes Service Workers on Firefox',
             badges: {
                 Google: {
                     id: 'nbkhplnnajkikghffmincdbipjalpobi',
@@ -331,7 +331,7 @@ const config = {
         {
             name: 'Zipline Android',
             github: 'cssnr/zipline-android',
-            url: 'https://github.com/cssnr/zipline-android',
+            url: 'https://zipline-android.cssnr.com/',
             icon: 'https://raw.githubusercontent.com/cssnr/zipline-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
             description:
                 'Android Application for sharing, uploading, and viewing files hosted on Zipline v4 server.',
