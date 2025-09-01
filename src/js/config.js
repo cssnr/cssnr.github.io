@@ -111,7 +111,7 @@ const config = {
         {
             name: 'Zipline Extension',
             github: 'cssnr/zipline-extension',
-            url: 'https://github.com/cssnr/zipline-extension',
+            url: 'https://zipline-extension.cssnr.com/',
             icon: 'https://raw.githubusercontent.com/cssnr/zipline-extension/master/src/media/logo128.png',
             description:
                 'Zipline Web Extension to Upload, View and Edit files from a Zipline v4 Server.',
@@ -388,6 +388,22 @@ const config = {
                 Website: 'https://tibs3dprints.com/',
             },
             fa: 'kotlin',
+        },
+    ],
+
+    npmPackages: [
+        {
+            name: 'VitePress Swiper',
+            github: 'cssnr/vitepress-swiper',
+            url: 'https://vitepress-swiper.cssnr.com/',
+            icon: 'https://vitepress-swiper.cssnr.com/images/logo.png',
+            description: 'A VitePress Plugin to add a SwiperJS Photo Gallery.',
+            // badges: {},
+            links: {
+                Website: 'https://vitepress-swiper.cssnr.com/',
+                NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-swiper',
+            },
+            fa: 'npm',
         },
     ],
 

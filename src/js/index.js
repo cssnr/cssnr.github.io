@@ -9,6 +9,7 @@ const devIcons = {
     powershell: document.querySelector('#clone > .devicon-powershell-plain'),
     kotlin: document.querySelector('#clone > .devicon-kotlin-plain'),
     docker: document.querySelector('#clone > .devicon-docker-plain'),
+    npm: document.querySelector('#clone > .devicon-npm-original-wordmark'),
 }
 
 const dtOptions = {
@@ -298,6 +299,7 @@ function addCard(parent, data) {
     if (data.fa) {
         const div = document.createElement('div')
         const icon = devIcons[data.fa].cloneNode(true)
+        console.log(`icon: ${data.fa} - `, icon)
         div.appendChild(icon)
         div.style.float = 'right'
         footer.appendChild(div)
