@@ -73,14 +73,14 @@ gulp.task('jquery', () => {
         .pipe(gulp.dest('src/dist/jquery'))
 })
 
-gulp.task('swiper', () => {
-    return gulp
-        .src([
-            'node_modules/swiper/swiper-bundle.min.css',
-            'node_modules/swiper/swiper-bundle.min.js',
-        ])
-        .pipe(gulp.dest('src/dist/swiper'))
-})
+// gulp.task('swiper', () => {
+//     return gulp
+//         .src([
+//             'node_modules/swiper/swiper-bundle.min.css',
+//             'node_modules/swiper/swiper-bundle.min.js',
+//         ])
+//         .pipe(gulp.dest('src/dist/swiper'))
+// })
 
 gulp.task('tsparticles', () => {
     return gulp
@@ -105,7 +105,7 @@ gulp.task(
         'devicon',
         'fontawesome',
         'jquery',
-        'swiper',
+        // 'swiper',
         'tsparticles',
         'ua-parser-js'
     )

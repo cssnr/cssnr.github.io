@@ -405,6 +405,34 @@ const config = {
             },
             fa: 'npm',
         },
+        {
+            name: 'VitePress Contributors',
+            github: 'cssnr/vitepress-plugin-contributors',
+            url: 'https://vitepress-contributors.cssnr.com/',
+            icon: 'https://vitepress-contributors.cssnr.com/images/logo.png',
+            description:
+                'A VitePress Plugin to generate and display GitHub Contributors.',
+            // badges: {},
+            links: {
+                Website: 'https://vitepress-contributors.cssnr.com/',
+                NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-contributors',
+            },
+            fa: 'npm',
+        },
+        {
+            name: 'VitePress CopyButton',
+            github: 'cssnr/vitepress-plugin-copybutton',
+            url: 'https://vitepress-copybutton.cssnr.com/',
+            icon: 'https://vitepress-copybutton.cssnr.com/images/logo.png',
+            description:
+                'A VitePress Plugin to easily add a Copy Button with automatic text detection.',
+            // badges: {},
+            links: {
+                Website: 'https://vitepress-copybutton.cssnr.com/',
+                NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-copybutton',
+            },
+            fa: 'npm',
+        },
     ],
 
     webApps: [

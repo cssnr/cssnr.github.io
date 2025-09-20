@@ -13,11 +13,9 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -28,10 +26,10 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: "Setup Node 22"
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -54,7 +52,7 @@ jobs:
           source: "./src"
 
       - name: "Upload Pages Artifact"
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site/
 
@@ -70,6 +68,10 @@ jobs:
     timeout-minutes: 5
     needs: build
 
+    permissions:
+      pages: write
+      id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -80,3 +82,10 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages
+
+      - name: "Send Deploy Notification"
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
