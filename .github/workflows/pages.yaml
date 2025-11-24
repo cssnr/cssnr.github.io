@@ -10,9 +10,6 @@ on:
       - "package*.json"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 concurrency:
   group: pages
   cancel-in-progress: false
