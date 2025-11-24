@@ -1,6 +1,7 @@
 {
   "name": "cssnr.github.io",
   "scripts": {
+    "dev": "jekyll serve -s src -o -l",
     "postinstall": "npx gulp"
   },
   "dependencies": {

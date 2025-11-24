@@ -435,6 +435,50 @@ const config = {
         },
     ],
 
+    pyPackages: [
+        {
+            name: 'Vultr Python',
+            github: 'cssnr/vultr-python',
+            url: 'https://cssnr.github.io/vultr-python/',
+            icon: 'https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/vultr-python/logo128.png',
+            description: 'Vultr Cloud Hosting API Python 3 Library.',
+            // badges: {},
+            links: {
+                Website: 'https://cssnr.github.io/vultr-python/',
+                Vultr: 'https://www.vultr.com/?ref=6905748',
+            },
+            fa: 'python',
+        },
+        {
+            name: 'Zipline CLI',
+            github: 'cssnr/zipline-cli',
+            url: 'https://zipline-cli.cssnr.com/',
+            icon: 'https://zipline-cli.cssnr.com/assets/images/logo.png',
+            description: 'Command Line Interface for Zipline and Django Files.',
+            // badges: {},
+            links: {
+                Website: 'https://zipline-cli.cssnr.com/',
+                Zipline: 'https://github.com/diced/zipline',
+                'Django Files': 'https://github.com/django-files/django-files',
+            },
+            fa: 'python',
+        },
+        {
+            name: 'Actions Tools',
+            github: 'cssnr/actions-tools',
+            url: 'https://actions-tools.cssnr.com/',
+            icon: 'https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/actions-tools/logo128.png',
+            description:
+                'A Typed Python GitHub Actions Tookit similar to actions/toolkit.',
+            // badges: {},
+            links: {
+                Website: 'https://actions-tools.cssnr.com/',
+                PyPi: 'https://pypi.org/project/actions-tools',
+            },
+            fa: 'python',
+        },
+    ],
+
     webApps: [
         {
             name: 'Django Files',
@@ -474,6 +518,51 @@ const config = {
                 Website: 'https://slashgif.com/',
             },
             fa: 'python',
+        },
+    ],
+
+    dockerImages: [
+        {
+            name: 'Docker Nginx Proxy',
+            github: 'cssnr/docker-nginx-proxy',
+            url: 'https://github.com/cssnr/docker-nginx-proxy',
+            icon: '',
+            description: 'Nginx Docker Image for Proxying to Other Services.',
+            // badges: {},
+            links: {
+                Package:
+                    'https://github.com/cssnr/docker-nginx-proxy/pkgs/container/docker-nginx-proxy',
+            },
+            fa: 'docker',
+        },
+
+        {
+            name: 'Docker Nginx Static',
+            github: 'cssnr/docker-nginx-static',
+            url: 'https://github.com/cssnr/docker-nginx-static',
+            icon: '',
+            description: 'Nginx Docker Image for Serving Static Files.',
+            // badges: {},
+            links: {
+                Package:
+                    'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
+            },
+            fa: 'docker',
+        },
+        {
+            name: 'Readme Stats Docker Image',
+            github: 'smashedr/github-readme-stats',
+            url: 'https://github.com/smashedr/github-readme-stats/',
+            icon: '',
+            description:
+                'GitHub Readme Stats Docker Images, Compose and Workflows.',
+            // badges: {},
+            links: {
+                Packages:
+                    'https://github.com/smashedr?tab=packages&repo_name=github-readme-stats',
+                Source: 'https://github.com/anuraghazra/github-readme-stats',
+            },
+            fa: 'docker',
         },
     ],
 
@@ -676,19 +765,6 @@ const config = {
 
     otherSoftware: [
         {
-            name: 'Zipline CLI',
-            github: 'cssnr/zipline-cli',
-            url: 'https://github.com/cssnr/zipline-cli',
-            icon: '',
-            description: 'Command Line Interface for Zipline and Django Files.',
-            // badges: {},
-            links: {
-                Zipline: 'https://github.com/diced/zipline',
-                'Django Files': 'https://github.com/django-files/django-files',
-            },
-            fa: 'python',
-        },
-        {
             name: "Carl's Cogs",
             github: 'cssnr/vultr-python',
             url: 'https://github.com/smashedr/carl-cogs',
@@ -699,18 +775,6 @@ const config = {
             links: {
                 'Red Discord Bot':
                     'https://github.com/Cog-Creators/Red-DiscordBot',
-            },
-            fa: 'python',
-        },
-        {
-            name: 'Vultr Python',
-            github: 'cssnr/vultr-python',
-            url: 'https://github.com/cssnr/vultr-python',
-            icon: '',
-            description: 'Vultr Cloud Hosting API Python 3 Library.',
-            // badges: {},
-            links: {
-                Vultr: 'https://www.vultr.com/?ref=6905748',
             },
             fa: 'python',
         },
@@ -753,48 +817,6 @@ const config = {
                 Pages: 'https://smashedr.github.io/youtube-embed/',
             },
             fa: 'python',
-        },
-        {
-            name: 'Docker Nginx Proxy',
-            github: 'cssnr/docker-nginx-proxy',
-            url: 'https://github.com/cssnr/docker-nginx-proxy',
-            icon: '',
-            description: 'Nginx Docker Image for Proxying to Other Services.',
-            // badges: {},
-            links: {
-                Package:
-                    'https://github.com/cssnr/docker-nginx-proxy/pkgs/container/docker-nginx-proxy',
-            },
-            fa: 'docker',
-        },
-
-        {
-            name: 'Docker Nginx Static',
-            github: 'cssnr/docker-nginx-static',
-            url: 'https://github.com/cssnr/docker-nginx-static',
-            icon: '',
-            description: 'Nginx Docker Image for Serving Static Files.',
-            // badges: {},
-            links: {
-                Package:
-                    'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
-            },
-            fa: 'docker',
-        },
-        {
-            name: 'Readme Stats Docker Image',
-            github: 'smashedr/github-readme-stats',
-            url: 'https://github.com/smashedr/github-readme-stats/',
-            icon: '',
-            description:
-                'GitHub Readme Stats Docker Images, Compose and Workflows.',
-            // badges: {},
-            links: {
-                Packages:
-                    'https://github.com/smashedr?tab=packages&repo_name=github-readme-stats',
-                Source: 'https://github.com/anuraghazra/github-readme-stats',
-            },
-            fa: 'docker',
         },
     ],
 }

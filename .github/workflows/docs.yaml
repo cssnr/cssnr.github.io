@@ -1,0 +1,79 @@
+name: "Build Docs"
+
+on:
+  workflow_call:
+    inputs:
+      name:
+        description: "Artifact Name"
+        type: string
+        default: github-pages
+      path:
+        description: "Build Path"
+        type: string
+        default: _site
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v5
+
+      - name: "Setup Node 24"
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: "Install"
+        run: |
+          npm ci
+
+      - name: "Jekyll Build Pages"
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: "src"
+          destination: ${{ inputs.path }}
+
+      - name: "Upload Pages Artifact"
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ inputs.path }}
+
+      - name: "List Artifacts"
+        env:
+          path: ${{ inputs.path }}
+        run: |
+          echo "::group::ls"
+          ls -lAhR "${path}"
+          echo "::endgroup::"
+          echo "::group::tree"
+          tree "${path}"
+          echo "::endgroup::"
+          results="$(tree "${path}")"
+          markdown='Artifacts:\n```text\n'"${results}"'\n```'
+          echo -e "${markdown}" >> $GITHUB_STEP_SUMMARY
+
+      - name: "Upload Pages Artifact"
+        if: ${{ inputs.name == 'github-pages' }}
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ inputs.path }}
+
+      - name: "Upload Artifact"
+        if: ${{ inputs.name != 'github-pages' }}
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ inputs.name }}
+          path: ${{ inputs.path }}
+          if-no-files-found: "error"
+          include-hidden-files: true
+
+      - name: "Send Failure Notification"
+        if: ${{ failure() }}
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: ${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}
