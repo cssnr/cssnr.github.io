@@ -10,7 +10,7 @@ on:
       path:
         description: "Build Path"
         type: string
-        default: src
+        default: _site
 
 jobs:
   build:
@@ -34,7 +34,8 @@ jobs:
       - name: "Jekyll Build Pages"
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ${{ inputs.path }}
+          source: "src"
+          destination: ${{ inputs.path }}
 
       - name: "Upload Pages Artifact"
         uses: actions/upload-pages-artifact@v4
