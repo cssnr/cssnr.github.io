@@ -318,21 +318,6 @@ const mobileApplications: Application[] = [
     fa: 'kotlin',
   },
   {
-    name: 'NOAA Weather',
-    github: 'cssnr/noaa-weather-android',
-    url: 'https://github.com/cssnr/noaa-weather-android',
-    icon: 'https://raw.githubusercontent.com/cssnr/noaa-weather-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
-    description:
-      'Android Application for viewing NOAA weather.gov information and forecast with a widget.',
-    badges: { Github: ghDownBadge('cssnr/noaa-weather-android') },
-    links: {
-      Download:
-        'https://github.com/cssnr/noaa-weather-android/releases/latest/download/app-release.apk',
-      NOAA: 'https://www.weather.gov/',
-    },
-    fa: 'kotlin',
-  },
-  {
     name: 'Remote Wallpaper',
     github: 'cssnr/remote-wallpaper-android',
     url: 'https://github.com/cssnr/remote-wallpaper-android',
@@ -344,6 +329,21 @@ const mobileApplications: Application[] = [
       Download:
         'https://github.com/cssnr/remote-wallpaper-android/releases/latest/download/app-release.apk',
       Aviation: 'https://smashedr.github.io/random-image/',
+    },
+    fa: 'kotlin',
+  },
+  {
+    name: 'NOAA Weather',
+    github: 'cssnr/noaa-weather-android',
+    url: 'https://github.com/cssnr/noaa-weather-android',
+    icon: 'https://raw.githubusercontent.com/cssnr/noaa-weather-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+    description:
+      'Android Application for viewing NOAA weather.gov information and forecast with a widget.',
+    badges: { Github: ghDownBadge('cssnr/noaa-weather-android') },
+    links: {
+      Download:
+        'https://github.com/cssnr/noaa-weather-android/releases/latest/download/app-release.apk',
+      NOAA: 'https://www.weather.gov/',
     },
     fa: 'kotlin',
   },
@@ -477,6 +477,39 @@ const npmPackages: Application[] = [
     badges: { Github: npmDownBadge('cssnr/vitepress-plugin-copybutton') },
     links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-copybutton' },
     fa: 'npm',
+  },
+]
+
+const goApps: Application[] = [
+  {
+    name: 'Back UP',
+    github: 'smashedr/bup',
+    url: 'https://smashedr.github.io/bup/',
+    icon: 'https://smashedr.github.io/bup/assets/images/logo.png',
+    description: 'Back UP CLI written in Go.',
+    badges: { Github: ghDownBadge('smashedr/bup') },
+    // links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-swiper' },
+    fa: 'go',
+  },
+  {
+    name: 'HLS Downloader Go',
+    github: 'smashedr/hls-downloader-go',
+    url: 'https://github.com/smashedr/hls-downloader-go',
+    icon: 'https://raw.githubusercontent.com/smashedr/hls-downloader-go/refs/heads/master/assets/logo.png',
+    description: 'HLS Video Downloader Client written in Go.',
+    badges: { Github: ghDownBadge('smashedr/hls-downloader-go') },
+    links: { 'Web Extension': 'https://github.com/cssnr/hls-video-downloader' },
+    fa: 'go',
+  },
+  {
+    name: 'Install Release',
+    github: 'smashedr/install-release',
+    url: 'https://smashedr.github.io/install-release/',
+    icon: 'https://smashedr.github.io/install-release/assets/images/logo.svg',
+    description: 'CLI to Install a GitHub Release.',
+    badges: { Github: ghDownBadge('smashedr/install-release') },
+    // links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-swiper' },
+    fa: 'go',
   },
 ]
 
@@ -915,6 +948,16 @@ const githubActions: Application[] = [
 
 const otherSoftware: Application[] = [
   {
+    name: 'BackUP',
+    github: 'smashedr/bup',
+    url: 'https://github.com/smashedr/bup',
+    icon: '',
+    description: 'Back UP CLI written in Go.',
+    // badges: {},
+    links: { Install: 'https://github.com/smashedr/bup?tab=readme-ov-file#install' },
+    fa: 'go',
+  },
+  {
     name: "Carl's Cogs",
     github: 'smashedr/carl-cogs',
     url: 'https://github.com/smashedr/carl-cogs',
@@ -968,6 +1011,7 @@ const categories: Category[] = [
   { name: 'Mobile Applications', id: 'mobileApplications', apps: mobileApplications },
   { name: 'Python Packages', id: 'pyPackages', apps: pyPackages },
   { name: 'NPM Packages', id: 'npmPackages', apps: npmPackages },
+  { name: 'Go Apps', id: 'goApps', apps: goApps },
   { name: 'Web Applications', id: 'webApplications', apps: webApplications },
   { name: 'GitHub Actions', id: 'githubActions', apps: githubActions },
   { name: 'Docker Images', id: 'dockerImages', apps: dockerImages },

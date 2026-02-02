@@ -8,7 +8,7 @@
 [![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/cssnr.github.io?logo=devbox)](https://github.com/cssnr/cssnr.github.io?tab=readme-ov-file#readme)
 [![GitHub Contributors](https://img.shields.io/github/contributors-anon/cssnr/cssnr.github.io?logo=southwestairlines)](https://github.com/cssnr/cssnr.github.io/graphs/contributors)
 [![GitHub Issues](https://img.shields.io/github/issues/cssnr/cssnr.github.io?logo=codeforces&logoColor=white)](https://github.com/cssnr/cssnr.github.io/issues)
-[![GitHub Discussions](https://img.shields.io/github/discussions/cssnr/cssnr.github.io?logo=rocketdotchat&logoColor=white)](https://github.com/cssnr/cssnr.github.io/discussions)
+[![GitHub Discussions](https://img.shields.io/github/discussions/cssnr/cssnr.github.io?logo=livechat&logoColor=white)](https://github.com/cssnr/cssnr.github.io/discussions)
 [![GitHub Forks](https://img.shields.io/github/forks/cssnr/cssnr.github.io?style=flat&logo=forgejo&logoColor=white)](https://github.com/cssnr/cssnr.github.io/forks)
 [![GitHub Repo Stars](https://img.shields.io/github/stars/cssnr/cssnr.github.io?style=flat&logo=gleam&logoColor=white)](https://github.com/cssnr/cssnr.github.io/stargazers)
 [![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=apachespark&logoColor=white&label=org%20stars)](https://cssnr.github.io/)

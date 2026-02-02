@@ -28,6 +28,11 @@ export const aboutLinks = [
     href: 'https://actions.cssnr.com/',
   },
   {
+    icon: 'fa-solid fa-beer-mug-empty',
+    text: 'Homebrew Tap',
+    href: 'https://github.com/cssnr/homebrew-tap',
+  },
+  {
     icon: 'fa-brands fa-github',
     text: 'CSSNR GitHub',
     href: 'https://github.com/cssnr',
