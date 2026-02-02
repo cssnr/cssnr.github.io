@@ -494,7 +494,7 @@ const goApps: Application[] = [
   {
     name: 'HLS Downloader Go',
     github: 'smashedr/hls-downloader-go',
-    url: 'https://smashedr.github.io/bup/',
+    url: 'https://github.com/smashedr/hls-downloader-go',
     icon: 'https://raw.githubusercontent.com/smashedr/hls-downloader-go/refs/heads/master/assets/logo.png',
     description: 'HLS Video Downloader Client written in Go.',
     badges: { Github: ghDownBadge('smashedr/hls-downloader-go') },
