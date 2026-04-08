@@ -23,7 +23,7 @@ interface Badge {
 const googleBadge = (id: string): Badge => {
   return {
     src: `https://img.shields.io/chrome-web-store/users/${id}?logo=google&logoColor=white&label=&labelColor=4285F4&color=4285F4`,
-    href: `https://chromewebstore.google.com/detail/link-extractor/${id}`,
+    href: `https://chromewebstore.google.com/detail/${id}`,
   }
 }
 const mozillaBadge = (id: string): Badge => {
@@ -210,6 +210,19 @@ const webExtensions: Application[] = [
       Mozilla: mozillaBadge('smwc-web-extension'),
     },
     links: { SMWCWorld: 'https://smwcworld.com/' },
+    fa: 'javascript',
+  },
+  {
+    name: 'GeoImage',
+    github: 'cssnr/geo-image',
+    url: 'https://github.com/cssnr/geo-image',
+    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
+    description:
+      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+    badges: {
+      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
+      Github: ghDownBadge('cssnr/geo-image'),
+    },
     fa: 'javascript',
   },
   {
