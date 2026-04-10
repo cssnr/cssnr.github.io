@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npm run type-check",
+    "prebuild": "npm run tsc",
     "build": "vite build",
     "build-only": "vite build",
     "dev": "vite",
