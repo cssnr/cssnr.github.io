@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { debounce } from '@/utils'
 
 const backToTop = ref<HTMLElement | null>(null)
 
@@ -13,11 +14,13 @@ const onScroll = () => {
   }
 }
 
-function debounce<T extends (...args: unknown[]) => unknown>(fn: T, timeout = 250): (...args: Parameters<T>) => void {
-  let timeoutID: ReturnType<typeof setTimeout>
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeoutID)
-    timeoutID = setTimeout(() => fn(...args), timeout)
+const topClick = () => {
+  if (window.location.hash) {
+    // let vue router handle the scroll
+    window.location.hash = ''
+  } else {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 }
 
@@ -25,25 +28,16 @@ onMounted(() => {
   // console.log('onMounted: window.addEventListener')
   window.addEventListener('scroll', debounce(onScroll))
 })
-
-const topClick = () => {
-  if (window.location.hash) {
-    window.location.hash = ''
-  } else {
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-  }
-}
 </script>
 
 <template>
-  <button ref="backToTop" id="back-to-top" type="button" class="btn btn-outline-secondary" :onclick="topClick">
+  <button ref="backToTop" type="button" class="btn btn-outline-secondary back-to-top" @click="topClick">
     <i class="fa-regular fa-square-caret-up"></i>
   </button>
 </template>
 
 <style scoped>
-#back-to-top {
+.back-to-top {
   position: fixed;
   bottom: 50px;
   right: 10px;

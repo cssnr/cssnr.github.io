@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import router from '../router/index.ts'
+import router from '@/router/index.ts'
 import { SETTINGS } from '@/config/settings.ts'
+
+const routes = computed(() => router.options.routes.filter((route) => route.meta?.name))
 </script>
 
 <template>
@@ -22,7 +25,7 @@ import { SETTINGS } from '@/config/settings.ts'
       <div class="ms-md-auto">
         <nav aria-label="Secondary Navigation">
           <ol class="list-inline mb-1 d-flex flex-column flex-sm-row">
-            <li class="list-inline-item mb-2 mb-sm-0" v-for="{ meta, path } in router.options.routes" :key="path">
+            <li class="list-inline-item mb-2 mb-sm-0" v-for="{ meta, path } in routes" :key="path">
               <RouterLink :to="path" class="text-decoration-none link-body-emphasis" active-class="fw-bold">
                 {{ meta?.name }}
               </RouterLink>
