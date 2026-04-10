@@ -29,7 +29,7 @@
     "@tsconfig/node24": "^24.0.4",
     "@types/aos": "^3.0.7",
     "@types/bootstrap": "^5.2.10",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.7.0",
@@ -37,9 +37,9 @@
     "eslint": "^9.39.4",
     "eslint-plugin-vue": "~10.8.0",
     "jiti": "^2.6.1",
-    "prettier": "3.8.1",
+    "prettier": "3.8.2",
     "typescript": "^5.9.3",
-    "vite": "^8.0.7",
+    "vite": "^8.0.8",
     "vue-tsc": "^3.2.6"
   },
   "engines": {
