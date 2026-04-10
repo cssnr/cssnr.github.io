@@ -5,16 +5,16 @@
   "printWidth": 100,
   "overrides": [
     {
-      "files": ["**/*.html", "**/*.yaml", "**/*.yml"],
+      "files": ["**/*.vue"],
       "options": {
-        "singleQuote": false,
-        "printWidth": 119
+        "printWidth": 120
       }
     },
     {
-      "files": ["**/*.html", "**/*.vue"],
+      "files": ["**/*.html", "**/*.yaml", "**/*.yml"],
       "options": {
-        "printWidth": 119
+        "singleQuote": false,
+        "printWidth": 120
       }
     },
     {

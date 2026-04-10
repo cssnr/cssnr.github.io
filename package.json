@@ -15,7 +15,7 @@
     "prepreview": "npm run build",
     "preview": "vite preview",
     "preview-only": "vite preview",
-    "type-check": "vue-tsc --build"
+    "tsc": "vue-tsc --build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
@@ -34,11 +34,11 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/tsconfig": "^0.9.1",
-    "eslint": "^9.39.4",
+    "eslint": "^10.2.0",
     "eslint-plugin-vue": "~10.8.0",
     "jiti": "^2.6.1",
     "prettier": "3.8.2",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "vite": "^8.0.8",
     "vue-tsc": "^3.2.6"
   },
