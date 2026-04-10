@@ -1,12 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import router from '../router/index.ts'
+import { SETTINGS } from '@/config/settings.ts'
 import { Collapse } from 'bootstrap'
 import ThemeSwitch from '@/components/ThemeSwitch.vue'
-import { SETTINGS } from '@/config/settings.ts'
 
 const navbarContent = ref<HTMLElement | null>(null)
+
+const routes = computed(() => router.options.routes.filter((route) => route.meta?.name))
+
+const navLinks = [
+  {
+    href: SETTINGS.kofi,
+    linkClass: 'hvr-grow-lg heart',
+    iconClass: 'fa-classic fa-solid fa-heart fa-xl',
+  },
+  {
+    href: SETTINGS.discord,
+    linkClass: 'hvr-grow-lg discord',
+    iconClass: 'fa-brands fa-discord fa-xl',
+  },
+  {
+    href: SETTINGS.github,
+    linkClass: 'hvr-grow-lg',
+    iconClass: 'fa-brands fa-github fa-xl',
+  },
+]
 
 function closeMenu() {
   const navbar = navbarContent?.value
@@ -35,27 +55,17 @@ function closeMenu() {
       </button>
       <div ref="navbarContent" class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item" v-for="{ meta, path } in router.options.routes" :key="path">
+          <li class="nav-item" v-for="{ meta, path } in routes" :key="path">
             <RouterLink :to="path" class="nav-link" active-class="active" :onclick="closeMenu">{{
               meta?.name
             }}</RouterLink>
           </li>
         </ul>
         <ul class="navbar-nav nav-icons d-flex flex-row">
-          <li class="nav-item">
-            <a class="nav-link hvr-grow-lg heart" :href="SETTINGS.kofi" target="_blank" rel="noopener">
-              <i class="fa-classic fa-solid fa-heart fa-xl"></i
-            ></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hvr-grow-lg discord" :href="SETTINGS.discord" target="_blank" rel="noopener">
-              <i class="fa-brands fa-discord fa-xl"></i
-            ></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hvr-grow-lg" :href="SETTINGS.github" target="_blank" rel="noopener">
-              <i class="fa-brands fa-github fa-xl"></i
-            ></a>
+          <li v-for="link in navLinks" :key="link.href" class="nav-item">
+            <a class="nav-link" :class="link.linkClass" :href="link.href" target="_blank" rel="noopener">
+              <i :class="link.iconClass"></i>
+            </a>
           </li>
           <ThemeSwitch />
         </ul>
@@ -64,4 +74,12 @@ function closeMenu() {
   </nav>
 </template>
 
-<!--<style scoped></style>-->
+<!--suppress CssUnusedSymbol -->
+<style scoped>
+.heart:hover {
+  color: #ff6433 !important;
+}
+.discord:hover {
+  color: #7785cc !important;
+}
+</style>
