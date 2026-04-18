@@ -237,6 +237,9 @@ const webExtensions: Application[] = [
       Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
       Github: ghDownBadge('cssnr/geo-image'),
     },
+    links: {
+      Firefox: 'https://github.com/cssnr/geo-image/releases/latest/download/geoimage-firefox.xpi',
+    },
     fa: 'javascript',
   },
   {
@@ -249,7 +252,8 @@ const webExtensions: Application[] = [
       Google: googleBadge('medimbembaeldnglneiipkenpagjfcdj'),
     },
     links: {
-      Mozilla: 'https://github.com/cssnr/text-formatter/releases/latest',
+      Firefox:
+        'https://github.com/cssnr/text-formatter/releases/latest/download/text_formatter-firefox.xpi ',
     },
     fa: 'javascript',
   },
