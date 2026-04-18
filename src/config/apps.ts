@@ -83,20 +83,6 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
-    name: 'Open Links in New Tab',
-    github: 'cssnr/open-links-in-new-tab',
-    url: 'https://open-links-in-new-tab.cssnr.com/',
-    icon: 'https://raw.githubusercontent.com/cssnr/open-links-in-new-tab/master/src/images/logo128.png',
-    description:
-      'Web Extension to Open Links in New Tabs for Specified Domains or Temporarily on Any Tab.',
-    badges: {
-      Google: googleBadge('efahmjakjnnmleokcaomicgfhobabdkc'),
-      Mozilla: mozillaBadge('open-links-in-new-tab'),
-    },
-    // links: {},
-    fa: 'javascript',
-  },
-  {
     name: 'Auto Auth',
     github: 'cssnr/auto-auth',
     url: 'https://github.com/cssnr/auto-auth',
@@ -106,6 +92,20 @@ const webExtensions: Application[] = [
     badges: {
       Google: googleBadge('gpoiggobidhogpmmlakahiaaegibnogm'),
       Mozilla: mozillaBadge('auto-auth'),
+    },
+    // links: {},
+    fa: 'javascript',
+  },
+  {
+    name: 'Open Links in New Tab',
+    github: 'cssnr/open-links-in-new-tab',
+    url: 'https://open-links-in-new-tab.cssnr.com/',
+    icon: 'https://raw.githubusercontent.com/cssnr/open-links-in-new-tab/master/src/images/logo128.png',
+    description:
+      'Web Extension to Open Links in New Tabs for Specified Domains or Temporarily on Any Tab.',
+    badges: {
+      Google: googleBadge('efahmjakjnnmleokcaomicgfhobabdkc'),
+      Mozilla: mozillaBadge('open-links-in-new-tab'),
     },
     // links: {},
     fa: 'javascript',
@@ -140,37 +140,6 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
-    name: 'Zipline Extension',
-    github: 'cssnr/zipline-extension',
-    url: 'https://zipline-extension.cssnr.com/',
-    icon: 'https://raw.githubusercontent.com/cssnr/zipline-extension/master/src/media/logo128.png',
-    description: 'Zipline Web Extension to Upload, View and Edit files from a Zipline v4 Server.',
-    badges: {
-      Google: googleBadge('flmepeihikildcikjbmikbbmbeemedja'),
-      Mozilla: mozillaBadge('zipline-extension'),
-    },
-    links: {
-      Zipline: 'https://github.com/diced/zipline',
-    },
-    fa: 'javascript',
-  },
-  {
-    name: 'Obtainium Extension',
-    github: 'cssnr/obtainium-extension',
-    url: 'https://github.com/cssnr/obtainium-extension',
-    icon: 'https://raw.githubusercontent.com/cssnr/obtainium-extension/master/src/images/logo128.png',
-    description:
-      'Obtainium Extension for Desktop and Firefox Android to help installing apps through Obtainium.',
-    badges: {
-      Google: googleBadge('flmepeihikildcikjbmikbbmbeemedja'),
-      Mozilla: mozillaBadge('obtainium-extension'),
-    },
-    links: {
-      Obtainium: 'https://github.com/ImranR98/Obtainium',
-    },
-    fa: 'javascript',
-  },
-  {
     name: 'PlayDrift Extension',
     github: 'cssnr/playdrift-extension',
     url: 'https://playdrift-extension.cssnr.com/',
@@ -199,6 +168,21 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
+    name: 'Zipline Extension',
+    github: 'cssnr/zipline-extension',
+    url: 'https://zipline-extension.cssnr.com/',
+    icon: 'https://raw.githubusercontent.com/cssnr/zipline-extension/master/src/media/logo128.png',
+    description: 'Zipline Web Extension to Upload, View and Edit files from a Zipline v4 Server.',
+    badges: {
+      Google: googleBadge('flmepeihikildcikjbmikbbmbeemedja'),
+      Mozilla: mozillaBadge('zipline-extension'),
+    },
+    links: {
+      Zipline: 'https://github.com/diced/zipline',
+    },
+    fa: 'javascript',
+  },
+  {
     name: 'SMWC Web Extension',
     github: 'cssnr/smwc-web-extension',
     url: 'https://github.com/cssnr/smwc-web-extension',
@@ -213,15 +197,18 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
-    name: 'GeoImage',
-    github: 'cssnr/geo-image',
-    url: 'https://github.com/cssnr/geo-image',
-    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
+    name: 'Obtainium Extension',
+    github: 'cssnr/obtainium-extension',
+    url: 'https://github.com/cssnr/obtainium-extension',
+    icon: 'https://raw.githubusercontent.com/cssnr/obtainium-extension/master/src/images/logo128.png',
     description:
-      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+      'Obtainium Extension for Desktop and Firefox Android to help installing apps through Obtainium.',
     badges: {
-      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
-      Github: ghDownBadge('cssnr/geo-image'),
+      Google: googleBadge('flmepeihikildcikjbmikbbmbeemedja'),
+      Mozilla: mozillaBadge('obtainium-extension'),
+    },
+    links: {
+      Obtainium: 'https://github.com/ImranR98/Obtainium',
     },
     fa: 'javascript',
   },
@@ -240,6 +227,22 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
+    name: 'GeoImage',
+    github: 'cssnr/geo-image',
+    url: 'https://github.com/cssnr/geo-image',
+    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
+    description:
+      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+    badges: {
+      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
+      Github: ghDownBadge('cssnr/geo-image'),
+    },
+    links: {
+      Firefox: 'https://github.com/cssnr/geo-image/releases/latest/download/geoimage-firefox.xpi',
+    },
+    fa: 'javascript',
+  },
+  {
     name: 'Text Formatter',
     github: 'cssnr/text-formatter',
     url: 'https://github.com/cssnr/text-formatter',
@@ -247,9 +250,11 @@ const webExtensions: Application[] = [
     description: 'Web Extension for Splitting and Formatting Text.',
     badges: {
       Google: googleBadge('medimbembaeldnglneiipkenpagjfcdj'),
+      Github: ghDownBadge('cssnr/text-formatter'),
     },
     links: {
-      Mozilla: 'https://github.com/cssnr/text-formatter/releases/latest',
+      Firefox:
+        'https://github.com/cssnr/text-formatter/releases/latest/download/text_formatter-firefox.xpi ',
     },
     fa: 'javascript',
   },
@@ -261,21 +266,12 @@ const webExtensions: Application[] = [
     description: 'Aviation Tools Web Extension. Currently a Work in Progress.',
     badges: {
       Google: googleBadge('cjjhackeogffajjndfhemgniokonimin'),
+      Github: ghDownBadge('cssnr/aviation-tools'),
     },
     links: {
-      Mozilla: 'https://github.com/cssnr/aviation-tools/releases/latest',
+      Firefox:
+        'https://github.com/cssnr/aviation-tools/releases/latest/download/aviation_tools-firefox.xpi',
     },
-    fa: 'javascript',
-  },
-  {
-    name: 'Simple Extension',
-    github: 'smashedr/simple-extension',
-    url: 'https://github.com/smashedr/simple-extension',
-    icon: 'https://raw.githubusercontent.com/smashedr/simple-extension/master/src/images/logo128.png',
-    description:
-      'Example Web Extension for copying and creating new web extensions based on Manifest V3.',
-    // badges: {},
-    // links: {},
     fa: 'javascript',
   },
   {
@@ -296,6 +292,18 @@ const webExtensions: Application[] = [
     description: 'Upcoming Web Extension with Various Site Modifications.',
     // badges: {},
     // links: {},
+    fa: 'javascript',
+  },
+  {
+    name: 'WXT Extension',
+    github: 'smashedr/wxt-extension',
+    url: 'https://github.com/smashedr/wxt-extension',
+    icon: 'https://raw.githubusercontent.com/smashedr/wxt-extension/master/src/assets/icon.svg',
+    description:
+      'WXT Extension Template for creating Web Extensions for Chrome, Firefox and Android.',
+    badges: {
+      Github: ghDownBadge('smashedr/wxt-extension'),
+    },
     fa: 'javascript',
   },
 ]
