@@ -250,6 +250,7 @@ const webExtensions: Application[] = [
     description: 'Web Extension for Splitting and Formatting Text.',
     badges: {
       Google: googleBadge('medimbembaeldnglneiipkenpagjfcdj'),
+      Github: ghDownBadge('cssnr/text-formatter'),
     },
     links: {
       Firefox:
@@ -265,9 +266,11 @@ const webExtensions: Application[] = [
     description: 'Aviation Tools Web Extension. Currently a Work in Progress.',
     badges: {
       Google: googleBadge('cjjhackeogffajjndfhemgniokonimin'),
+      Github: ghDownBadge('cssnr/aviation-tools'),
     },
     links: {
-      Mozilla: 'https://github.com/cssnr/aviation-tools/releases/latest',
+      Firefox:
+        'https://github.com/cssnr/aviation-tools/releases/latest/download/aviation_tools-firefox.xpi',
     },
     fa: 'javascript',
   },
