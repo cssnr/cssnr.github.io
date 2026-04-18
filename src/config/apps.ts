@@ -227,6 +227,19 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
+    name: 'GeoImage',
+    github: 'cssnr/geo-image',
+    url: 'https://github.com/cssnr/geo-image',
+    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
+    description:
+      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+    badges: {
+      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
+      Github: ghDownBadge('cssnr/geo-image'),
+    },
+    fa: 'javascript',
+  },
+  {
     name: 'Text Formatter',
     github: 'cssnr/text-formatter',
     url: 'https://github.com/cssnr/text-formatter',
@@ -237,19 +250,6 @@ const webExtensions: Application[] = [
     },
     links: {
       Mozilla: 'https://github.com/cssnr/text-formatter/releases/latest',
-    },
-    fa: 'javascript',
-  },
-  {
-    name: 'GeoImage',
-    github: 'cssnr/geo-image',
-    url: 'https://github.com/cssnr/geo-image',
-    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
-    description:
-      'Use Gemini AI free tier to determine the location of any image based on the image data.',
-    badges: {
-      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
-      Github: ghDownBadge('cssnr/geo-image'),
     },
     fa: 'javascript',
   },
