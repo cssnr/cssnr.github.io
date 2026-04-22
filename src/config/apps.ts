@@ -197,6 +197,38 @@ const webExtensions: Application[] = [
     fa: 'javascript',
   },
   {
+    name: 'GeoImage',
+    github: 'cssnr/geo-image',
+    url: 'https://github.com/cssnr/geo-image',
+    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
+    description:
+      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+    badges: {
+      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
+      Github: ghDownBadge('cssnr/geo-image'),
+    },
+    links: {
+      Firefox: 'https://github.com/cssnr/geo-image/releases/latest/download/geoimage-firefox.xpi',
+    },
+    fa: 'javascript',
+  },
+  {
+    name: 'New Tab',
+    github: 'cssnr/new-tab',
+    url: 'https://github.com/cssnr/new-tab',
+    icon: 'https://raw.githubusercontent.com/cssnr/new-tab/master/src/assets/icon.svg',
+    description:
+      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+    badges: {
+      Google: googleBadge('goholgjajaneidafddjpiaphbdaalbhm'),
+      Github: ghDownBadge('cssnr/new-tab'),
+    },
+    links: {
+      Firefox: 'https://github.com/cssnr/new-tab/releases/latest/download/geoimage-firefox.xpi',
+    },
+    fa: 'javascript',
+  },
+  {
     name: 'Obtainium Extension',
     github: 'cssnr/obtainium-extension',
     url: 'https://github.com/cssnr/obtainium-extension',
@@ -224,22 +256,6 @@ const webExtensions: Application[] = [
       Mozilla: mozillaBadge('asn-plus'),
     },
     links: { ASN: 'https://aviation-safety.net/' },
-    fa: 'javascript',
-  },
-  {
-    name: 'GeoImage',
-    github: 'cssnr/geo-image',
-    url: 'https://github.com/cssnr/geo-image',
-    icon: 'https://raw.githubusercontent.com/cssnr/geo-image/master/src/assets/icon.svg',
-    description:
-      'Use Gemini AI free tier to determine the location of any image based on the image data.',
-    badges: {
-      Google: googleBadge('ipliinigkdddaaeaoncoljmdaoabgjdo'),
-      Github: ghDownBadge('cssnr/geo-image'),
-    },
-    links: {
-      Firefox: 'https://github.com/cssnr/geo-image/releases/latest/download/geoimage-firefox.xpi',
-    },
     fa: 'javascript',
   },
   {
