@@ -114,7 +114,7 @@ const webExtensions: Application[] = [
     name: 'Cache Cleaner',
     github: 'cssnr/cache-cleaner',
     url: 'https://github.com/cssnr/cache-cleaner',
-    icon: 'https://raw.githubusercontent.com/cssnr/cache-cleaner/master/src/images/logo128.png',
+    icon: 'https://raw.githubusercontent.com/cssnr/cache-cleaner/master/.github/assets/logo.svg',
     description:
       'Easily clear cache and auto-reload with a single key press. Includes Service Workers on Firefox',
     badges: {
