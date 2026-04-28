@@ -114,7 +114,7 @@ const webExtensions: Application[] = [
     name: 'Cache Cleaner',
     github: 'cssnr/cache-cleaner',
     url: 'https://github.com/cssnr/cache-cleaner',
-    icon: 'https://raw.githubusercontent.com/cssnr/cache-cleaner/master/src/images/logo128.png',
+    icon: 'https://raw.githubusercontent.com/cssnr/cache-cleaner/master/.github/assets/logo.svg',
     description:
       'Easily clear cache and auto-reload with a single key press. Includes Service Workers on Firefox',
     badges: {
@@ -639,6 +639,16 @@ const dockerImages: Application[] = [
 
 const githubActions: Application[] = [
   {
+    name: 'Web Store Publish',
+    github: 'cssnr/webstore-publish-action',
+    url: 'https://docker-deploy.cssnr.com/',
+    icon: 'https://raw.githubusercontent.com/cssnr/webstore-publish-action/refs/heads/master/.github/assets/logo.svg',
+    description: 'Publish Web Extensions to the Chrome Web Store v2 using Service Account.',
+    badges: { UsedBy: usedByBadge('cssnr/webstore-publish-action') },
+    links: { Actions: 'https://github.com/marketplace/actions/docker-stack-deploy' },
+    fa: 'powershell',
+  },
+  {
     name: 'Stack Deploy',
     github: 'cssnr/stack-deploy-action',
     url: 'https://docker-deploy.cssnr.com/',
@@ -653,7 +663,7 @@ const githubActions: Application[] = [
     github: 'cssnr/portainer-stack-deploy-action',
     url: 'https://portainer-deploy.cssnr.com/',
     icon: 'https://raw.githubusercontent.com/cssnr/portainer-stack-deploy-docs/refs/heads/master/docs/public/images/logo/logo.png',
-    description: 'Deploy Docker Stack to Remote Host using SSH Authentication.',
+    description: 'Deploy Docker Stack to a Portainer Host using the Portainer API.',
     badges: { UsedBy: usedByBadge('cssnr/portainer-stack-deploy-action') },
     links: { Actions: 'https://github.com/marketplace/actions/portainer-stack-deploy-action' },
     fa: 'javascript',
