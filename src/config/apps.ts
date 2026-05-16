@@ -86,7 +86,7 @@ const webExtensions: Application[] = [
     name: 'Auto Auth',
     github: 'cssnr/auto-auth',
     url: 'https://github.com/cssnr/auto-auth',
-    icon: 'https://raw.githubusercontent.com/cssnr/auto-auth/master/src/images/logo128.png',
+    icon: 'https://raw.githubusercontent.com/cssnr/auto-auth/master/src/assets/icon.svg',
     description:
       'Web Extension for Automatic Basic HTTP Authentication with many Options and Features.',
     badges: {
