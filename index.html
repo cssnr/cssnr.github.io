@@ -37,16 +37,6 @@
   </head>
   <body class="d-flex flex-column h-100">
     <div id="app" class="d-flex h-100 flex-column"></div>
-    <script>
-      ;(function () {
-        const redirect = sessionStorage.redirect
-        delete sessionStorage.redirect
-        if (redirect && redirect !== location.href) {
-          console.log("index - history.replaceState:", redirect)
-          history.replaceState(null, null, redirect)
-        }
-      })()
-    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

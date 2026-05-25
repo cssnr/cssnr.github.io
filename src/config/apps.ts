@@ -484,6 +484,35 @@ const pyPackages: Application[] = [
   },
 ]
 
+const mcpServers: Application[] = [
+  {
+    name: 'iNaturalist MCP',
+    github: 'cssnr/inaturalist-mcp',
+    url: 'https://github.com/cssnr/inaturalist-mcp',
+    icon: 'https://raw.githubusercontent.com/cssnr/inaturalist-mcp/master/.github/assets/logo.svg',
+    description: 'MCP (Model Context Protocol) Server for the iNaturalist API.',
+    badges: {
+      PyPi: pypiBadge('inaturalist-mcp'),
+      Size: imageSizeBadge('cssnr/inaturalist-mcp', 'inaturalist-mcp'),
+    },
+    links: { PyPi: 'https://pypi.org/project/inaturalist-mcp' },
+    fa: 'python',
+  },
+  {
+    name: 'GeoPy MCP',
+    github: 'cssnr/geopy-mcp',
+    url: 'https://github.com/cssnr/geopy-mcp',
+    icon: 'https://raw.githubusercontent.com/cssnr/geopy-mcp/master/.github/assets/logo.svg',
+    description: 'MCP (Model Context Protocol) Server for GeoPy geocoding services.',
+    badges: {
+      PyPi: pypiBadge('geopy-mcp'),
+      Size: imageSizeBadge('cssnr/geopy-mcp', 'geopy-mcp'),
+    },
+    links: { PyPi: 'https://pypi.org/project/geopy-mcp' },
+    fa: 'python',
+  },
+]
+
 const npmPackages: Application[] = [
   {
     name: 'VitePress Swiper',
@@ -942,6 +971,16 @@ const githubActions: Application[] = [
     fa: 'powershell',
   },
   {
+    name: 'AI Issue Action',
+    github: 'smashedr/ai-issue-action',
+    url: 'https://github.com/smashedr/ai-issue-action',
+    icon: 'https://raw.githubusercontent.com/smashedr/ai-issue-action/refs/heads/master/.github/assets/logo.svg',
+    description: 'Automatic AI Issue Triage Action.',
+    badges: { UsedBy: usedByBadge('smashedr/ai-issue') },
+    // links: {},
+    fa: 'typescript',
+  },
+  {
     name: 'JavaScript Template Action',
     github: 'smashedr/javascript-action',
     url: 'https://github.com/smashedr/javascript-action',
@@ -994,16 +1033,6 @@ const githubActions: Application[] = [
 ]
 
 const otherSoftware: Application[] = [
-  {
-    name: 'BackUP',
-    github: 'smashedr/bup',
-    url: 'https://github.com/smashedr/bup',
-    icon: '',
-    description: 'Back UP CLI written in Go.',
-    // badges: {},
-    links: { Install: 'https://github.com/smashedr/bup?tab=readme-ov-file#install' },
-    fa: 'go',
-  },
   {
     name: "Carl's Cogs",
     github: 'smashedr/carl-cogs',
@@ -1060,6 +1089,7 @@ const categories: Category[] = [
   { name: 'NPM Packages', id: 'npmPackages', apps: npmPackages },
   { name: 'Go Apps', id: 'goApps', apps: goApps },
   { name: 'Web Applications', id: 'webApplications', apps: webApplications },
+  { name: 'MCP Servers', id: 'mcpServers', apps: mcpServers },
   { name: 'GitHub Actions', id: 'githubActions', apps: githubActions },
   { name: 'Docker Images', id: 'dockerImages', apps: dockerImages },
   { name: 'Other Software', id: 'otherSoftware', apps: otherSoftware },
