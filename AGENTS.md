@@ -4,15 +4,15 @@ Vue 3 SPA — GitHub Pages org site showcasing CSSNR projects.
 
 ## Commands
 
-| Command | Action |
-|---|---|
-| `npm run dev` | Dev server at localhost:5173 |
-| `npm run tsc` | Typecheck via `vue-tsc --build` |
-| `npm run build` | `tsc` then `vite build` (prebuild hook) |
-| `npm run lint` | ESLint 10 with `--cache --fix` |
-| `npm run lint:check` | ESLint read-only |
-| `npm run prettier` | `npx prettier --write .` |
-| `npm run prettier:check` | Prettier read-only |
+| Command                  | Action                                  |
+| ------------------------ | --------------------------------------- |
+| `npm run dev`            | Dev server at localhost:5173            |
+| `npm run tsc`            | Typecheck via `vue-tsc --build`         |
+| `npm run build`          | `tsc` then `vite build` (prebuild hook) |
+| `npm run lint`           | ESLint 10 with `--cache --fix`          |
+| `npm run lint:check`     | ESLint read-only                        |
+| `npm run prettier`       | `npx prettier --write .`                |
+| `npm run prettier:check` | Prettier read-only                      |
 
 Run `lint` before `tsc` before `build`. No test framework exists.
 
