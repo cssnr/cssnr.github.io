@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "prebuild": "npm run tsc",
-    "build": "vite build",
+    "build": "vite-ssg build",
     "build-only": "vite build",
     "dev": "vite",
     "lint": "eslint . --cache --fix",
@@ -40,6 +40,7 @@
     "prettier": "3.8.3",
     "typescript": "^6.0.3",
     "vite": "^8.0.14",
+    "vite-ssg": "^28.3.0",
     "vue-tsc": "^3.3.2"
   },
   "engines": {

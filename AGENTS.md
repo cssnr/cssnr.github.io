@@ -1,18 +1,20 @@
-# cssnr-vue (cssnr.github.io)
+# Agents - cssnr-vue (cssnr.github.io)
 
 Vue 3 SPA — GitHub Pages org site showcasing CSSNR projects.
 
+Production Site: https://cssnr.github.io/
+
 ## Commands
 
-| Command                  | Action                                  |
-| ------------------------ | --------------------------------------- |
-| `npm run dev`            | Dev server at localhost:5173            |
-| `npm run tsc`            | Typecheck via `vue-tsc --build`         |
-| `npm run build`          | `tsc` then `vite build` (prebuild hook) |
-| `npm run lint`           | ESLint 10 with `--cache --fix`          |
-| `npm run lint:check`     | ESLint read-only                        |
-| `npm run prettier`       | `npx prettier --write .`                |
-| `npm run prettier:check` | Prettier read-only                      |
+| Command                  | Action                             |
+| ------------------------ | ---------------------------------- |
+| `npm run dev`            | Dev server at localhost:5173       |
+| `npm run tsc`            | TypeScript check `vue-tsc --build` |
+| `npm run build`          | `tsc` then `vite-ssg build`        |
+| `npm run lint`           | ESLint Write `--cache --fix`       |
+| `npm run lint:check`     | ESLint Check                       |
+| `npm run prettier`       | Prettier Write                     |
+| `npm run prettier:check` | Prettier Check                     |
 
 Run `lint` before `tsc` before `build`. No test framework exists.
 
@@ -23,13 +25,15 @@ Run `lint` before `tsc` before `build`. No test framework exists.
 - Lint CI checks: `lint:check` + `prettier:check` + yamllint + actionlint
 - Path alias `@/` → `src/`
 
+| Script     | Command                               |
+| ---------- | ------------------------------------- |
+| yamllint   | `yamllint -c .github/yamllint.yaml .` |
+| actionlint | `actionlint`                          |
+
 ## Architecture
 
-- **No state management (Pinia/Vuex)** — all data is static, imported from `src/config/`
-- `src/config/apps.ts` (~1068 lines) defines 9 categories of ~80+ projects — the site's core data
-- `src/router/index.ts` — 3 routes: `/` (Home), `/about` (lazy), catch-all redirects to `/`
-- Theme: `public/theme.js` (blocking `<script>` in `index.html`) applies `data-bs-theme` on `<html>` before Vue mounts; Vue's `ThemeSwitch.vue` toggles it
-- 404.html stores `location.href` in `sessionStorage.redirect`; `index.html` replays it (GitHub Pages SPA workaround)
+- `src/config/apps.ts` — list of apps
+- `src/router/index.ts` — vue router
 
 ## Environment
 
@@ -37,7 +41,9 @@ Copy `.env` from the template (not committed). Vars are `VITE_TITLE`, `VITE_*_UR
 
 ## CI
 
-- `pages.yaml`: push to `master` → npm build → deploy to GitHub Pages + optional Cloudflare purge + Algolia crawl
+Workflows in: `.github/workflows`
+
+- `pages.yaml`: push to `master` → npm build → deploy to GitHub Pages
 - `preview.yaml`: push non-master → npm build → deploy to `https://dev-static.cssnr.com/`
 - `lint.yaml`: push/PR to master → lint check
 

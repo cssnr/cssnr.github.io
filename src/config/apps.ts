@@ -129,7 +129,8 @@ const webExtensions: Application[] = [
     github: 'cssnr/hls-video-downloader',
     url: 'https://github.com/cssnr/hls-video-downloader',
     icon: 'https://raw.githubusercontent.com/cssnr/hls-video-downloader/master/src/images/logo128.png',
-    description: 'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
+    description:
+      'Experimental Web Extension for Downloading HLS Videos using Native FFmpeg.',
     badges: {
       Google: googleBadge('mpmiiaolodhanoalpjncddpmnkbjicbo'),
       Mozilla: mozillaBadge('hls-video-downloader'),
@@ -172,7 +173,8 @@ const webExtensions: Application[] = [
     github: 'cssnr/zipline-extension',
     url: 'https://zipline-extension.cssnr.com/',
     icon: 'https://raw.githubusercontent.com/cssnr/zipline-extension/master/src/media/logo128.png',
-    description: 'Zipline Web Extension to Upload, View and Edit files from a Zipline v4 Server.',
+    description:
+      'Zipline Web Extension to Upload, View and Edit files from a Zipline v4 Server.',
     badges: {
       Google: googleBadge('flmepeihikildcikjbmikbbmbeemedja'),
       Mozilla: mozillaBadge('zipline-extension'),
@@ -208,7 +210,8 @@ const webExtensions: Application[] = [
       Github: ghDownBadge('cssnr/geo-image'),
     },
     links: {
-      Firefox: 'https://github.com/cssnr/geo-image/releases/latest/download/geoimage-firefox.xpi',
+      Firefox:
+        'https://github.com/cssnr/geo-image/releases/latest/download/geoimage-firefox.xpi',
     },
     fa: 'javascript',
   },
@@ -224,7 +227,8 @@ const webExtensions: Application[] = [
       Github: ghDownBadge('cssnr/new-tab'),
     },
     links: {
-      Firefox: 'https://github.com/cssnr/new-tab/releases/latest/download/geoimage-firefox.xpi',
+      Firefox:
+        'https://github.com/cssnr/new-tab/releases/latest/download/geoimage-firefox.xpi',
     },
     fa: 'javascript',
   },
@@ -349,7 +353,8 @@ const mobileApplications: Application[] = [
       'Android Application for sharing, uploading, and viewing files hosted on Zipline v4 server.',
     badges: { Github: ghDownBadge('cssnr/zipline-android') },
     links: {
-      Download: 'https://github.com/cssnr/zipline-android/releases/latest/download/app-release.apk',
+      Download:
+        'https://github.com/cssnr/zipline-android/releases/latest/download/app-release.apk',
       Zipline: 'https://github.com/diced/zipline',
     },
     fa: 'kotlin',
@@ -418,7 +423,8 @@ const pyPackages: Application[] = [
     github: 'cssnr/toml-run',
     url: 'https://cssnr.github.io/toml-run/',
     icon: 'https://cssnr.github.io/toml-run/assets/images/logo.svg',
-    description: 'Define custom scripts in your pyproject.toml and easily run them with this tool.',
+    description:
+      'Define custom scripts in your pyproject.toml and easily run them with this tool.',
     badges: { PyPi: pypiBadge('toml-run') },
     links: { PyPi: 'https://pypi.org/project/toml-run' },
     fa: 'python',
@@ -456,7 +462,10 @@ const pyPackages: Application[] = [
     icon: 'https://zipline-cli.cssnr.com/assets/images/logo.png',
     description: 'Command Line Interface for Zipline and Django Files.',
     badges: { PyPi: pypiBadge('zipline-cli') },
-    links: { PyPi: 'https://pypi.org/project/zipline-cli', Zipline: 'https://zipline.diced.sh/' },
+    links: {
+      PyPi: 'https://pypi.org/project/zipline-cli',
+      Zipline: 'https://zipline.diced.sh/',
+    },
     fa: 'python',
   },
   {
@@ -477,7 +486,8 @@ const pyPackages: Application[] = [
     github: 'cssnr/npmstat',
     url: 'https://cssnr.github.io/npmstat/',
     icon: 'https://cssnr.github.io/npmstat/assets/images/logo.svg',
-    description: 'Get NPM Package Stats and Info from the command line or as a Python module.',
+    description:
+      'Get NPM Package Stats and Info from the command line or as a Python module.',
     badges: { PyPi: pypiBadge('npmstat') },
     links: { PyPi: 'https://pypi.org/project/npmstat' },
     fa: 'python',
@@ -539,7 +549,8 @@ const npmPackages: Application[] = [
     github: 'cssnr/vitepress-plugin-copybutton',
     url: 'https://vitepress-copybutton.cssnr.com/',
     icon: 'https://vitepress-copybutton.cssnr.com/images/logo.png',
-    description: 'A VitePress Plugin to easily add a Copy Button with automatic text detection.',
+    description:
+      'A VitePress Plugin to easily add a Copy Button with automatic text detection.',
     badges: { Github: npmDownBadge('cssnr/vitepress-plugin-copybutton') },
     links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-copybutton' },
     fa: 'npm',
@@ -589,7 +600,8 @@ const webApplications: Application[] = [
     // badges: {},
     links: {
       API: 'https://badges.cssnr.com/',
-      Dashboard: 'https://cssnr.grafana.net/public-dashboards/8a24a95171fe4127ada92afb071b9331',
+      Dashboard:
+        'https://cssnr.grafana.net/public-dashboards/8a24a95171fe4127ada92afb071b9331',
     },
     fa: 'python',
   },
@@ -598,7 +610,8 @@ const webApplications: Application[] = [
     github: 'django-files/django-files',
     url: 'https://django-files.github.io/',
     icon: 'https://raw.githubusercontent.com/django-files/web-extension/master/src/media/logo128.png',
-    description: 'A Feature Packed Self-Hosted File Manager for Sharing Files with ShareX.',
+    description:
+      'A Feature Packed Self-Hosted File Manager for Sharing Files with ShareX.',
     // badges: {},
     links: { Website: 'https://django-files.github.io/' },
     fa: 'python',
@@ -608,7 +621,8 @@ const webApplications: Application[] = [
     github: 'cssnr/smwc-web',
     url: 'https://smwcworld.com/',
     icon: 'https://smwcworld.com/static/images/logo.png',
-    description: 'SMWCentral ROM Archive to archive, download, notify, patch and play SMW ROMs.',
+    description:
+      'SMWCentral ROM Archive to archive, download, notify, patch and play SMW ROMs.',
     // badges: {},
     links: { Website: 'https://smwcworld.com/' },
     fa: 'python',
@@ -618,7 +632,8 @@ const webApplications: Application[] = [
     github: '',
     url: 'https://slashgif.com/',
     icon: 'https://slashgif.com/static/images/slashgif.png',
-    description: 'Slack App to search for a random GIF and preview it, before posting publicly.',
+    description:
+      'Slack App to search for a random GIF and preview it, before posting publicly.',
     // badges: {},
     links: { Website: 'https://slashgif.com/' },
     fa: 'python',
@@ -634,7 +649,8 @@ const dockerImages: Application[] = [
     description: 'Nginx Docker Image for Proxying to Other Services.',
     badges: { Size: imageSizeBadge('cssnr/docker-nginx-proxy', 'docker-nginx-proxy') },
     links: {
-      Package: 'https://github.com/cssnr/docker-nginx-proxy/pkgs/container/docker-nginx-proxy',
+      Package:
+        'https://github.com/cssnr/docker-nginx-proxy/pkgs/container/docker-nginx-proxy',
     },
     fa: 'docker',
   },
@@ -647,7 +663,8 @@ const dockerImages: Application[] = [
     description: 'Nginx Docker Image for Serving Static Files.',
     badges: { Size: imageSizeBadge('cssnr/docker-nginx-static', 'docker-nginx-static') },
     links: {
-      Package: 'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
+      Package:
+        'https://github.com/cssnr/docker-nginx-static/pkgs/container/docker-nginx-static',
     },
     fa: 'docker',
   },
@@ -657,7 +674,9 @@ const dockerImages: Application[] = [
     url: 'https://github.com/smashedr/github-readme-stats/',
     icon: '',
     description: 'GitHub Readme Stats Docker Images, Compose and Workflows.',
-    badges: { Size: imageSizeBadge('smashedr/github-readme-stats', 'github-readme-stats') },
+    badges: {
+      Size: imageSizeBadge('smashedr/github-readme-stats', 'github-readme-stats'),
+    },
     links: {
       Package: 'https://github.com/smashedr?tab=packages&repo_name=github-readme-stats',
       Source: 'https://github.com/anuraghazra/github-readme-stats',
@@ -672,7 +691,8 @@ const githubActions: Application[] = [
     github: 'cssnr/webstore-publish-action',
     url: 'https://docker-deploy.cssnr.com/',
     icon: 'https://raw.githubusercontent.com/cssnr/webstore-publish-action/refs/heads/master/.github/assets/logo.svg',
-    description: 'Publish Web Extensions to the Chrome Web Store v2 using Service Account.',
+    description:
+      'Publish Web Extensions to the Chrome Web Store v2 using Service Account.',
     badges: { UsedBy: usedByBadge('cssnr/webstore-publish-action') },
     links: { Actions: 'https://github.com/marketplace/actions/docker-stack-deploy' },
     fa: 'powershell',
@@ -694,7 +714,9 @@ const githubActions: Application[] = [
     icon: 'https://raw.githubusercontent.com/cssnr/portainer-stack-deploy-docs/refs/heads/master/docs/public/images/logo/logo.png',
     description: 'Deploy Docker Stack to a Portainer Host using the Portainer API.',
     badges: { UsedBy: usedByBadge('cssnr/portainer-stack-deploy-action') },
-    links: { Actions: 'https://github.com/marketplace/actions/portainer-stack-deploy-action' },
+    links: {
+      Actions: 'https://github.com/marketplace/actions/portainer-stack-deploy-action',
+    },
     fa: 'javascript',
   },
   {
@@ -713,7 +735,8 @@ const githubActions: Application[] = [
     github: 'cssnr/docker-tags-action',
     url: 'https://github.com/cssnr/docker-tags-action',
     icon: 'https://raw.githubusercontent.com/cssnr/docker-tags-action/refs/heads/master/.github/assets/logo.svg',
-    description: 'Generate Docker Tags and Labels for building Docker images with GitHub Actions.',
+    description:
+      'Generate Docker Tags and Labels for building Docker images with GitHub Actions.',
     badges: { UsedBy: usedByBadge('cssnr/docker-tags-action') },
     links: { Actions: 'https://github.com/marketplace/actions/docker-tags' },
     fa: 'javascript',
@@ -724,8 +747,12 @@ const githubActions: Application[] = [
     url: 'https://github.com/cssnr/update-version-tags-action',
     icon: '',
     description: 'Update Version Tags on Push or Release for Semantic Versions.',
-    badges: { UsedBy: usedByBadge('cssnr/update-version-tags-action', 'UGFja2FnZS01Nzg2OTE4MTQ0') },
-    links: { Actions: 'https://github.com/marketplace/actions/update-version-tags-action' },
+    badges: {
+      UsedBy: usedByBadge('cssnr/update-version-tags-action', 'UGFja2FnZS01Nzg2OTE4MTQ0'),
+    },
+    links: {
+      Actions: 'https://github.com/marketplace/actions/update-version-tags-action',
+    },
     fa: 'javascript',
   },
   {
@@ -755,9 +782,14 @@ const githubActions: Application[] = [
     icon: '',
     description: 'Easily Purge Cloudflare Cache.',
     badges: {
-      UsedBy: usedByBadge('cssnr/cloudflare-purge-cache-action', 'UGFja2FnZS01ODQ1MzI4NzQy'),
+      UsedBy: usedByBadge(
+        'cssnr/cloudflare-purge-cache-action',
+        'UGFja2FnZS01ODQ1MzI4NzQy',
+      ),
     },
-    links: { Actions: 'https://github.com/marketplace/actions/cloudflare-purge-zone-cache' },
+    links: {
+      Actions: 'https://github.com/marketplace/actions/cloudflare-purge-zone-cache',
+    },
     fa: 'python',
   },
   {
@@ -765,7 +797,8 @@ const githubActions: Application[] = [
     github: 'cssnr/actions-up-action',
     url: 'https://github.com/cssnr/actions-up-action',
     icon: '',
-    description: 'Check Actions for Updates with actions-up and report out-of-date actions.',
+    description:
+      'Check Actions for Updates with actions-up and report out-of-date actions.',
     badges: { UsedBy: usedByBadge('cssnr/actions-up-action') },
     links: { Actions: 'https://github.com/marketplace/actions/actions-up' },
     fa: 'javascript',
@@ -775,7 +808,8 @@ const githubActions: Application[] = [
     github: 'cssnr/actionlint-action',
     url: 'https://github.com/cssnr/actionlint-action',
     icon: '',
-    description: 'Easily use rhysd/actionlint in a Workflow run with Pyflakes and Actions caching.',
+    description:
+      'Easily use rhysd/actionlint in a Workflow run with Pyflakes and Actions caching.',
     badges: { UsedBy: usedByBadge('cssnr/actionlint-action') },
     links: { Actions: 'https://github.com/marketplace/actions/rhysd-actionlint-action' },
     fa: 'javascript',
@@ -937,7 +971,9 @@ const githubActions: Application[] = [
     icon: '',
     description: 'Update the Mozilla Firefox Update JSON File after a Release.',
     badges: { UsedBy: usedByBadge('cssnr/mozilla-addon-update-action') },
-    links: { Actions: 'https://github.com/marketplace/actions/mozilla-addon-update-action' },
+    links: {
+      Actions: 'https://github.com/marketplace/actions/mozilla-addon-update-action',
+    },
     fa: 'python',
   },
   {
