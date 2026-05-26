@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 export const routes = [
   {
@@ -15,11 +16,13 @@ export const routes = [
     meta: { name: 'About' },
   },
   {
+    path: '/404',
+    name: '404',
+    component: NotFoundView,
+  },
+  {
     path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    redirect: () => {
-      return '/'
-    },
+    component: NotFoundView,
   },
 ]
 

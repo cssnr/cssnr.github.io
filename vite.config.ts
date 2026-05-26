@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-import { copyFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // noinspection ES6UnusedImports
@@ -18,9 +17,6 @@ export default defineConfig({
   ssgOptions: {
     mock: true,
     script: 'async',
-    onFinished() {
-      copyFileSync('dist/index.html', 'dist/404.html')
-    },
   },
   ssr: {
     noExternal: ['bootstrap'],
