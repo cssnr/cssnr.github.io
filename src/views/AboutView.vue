@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import { SETTINGS } from '@/config/settings.ts'
 import { aboutBadges, aboutLinks } from '@/config/links.ts'
 import GHStatsCard from '@/components/GHStatsCard.vue'
 import HeadingTitle from '@/components/HeadingTitle.vue'
 
 const urlPath = (url: string) => new URL(url).pathname.slice(1)
+
+useHead({ title: `About - ${SETTINGS.title}` })
 </script>
 
 <template>

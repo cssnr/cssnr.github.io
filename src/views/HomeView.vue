@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import { SETTINGS } from '@/config/settings.ts'
 import AppsView from '@/components/AppsView.vue'
 import HeadingTitle from '@/components/HeadingTitle.vue'
+
+useHead({ title: SETTINGS.title })
 </script>
 
 <template>

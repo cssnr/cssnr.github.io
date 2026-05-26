@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import categories from '@/config/apps.ts'
 import AppCard from '@/components/AppCard.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-AOS.init()
+onMounted(() => {
+  AOS.init()
+})
 
 // const names = categories.map((x) => x.name)
 // console.log('names:', names)
