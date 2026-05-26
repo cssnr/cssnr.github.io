@@ -1,8 +1,6 @@
 // JS Bootstrap Theme Switcher
 
 ;(() => {
-  if (import.meta.env.SSR) return
-
   const getStoredTheme = () => localStorage.getItem('theme')
   const setStoredTheme = (theme) => localStorage.setItem('theme', theme)
   const getMediaMatch = () =>

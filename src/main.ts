@@ -1,5 +1,4 @@
 import '@/assets/main.css'
-import '@/utils/theme.js'
 
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'animate.css'
