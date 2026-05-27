@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="col info-card aos-init aos-animate" data-aos="flip-up">
+  <div class="col info-card" data-aos="flip-up">
     <div class="card h-100">
       <div class="card-body">
         <div v-if="app.icon" class="float-end ps-2 pb-2">

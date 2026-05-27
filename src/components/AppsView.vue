@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { nextTick, onMounted } from 'vue'
 import categories from '@/config/apps.ts'
 import AppCard from '@/components/AppCard.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-onMounted(() => {
+onMounted(async () => {
+  await nextTick()
   AOS.init()
 })
 
@@ -30,7 +31,7 @@ onMounted(() => {
   </div>
 
   <template v-for="cat in categories" :key="cat.id">
-    <h2 :id="cat.id" class="aos-init aos-animate" data-aos="zoom-in">{{ cat.name }}</h2>
+    <h2 :id="cat.id" data-aos="zoom-in">{{ cat.name }}</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4">
       <template v-for="app in cat.apps" :key="app.name"><AppCard :app="app" /></template>
     </div>
