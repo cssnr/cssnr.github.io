@@ -496,16 +496,16 @@ const pyPackages: Application[] = [
 
 const mcpServers: Application[] = [
   {
-    name: 'iNaturalist MCP',
-    github: 'cssnr/inaturalist-mcp',
-    url: 'https://github.com/cssnr/inaturalist-mcp',
-    icon: 'https://raw.githubusercontent.com/cssnr/inaturalist-mcp/master/.github/assets/logo.svg',
-    description: 'MCP (Model Context Protocol) Server for the iNaturalist API.',
+    name: 'FlightAware MCP',
+    github: 'cssnr/flightaware-mcp',
+    url: 'https://github.com/cssnr/flightaware-mcp',
+    icon: 'https://raw.githubusercontent.com/cssnr/flightaware-mcp/master/.github/assets/logo.svg',
+    description: 'MCP (Model Context Protocol) Server for the FlightAware API.',
     badges: {
-      PyPi: pypiBadge('inaturalist-mcp'),
-      Size: imageSizeBadge('cssnr/inaturalist-mcp', 'inaturalist-mcp'),
+      PyPi: pypiBadge('flightaware-mcp'),
+      Size: imageSizeBadge('cssnr/flightaware-mcp', 'flightaware-mcp'),
     },
-    links: { PyPi: 'https://pypi.org/project/inaturalist-mcp' },
+    links: { PyPi: 'https://pypi.org/project/flightaware-mcp' },
     fa: 'python',
   },
   {
@@ -519,6 +519,32 @@ const mcpServers: Application[] = [
       Size: imageSizeBadge('cssnr/geopy-mcp', 'geopy-mcp'),
     },
     links: { PyPi: 'https://pypi.org/project/geopy-mcp' },
+    fa: 'python',
+  },
+  {
+    name: 'iNaturalist MCP',
+    github: 'cssnr/inaturalist-mcp',
+    url: 'https://github.com/cssnr/inaturalist-mcp',
+    icon: 'https://raw.githubusercontent.com/cssnr/inaturalist-mcp/master/.github/assets/logo.svg',
+    description: 'MCP (Model Context Protocol) Server for the iNaturalist API.',
+    badges: {
+      PyPi: pypiBadge('inaturalist-mcp'),
+      Size: imageSizeBadge('cssnr/inaturalist-mcp', 'inaturalist-mcp'),
+    },
+    links: { PyPi: 'https://pypi.org/project/inaturalist-mcp' },
+    fa: 'python',
+  },
+  {
+    name: 'Urban Dictionary MCP',
+    github: 'cssnr/urban-dictionary-mcp',
+    url: 'https://github.com/cssnr/urban-dictionary-mcp',
+    icon: 'https://raw.githubusercontent.com/cssnr/urban-dictionary-mcp/master/.github/assets/logo.svg',
+    description: 'MCP (Model Context Protocol) Server for the Urban Dictionary.',
+    badges: {
+      PyPi: pypiBadge('urban-dictionary-mcp'),
+      Size: imageSizeBadge('cssnr/urban-dictionary-mcp', 'urban-dictionary-mcp'),
+    },
+    links: { PyPi: 'https://pypi.org/project/urban-dictionary-mcp' },
     fa: 'python',
   },
 ]
