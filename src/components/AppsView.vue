@@ -13,15 +13,7 @@ import 'aos/dist/aos.css'
 
 // NOTE: This is an attempt to fix a race condition with vite-ssg and AOS
 onMounted(() => {
-  const startAOS = () => {
-    AOS.init()
-    AOS.refresh()
-  }
-  if (document.readyState === 'complete') {
-    startAOS()
-  } else {
-    window.addEventListener('load', startAOS)
-  }
+  AOS.init()
 })
 
 window.addEventListener('pageshow', (event) => {
