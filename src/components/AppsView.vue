@@ -1,14 +1,31 @@
 <script setup lang="ts">
-import { nextTick, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import categories from '@/config/apps.ts'
 import AppCard from '@/components/AppCard.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-onMounted(async () => {
-  await nextTick()
-  AOS.init()
+// onMounted(async () => {
+//   await nextTick()
+//   AOS.init()
+// })
+
+// NOTE: This is an attempt to fix a race condition with vite-ssg and AOS
+onMounted(() => {
+  const startAOS = () => {
+    AOS.init()
+    AOS.refresh()
+  }
+  if (document.readyState === 'complete') {
+    startAOS()
+  } else {
+    window.addEventListener('load', startAOS)
+  }
+})
+
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) AOS.refresh()
 })
 
 // const names = categories.map((x) => x.name)
