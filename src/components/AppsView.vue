@@ -12,6 +12,7 @@ onMounted(() => {
 })
 
 // NOTE: This is an attempt to fix a race condition with vite-ssg and AOS
+window.addEventListener('load', () => AOS.refresh())
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) AOS.refresh()
 })
