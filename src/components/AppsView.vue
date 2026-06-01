@@ -6,16 +6,12 @@ import AppCard from '@/components/AppCard.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-// onMounted(async () => {
-//   await nextTick()
-//   AOS.init()
-// })
-
-// NOTE: This is an attempt to fix a race condition with vite-ssg and AOS
 onMounted(() => {
+  // await nextTick()
   AOS.init()
 })
 
+// NOTE: This is an attempt to fix a race condition with vite-ssg and AOS
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) AOS.refresh()
 })
