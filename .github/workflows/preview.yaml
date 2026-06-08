@@ -3,7 +3,7 @@ name: "Preview"
 on:
   workflow_dispatch:
   push:
-    branches-ignore: [master]
+    branches-ignore: [master, legacy]
     paths:
       - ".github/workflows/preview.yaml"
       - "public/**"
@@ -27,8 +27,7 @@ jobs:
     with:
       build: "npm run build"
       path: "dist"
-    secrets:
-      webhook: ${{ secrets.DISCORD_WEBHOOK }}
+    secrets: inherit
 
   deploy:
     name: "Deploy"
