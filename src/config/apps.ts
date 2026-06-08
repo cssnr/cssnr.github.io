@@ -494,6 +494,50 @@ const pyPackages: Application[] = [
   },
 ]
 
+const npmPackages: Application[] = [
+  {
+    name: 'VitePress Chat',
+    github: 'cssnr/vitepress-chat',
+    url: 'https://cssnr.github.io/vitepress-chat/',
+    icon: 'https://cssnr.github.io/vitepress-chat/images/logo.svg',
+    description: 'AI Chat with Trained on Your Documentation.',
+    badges: { Github: npmDownBadge('vitepress-swiper') },
+    links: { NPM: 'https://www.npmjs.com/package/vitepress-swiper' },
+    fa: 'npm',
+  },
+  {
+    name: 'VitePress Swiper',
+    github: 'cssnr/vitepress-swiper',
+    url: 'https://vitepress-swiper.cssnr.com/',
+    icon: 'https://vitepress-swiper.cssnr.com/images/logo.png',
+    description: 'A VitePress Plugin to add a SwiperJS Photo Gallery.',
+    badges: { Github: npmDownBadge('cssnr/vitepress-swiper') },
+    links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-swiper' },
+    fa: 'npm',
+  },
+  {
+    name: 'VitePress Contributors',
+    github: 'cssnr/vitepress-plugin-contributors',
+    url: 'https://vitepress-contributors.cssnr.com/',
+    icon: 'https://vitepress-contributors.cssnr.com/images/logo.png',
+    description: 'A VitePress Plugin to generate and display GitHub Contributors.',
+    badges: { Github: npmDownBadge('cssnr/vitepress-plugin-contributors') },
+    links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-contributors' },
+    fa: 'npm',
+  },
+  {
+    name: 'VitePress CopyButton',
+    github: 'cssnr/vitepress-plugin-copybutton',
+    url: 'https://vitepress-copybutton.cssnr.com/',
+    icon: 'https://vitepress-copybutton.cssnr.com/images/logo.png',
+    description:
+      'A VitePress Plugin to easily add a Copy Button with automatic text detection.',
+    badges: { Github: npmDownBadge('cssnr/vitepress-plugin-copybutton') },
+    links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-copybutton' },
+    fa: 'npm',
+  },
+]
+
 const mcpServers: Application[] = [
   {
     name: 'FlightAware MCP',
@@ -546,40 +590,6 @@ const mcpServers: Application[] = [
     },
     links: { PyPi: 'https://pypi.org/project/urban-dictionary-mcp' },
     fa: 'python',
-  },
-]
-
-const npmPackages: Application[] = [
-  {
-    name: 'VitePress Swiper',
-    github: 'cssnr/vitepress-swiper',
-    url: 'https://vitepress-swiper.cssnr.com/',
-    icon: 'https://vitepress-swiper.cssnr.com/images/logo.png',
-    description: 'A VitePress Plugin to add a SwiperJS Photo Gallery.',
-    badges: { Github: npmDownBadge('cssnr/vitepress-swiper') },
-    links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-swiper' },
-    fa: 'npm',
-  },
-  {
-    name: 'VitePress Contributors',
-    github: 'cssnr/vitepress-plugin-contributors',
-    url: 'https://vitepress-contributors.cssnr.com/',
-    icon: 'https://vitepress-contributors.cssnr.com/images/logo.png',
-    description: 'A VitePress Plugin to generate and display GitHub Contributors.',
-    badges: { Github: npmDownBadge('cssnr/vitepress-plugin-contributors') },
-    links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-contributors' },
-    fa: 'npm',
-  },
-  {
-    name: 'VitePress CopyButton',
-    github: 'cssnr/vitepress-plugin-copybutton',
-    url: 'https://vitepress-copybutton.cssnr.com/',
-    icon: 'https://vitepress-copybutton.cssnr.com/images/logo.png',
-    description:
-      'A VitePress Plugin to easily add a Copy Button with automatic text detection.',
-    badges: { Github: npmDownBadge('cssnr/vitepress-plugin-copybutton') },
-    links: { NPM: 'https://www.npmjs.com/package/@cssnr/vitepress-plugin-copybutton' },
-    fa: 'npm',
   },
 ]
 
@@ -713,6 +723,16 @@ const dockerImages: Application[] = [
 
 const githubActions: Application[] = [
   {
+    name: 'AI Issue Action',
+    github: 'cssnr/ai-issue-action',
+    url: 'https://github.com/cssnr/ai-issue-action',
+    icon: 'https://raw.githubusercontent.com/cssnr/ai-issue-action/refs/heads/master/.github/assets/logo.svg',
+    description: 'Automatic AI Issue Triage Action.',
+    badges: { UsedBy: usedByBadge('cssnr/ai-issue') },
+    // links: {},
+    fa: 'typescript',
+  },
+  {
     name: 'Web Store Publish',
     github: 'cssnr/webstore-publish-action',
     url: 'https://docker-deploy.cssnr.com/',
@@ -782,6 +802,26 @@ const githubActions: Application[] = [
     fa: 'javascript',
   },
   {
+    name: 'Zensical Action',
+    github: 'cssnr/zensical-action',
+    url: 'https://zensical-action.cssnr.com/',
+    icon: 'https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/zensical-action/logo160.png',
+    description: 'Checkout, build, upload, and deploy Zensical Docs to GitHub Pages.',
+    badges: { UsedBy: usedByBadge('cssnr/zensical-action') },
+    links: { Actions: 'https://github.com/marketplace/actions/zensical-action' },
+    fa: 'javascript',
+  },
+  {
+    name: 'Homebrew Action',
+    github: 'cssnr/homebrew-action',
+    url: 'https://github.com/cssnr/homebrew-action',
+    icon: 'https://raw.githubusercontent.com/cssnr/homebrew-action/refs/heads/master/.github/assets/logo.svg',
+    description: 'Homebrew Action to Update Formula url, version and sha256.',
+    badges: { UsedBy: usedByBadge('cssnr/homebrew-action') },
+    links: { Actions: 'https://github.com/marketplace/actions/homebrew-action' },
+    fa: 'javascript',
+  },
+  {
     name: 'Mirror Repository Action',
     github: 'cssnr/mirror-repository-action',
     url: 'https://github.com/cssnr/mirror-repository-action',
@@ -838,26 +878,6 @@ const githubActions: Application[] = [
       'Easily use rhysd/actionlint in a Workflow run with Pyflakes and Actions caching.',
     badges: { UsedBy: usedByBadge('cssnr/actionlint-action') },
     links: { Actions: 'https://github.com/marketplace/actions/rhysd-actionlint-action' },
-    fa: 'javascript',
-  },
-  {
-    name: 'Zensical Action',
-    github: 'cssnr/zensical-action',
-    url: 'https://zensical-action.cssnr.com/',
-    icon: 'https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/zensical-action/logo160.png',
-    description: 'Checkout, build, upload, and deploy Zensical Docs to GitHub Pages.',
-    badges: { UsedBy: usedByBadge('cssnr/zensical-action') },
-    links: { Actions: 'https://github.com/marketplace/actions/zensical-action' },
-    fa: 'javascript',
-  },
-  {
-    name: 'Homebrew Action',
-    github: 'cssnr/homebrew-action',
-    url: 'https://github.com/cssnr/homebrew-action',
-    icon: 'https://raw.githubusercontent.com/cssnr/homebrew-action/refs/heads/master/.github/assets/logo.svg',
-    description: 'Homebrew Action to Update Formula url, version and sha256.',
-    badges: { UsedBy: usedByBadge('cssnr/homebrew-action') },
-    links: { Actions: 'https://github.com/marketplace/actions/homebrew-action' },
     fa: 'javascript',
   },
   {
@@ -1033,16 +1053,6 @@ const githubActions: Application[] = [
     fa: 'powershell',
   },
   {
-    name: 'AI Issue Action',
-    github: 'smashedr/ai-issue-action',
-    url: 'https://github.com/smashedr/ai-issue-action',
-    icon: 'https://raw.githubusercontent.com/smashedr/ai-issue-action/refs/heads/master/.github/assets/logo.svg',
-    description: 'Automatic AI Issue Triage Action.',
-    badges: { UsedBy: usedByBadge('smashedr/ai-issue') },
-    // links: {},
-    fa: 'typescript',
-  },
-  {
     name: 'JavaScript Template Action',
     github: 'smashedr/javascript-action',
     url: 'https://github.com/smashedr/javascript-action',
@@ -1096,6 +1106,16 @@ const githubActions: Application[] = [
 
 const otherSoftware: Application[] = [
   {
+    name: 'Chat Server',
+    github: 'cssnr/vitepress-chat',
+    url: 'https://cssnr.github.io/vitepress-chat/',
+    icon: 'https://cssnr.github.io/vitepress-chat/images/logo.svg',
+    description: 'AI Chat Server Designed to work with VitePress Chat.',
+    badges: { Size: imageSizeBadge('cssnr/chat-server', 'chat-server') },
+    links: { 'VitePress Plugin': 'https://cssnr.github.io/vitepress-chat/' },
+    fa: 'javascript',
+  },
+  {
     name: "Carl's Cogs",
     github: 'smashedr/carl-cogs',
     url: 'https://github.com/smashedr/carl-cogs',
@@ -1148,8 +1168,8 @@ const categories: Category[] = [
   { name: 'Web Extensions', id: 'webExtensions', apps: webExtensions },
   { name: 'Mobile Applications', id: 'mobileApplications', apps: mobileApplications },
   { name: 'Python Packages', id: 'pyPackages', apps: pyPackages },
-  { name: 'MCP Servers', id: 'mcpServers', apps: mcpServers },
   { name: 'NPM Packages', id: 'npmPackages', apps: npmPackages },
+  { name: 'MCP Servers', id: 'mcpServers', apps: mcpServers },
   { name: 'Go Apps', id: 'goApps', apps: goApps },
   { name: 'Web Applications', id: 'webApplications', apps: webApplications },
   { name: 'GitHub Actions', id: 'githubActions', apps: githubActions },

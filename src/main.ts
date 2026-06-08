@@ -8,7 +8,7 @@ import 'bootstrap'
 
 import { ViteSSG } from 'vite-ssg'
 import App from '@/App.vue'
-import { routes } from '@/router'
+import { routes, scrollBehavior } from '@/router'
 
 // noinspection JSUnusedGlobalSymbols
-export const createApp = ViteSSG(App, { routes })
+export const createApp = ViteSSG(App, { routes, scrollBehavior })
