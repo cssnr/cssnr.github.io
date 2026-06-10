@@ -1107,9 +1107,9 @@ const githubActions: Application[] = [
 const otherSoftware: Application[] = [
   {
     name: 'Chat Server',
-    github: 'cssnr/vitepress-chat',
-    url: 'https://cssnr.github.io/vitepress-chat/',
-    icon: 'https://cssnr.github.io/vitepress-chat/images/logo.svg',
+    github: 'cssnr/chat-server',
+    url: 'https://cssnr.github.io/vitepress-chat/server',
+    icon: 'https://cssnr.github.io/vitepress-chat/images/server.svg',
     description: 'AI Chat Server Designed to work with VitePress Chat.',
     badges: { Size: imageSizeBadge('cssnr/chat-server', 'chat-server') },
     links: { 'VitePress Plugin': 'https://cssnr.github.io/vitepress-chat/' },
