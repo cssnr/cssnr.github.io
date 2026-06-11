@@ -7,12 +7,15 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 onMounted(() => {
-  // await nextTick()
   AOS.init()
+  // Handle race: script='async' means 'load' may fire before Vue hydrates
+  if (document.readyState === 'complete') {
+    AOS.refresh()
+  } else {
+    window.addEventListener('load', () => AOS.refresh())
+  }
 })
 
-// NOTE: This is an attempt to fix a race condition with vite-ssg and AOS
-window.addEventListener('load', () => AOS.refresh())
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) AOS.refresh()
 })
