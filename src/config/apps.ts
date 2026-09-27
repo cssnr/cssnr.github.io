@@ -44,10 +44,11 @@ const ghDownBadge = (github: string): Badge => {
     href: `https://github.com/${github}/releases/latest`,
   }
 }
-const npmDownBadge = (pkg: string, github: string = ''): Badge => {
+const npmDownBadge = (name: string): Badge => {
+  const id = encodeURIComponent(name.includes('/') ? `@${name}` : name)
   return {
-    src: `https://img.shields.io/npm/dm/%40${encodeURIComponent(pkg)}?logo=npm&label=&color=red`,
-    href: `https://npm-stat.com/charts.html?package=%40${encodeURIComponent(github || pkg)}`,
+    src: `https://img.shields.io/npm/dm/${id}?logo=npm&label=&color=red`,
+    href: `https://npm-stat.com/charts.html?package=${id}`,
   }
 }
 const usedByBadge = (name: string, id: string = ''): Badge => {
