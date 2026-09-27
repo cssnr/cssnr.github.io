@@ -44,10 +44,11 @@ const ghDownBadge = (github: string): Badge => {
     href: `https://github.com/${github}/releases/latest`,
   }
 }
-const npmDownBadge = (pkg: string, github: string = ''): Badge => {
+const npmDownBadge = (name: string): Badge => {
+  const id = encodeURIComponent(name.includes('/') ? `@${name}` : name)
   return {
-    src: `https://img.shields.io/npm/dm/%40${encodeURIComponent(pkg)}?logo=npm&label=&color=red`,
-    href: `https://npm-stat.com/charts.html?package=%40${encodeURIComponent(github || pkg)}`,
+    src: `https://img.shields.io/npm/dm/${id}?logo=npm&label=&color=red`,
+    href: `https://npm-stat.com/charts.html?package=${id}`,
   }
 }
 const usedByBadge = (name: string, id: string = ''): Badge => {
@@ -348,7 +349,7 @@ const mobileApplications: Application[] = [
     name: 'Zipline Android',
     github: 'cssnr/zipline-android',
     url: 'https://zipline-android.cssnr.com/',
-    icon: 'https://raw.githubusercontent.com/cssnr/zipline-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+    icon: 'https://zipline-android.cssnr.com/images/logo.png',
     description:
       'Android Application for sharing, uploading, and viewing files hosted on Zipline v4 server.',
     badges: { Github: ghDownBadge('cssnr/zipline-android') },
@@ -363,7 +364,7 @@ const mobileApplications: Application[] = [
     name: 'Remote Wallpaper',
     github: 'cssnr/remote-wallpaper-android',
     url: 'https://github.com/cssnr/remote-wallpaper-android',
-    icon: 'https://raw.githubusercontent.com/cssnr/remote-wallpaper-android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp',
+    icon: 'https://raw.githubusercontent.com/cssnr/remote-wallpaper-android/master/docs/assets/images/logo.png',
     description:
       'Set a Random Wallpaper from a Remote Source at set intervals or manually from the widget.',
     badges: { Github: ghDownBadge('cssnr/remote-wallpaper-android') },
@@ -386,6 +387,34 @@ const mobileApplications: Application[] = [
       Download:
         'https://github.com/cssnr/noaa-weather-android/releases/latest/download/app-release.apk',
       NOAA: 'https://www.weather.gov/',
+    },
+    fa: 'kotlin',
+  },
+  {
+    name: 'ParKing Android',
+    github: 'cssnr/parking-android',
+    url: 'https://github.com/cssnr/parking-android',
+    icon: 'https://raw.githubusercontent.com/cssnr/parking-android/master/app/src/main/ic_launcher-playstore.png',
+    description:
+      'Automatically detect where you parked your car using a Bluetooth device.',
+    badges: { Github: ghDownBadge('cssnr/parking-android') },
+    links: {
+      Download:
+        'https://github.com/cssnr/parking-android/releases/latest/download/app-release.apk',
+    },
+    fa: 'kotlin',
+  },
+  {
+    name: 'TodoList Android',
+    github: 'cssnr/todolist-android',
+    url: 'https://github.com/cssnr/todolist-android',
+    icon: 'https://raw.githubusercontent.com/cssnr/todolist-android/master/.github/assets/icon.svg',
+    description:
+      'Offline-first todo list app with a focus on grocery shopping, stored locally with no account or servers.',
+    badges: { Github: ghDownBadge('cssnr/todolist-android') },
+    links: {
+      Download:
+        'https://github.com/cssnr/todolist-android/releases/latest/download/app-release.apk',
     },
     fa: 'kotlin',
   },
@@ -501,8 +530,8 @@ const npmPackages: Application[] = [
     url: 'https://cssnr.github.io/vitepress-chat/',
     icon: 'https://cssnr.github.io/vitepress-chat/images/logo.svg',
     description: 'AI Chat with Trained on Your Documentation.',
-    badges: { Github: npmDownBadge('vitepress-swiper') },
-    links: { NPM: 'https://www.npmjs.com/package/vitepress-swiper' },
+    badges: { Github: npmDownBadge('vitepress-chat') },
+    links: { NPM: 'https://www.npmjs.com/package/vitepress-chat' },
     fa: 'npm',
   },
   {
@@ -677,6 +706,16 @@ const webApplications: Application[] = [
 ]
 
 const dockerImages: Application[] = [
+  {
+    name: 'Chat Server',
+    github: 'cssnr/chat-server',
+    url: 'https://cssnr.github.io/vitepress-chat/server',
+    icon: 'https://cssnr.github.io/vitepress-chat/images/server.svg',
+    description: 'AI Chat Server Designed to work with VitePress Chat.',
+    badges: { Size: imageSizeBadge('cssnr/chat-server', 'chat-server') },
+    links: { 'VitePress Plugin': 'https://cssnr.github.io/vitepress-chat/' },
+    fa: 'javascript',
+  },
   {
     name: 'Docker Nginx Proxy',
     github: 'cssnr/docker-nginx-proxy',
@@ -1105,16 +1144,6 @@ const githubActions: Application[] = [
 ]
 
 const otherSoftware: Application[] = [
-  {
-    name: 'Chat Server',
-    github: 'cssnr/chat-server',
-    url: 'https://cssnr.github.io/vitepress-chat/server',
-    icon: 'https://cssnr.github.io/vitepress-chat/images/server.svg',
-    description: 'AI Chat Server Designed to work with VitePress Chat.',
-    badges: { Size: imageSizeBadge('cssnr/chat-server', 'chat-server') },
-    links: { 'VitePress Plugin': 'https://cssnr.github.io/vitepress-chat/' },
-    fa: 'javascript',
-  },
   {
     name: "Carl's Cogs",
     github: 'smashedr/carl-cogs',
