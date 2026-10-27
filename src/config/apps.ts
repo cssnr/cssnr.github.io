@@ -222,7 +222,7 @@ const webExtensions: Application[] = [
     url: 'https://github.com/cssnr/new-tab',
     icon: 'https://raw.githubusercontent.com/cssnr/new-tab/master/src/assets/icon.svg',
     description:
-      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+      'New Tab Extension with Bookmarks, Top Sites, Search, and recently visited GitHub repository list.',
     badges: {
       Google: googleBadge('goholgjajaneidafddjpiaphbdaalbhm'),
       Github: ghDownBadge('cssnr/new-tab'),
