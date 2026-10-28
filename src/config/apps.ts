@@ -222,7 +222,7 @@ const webExtensions: Application[] = [
     url: 'https://github.com/cssnr/new-tab',
     icon: 'https://raw.githubusercontent.com/cssnr/new-tab/master/src/assets/icon.svg',
     description:
-      'Use Gemini AI free tier to determine the location of any image based on the image data.',
+      'New Tab Extension with Bookmarks, Top Sites, Search, and recently visited GitHub repository list.',
     badges: {
       Google: googleBadge('goholgjajaneidafddjpiaphbdaalbhm'),
       Github: ghDownBadge('cssnr/new-tab'),
@@ -408,7 +408,7 @@ const mobileApplications: Application[] = [
     name: 'TodoList Android',
     github: 'cssnr/todolist-android',
     url: 'https://github.com/cssnr/todolist-android',
-    icon: 'https://raw.githubusercontent.com/cssnr/todolist-android/master/.github/assets/icon.svg',
+    icon: 'https://raw.githubusercontent.com/cssnr/todolist-android/master/app/src/main/ic_launcher-playstore.png',
     description:
       'Offline-first todo list app with a focus on grocery shopping, stored locally with no account or servers.',
     badges: { Github: ghDownBadge('cssnr/todolist-android') },
