@@ -408,7 +408,7 @@ const mobileApplications: Application[] = [
     name: 'TodoList Android',
     github: 'cssnr/todolist-android',
     url: 'https://github.com/cssnr/todolist-android',
-    icon: 'https://raw.githubusercontent.com/cssnr/todolist-android/master/.github/assets/icon.svg',
+    icon: 'https://raw.githubusercontent.com/cssnr/todolist-android/master/app/src/main/ic_launcher-playstore.png',
     description:
       'Offline-first todo list app with a focus on grocery shopping, stored locally with no account or servers.',
     badges: { Github: ghDownBadge('cssnr/todolist-android') },
